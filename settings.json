@@ -1,0 +1,565 @@
+{
+	// ===========================================
+	// EDITOR - Cấu hình cơ bản của editor
+	// ===========================================
+	"editor.fontSize": 15,
+	"editor.lineHeight": 30,
+	"editor.fontWeight": "500",
+	"editor.fontFamily": "JetBrains Mono, Maple Mono, GeistMono Nerd Font Mono,Dank Mono",
+	// "editor.fontLigatures": true,
+	"editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'calt', 'dlig'",
+	// "editor.fontLigatures": "'calt', 'zero', 'ss03'",
+	"editor.tabSize": 4,
+	"editor.insertSpaces": true,
+	"editor.detectIndentation": false,
+	"editor.wordWrap": "wordWrapColumn",
+	"editor.copyWithSyntaxHighlighting": false,
+	"editor.linkedEditing": true,
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.autoClosingBrackets": "always",
+	"editor.autoClosingQuotes": "always",
+	"editor.autoIndent": "advanced",
+	"editor.autoIndentOnPaste": true,
+	"editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?",
+	"editor.semanticHighlighting.enabled": true,
+
+	// ===========================================
+	// EDITOR UI - Giao diện và hiển thị của editor
+	// ===========================================
+	"editor.lineNumbers": "off",
+	"editor.minimap.enabled": false,
+	"editor.minimap.maxColumn": 250,
+	"editor.glyphMargin": false,
+	"editor.scrollbar.vertical": "hidden",
+	"editor.scrollbar.horizontal": "hidden",
+	"editor.scrollbar.verticalScrollbarSize": 0,
+	"editor.codeLens": false,
+	// "editor.bracketPairColorization.enabled": true,
+	"editor.guides.bracketPairs": false,
+	"editor.guides.indentation": false,
+	"editor.inlayHints.enabled": "off",
+	"editor.renderLineHighlight": "none",
+	"editor.renderControlCharacters": false,
+	"editor.overviewRulerBorder": false,
+	"editor.hideCursorInOverviewRuler": true,
+	"editor.selectionHighlight": false,
+	"editor.occurrencesHighlight": "off",
+	"editor.matchBrackets": "never",
+	"editor.hover.enabled": true,
+	"editor.lightbulb.enabled": "off",
+	"editor.padding.top": 10,
+	"editor.stickyScroll.enabled": false,
+	// "editor.cursorHeight": 22,
+	"editor.cursorWidth": 2,
+	"editor.cursorSurroundingLines": 5,
+	"editor.cursorBlinking": "solid",
+	"editor.cursorSmoothCaretAnimation": "on",
+	"editor.smoothScrolling": true,
+	"editor.scrollBeyondLastLine": true,
+	// "editor.colorDecorators": false,
+
+	// ===========================================
+	// EDITOR SUGGESTIONS - Gợi ý và tự động hoàn thành
+	// ===========================================
+	"editor.tabCompletion": "on",
+	"editor.snippetSuggestions": "inline",
+	"editor.suggest.snippetsPreventQuickSuggestions": false,
+	"editor.inlineSuggest.suppressSuggestions": false,
+	"editor.suggestFontSize": 16,
+	"editor.suggestLineHeight": 30,
+	"editor.quickSuggestions": {
+		"strings": true
+	},
+	"editor.screenReaderAnnounceInlineSuggestion": false,
+	"editor.accessibilitySupport": "off",
+	"editor.multiCursorModifier": "ctrlCmd",
+
+	// ===========================================
+	// EDITOR NAVIGATION - Điều hướng trong code
+	// ===========================================
+	"editor.gotoLocation.multipleReferences": "goto",
+	"editor.gotoLocation.multipleDefinitions": "goto",
+	"editor.gotoLocation.multipleDeclarations": "goto",
+	"editor.gotoLocation.multipleImplementations": "goto",
+	"editor.gotoLocation.multipleTypeDefinitions": "goto",
+
+	// ===========================================
+	// WORKBENCH - Giao diện chính của VS Code
+	// ===========================================
+	"workbench.startupEditor": "none",
+	"workbench.tips.enabled": false,
+	"workbench.activityBar.location": "hidden",
+	"workbench.sideBar.location": "right",
+	"workbench.tree.indent": 15,
+	"workbench.tree.enableStickyScroll": false,
+	"workbench.tree.renderIndentGuides": "none",
+	"workbench.list.smoothScrolling": true,
+	"workbench.secondarySideBar.defaultVisibility": "hidden",
+	"workbench.secondarySideBar.showLabels": false,
+	"workbench.quickOpen.closeOnFocusLost": false,
+	"workbench.layoutControl.enabled": false,
+	"workbench.navigationControl.enabled": false,
+	// "workbench.editor.showTabs": "none",
+	// "workbench.statusBar.visible": false,
+
+	// ===========================================
+	// WORKBENCH EDITOR TABS - Quản lý tab
+	// ===========================================
+	"workbench.editor.scrollToSwitchTabs": true,
+	"workbench.editor.editorActionsLocation": "hidden",
+	"workbench.editor.decorations.badges": false,
+	"workbench.editor.enablePreviewFromCodeNavigation": true,
+	"workbench.editor.highlightModifiedTabs": true,
+	"workbench.editor.openSideBySideDirection": "right",
+	"workbench.editor.pinnedTabSizing": "compact",
+
+	// ===========================================
+	// WINDOW - Cửa sổ và thanh tiêu đề
+	// ===========================================
+	"window.newWindowDimensions": "inherit",
+	"window.autoDetectColorScheme": false,
+	"window.title": "${activeEditorShort}${separator}${activeFolderShort}",
+	"window.density.editorTabHeight": "compact",
+	"window.commandCenter": false,
+	"window.menuBarVisibility": "toggle",
+	"window.customTitleBarVisibility": "never",
+	"window.titleBarStyle": "native",
+
+	// ===========================================
+	// FILES - Quản lý file và tự động lưu
+	// ===========================================
+	"files.autoSave": "afterDelay",
+	"files.autoSaveDelay": 500,
+	"files.trimTrailingWhitespace": true,
+	"files.insertFinalNewline": true,
+	"files.trimFinalNewlines": true,
+	"files.encoding": "utf8",
+	"files.associations": {
+		".php_cs": "php",
+		".php_cs.dist": "php"
+	},
+
+	// ===========================================
+	// EXPLORER - Trình duyệt file
+	// ===========================================
+	"explorer.compactFolders": false,
+	"explorer.confirmDragAndDrop": false,
+	"explorer.confirmPasteNative": false,
+	"explorer.confirmDelete": false,
+	"explorer.fileNesting.patterns": {
+		"*.ts": "${capture}.js",
+		"*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+		"*.jsx": "${capture}.js",
+		"*.tsx": "${capture}.ts",
+		"tsconfig.json": "tsconfig.*.json",
+		"package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb, bun.lock",
+		"*.sqlite": "${capture}.${extname}-*",
+		"*.db": "${capture}.${extname}-*",
+		"*.sqlite3": "${capture}.${extname}-*",
+		"*.db3": "${capture}.${extname}-*",
+		"*.sdb": "${capture}.${extname}-*",
+		"*.s3db": "${capture}.${extname}-*"
+	},
+
+	// ===========================================
+	// SEARCH - Tìm kiếm và loại trừ
+	// ===========================================
+	"search.searchOnType": false,
+	"search.smartCase": true,
+	"search.useIgnoreFiles": false,
+	"search.exclude": {
+		// Hide everything in /vendor, except the "laravel" and "livewire" folder.
+		"**/vendor/{[^l],?[^ai]}*": true,
+		// Hide everything in /public, except "index.php"
+		"**/public/{[^i],?[^n]}*": true,
+		"**/node_modules": true,
+		"**/dist": true,
+		"**/_ide_helper.php": true,
+		"**/composer.lock": true,
+		"**/package-lock.json": true,
+		"storage": true,
+		".phpunit.result.cache": true
+	},
+
+	// ===========================================
+	// TERMINAL - Terminal tích hợp
+	// ===========================================
+	"terminal.integrated.fontSize": 16,
+	"terminal.integrated.lineHeight": 1.5,
+	"terminal.integrated.fontFamily": "JetBrains Mono, Maple Mono, GeistMono Nerd Font Mono,Dank Mono",
+	"terminal.integrated.letterSpacing": 0,
+	"terminal.integrated.enableMultiLinePasteWarning": "never",
+	"terminal.integrated.suggest.enabled": true,
+	"terminal.integrated.suggest.showStatusBar": false,
+	"terminal.integrated.tabs.location": "left",
+	"terminal.integrated.smoothScrolling": true,
+	"terminal.integrated.cursorBlinking": true,
+
+	// ===========================================
+	// DIFF EDITOR - Trình so sánh code
+	// ===========================================
+	"diffEditor.hideUnchangedRegions.enabled": true,
+	"diffEditor.useInlineViewWhenSpaceIsLimited": false,
+	"diffEditor.ignoreTrimWhitespace": false,
+	"diffEditor.wordWrap": "on",
+
+	// ===========================================
+	// DEBUG - Debug và breakpoints
+	// ===========================================
+	"debug.showBreakpointsInOverviewRuler": false,
+
+	// ===========================================
+	// SCM & GIT - Source control
+	// ===========================================
+	"scm.diffDecorations": "none",
+	// "git.decorations.enabled": false,
+	"git.confirmSync": false,
+
+	// ===========================================
+	// PROBLEMS - Lỗi và cảnh báo
+	// ===========================================
+	"problems.decorations.enabled": false,
+
+	// ===========================================
+	// BREADCRUMBS - Đường dẫn điều hướng
+	// ===========================================
+	"breadcrumbs.enabled": false,
+
+	// ===========================================
+	// CHAT & AI - Chat và tính năng AI
+	// ===========================================
+	"chat.commandCenter.enabled": false,
+	"chat.disableAIFeatures": true,
+	"chat.editor.wordWrap": "on",
+
+	// ===========================================
+	// SECURITY - Bảo mật workspace
+	// ===========================================
+	"security.workspace.trust.untrustedFiles": "open",
+
+	// ===========================================
+	// EXTENSIONS - Quản lý extension
+	// ===========================================
+	"extensions.ignoreRecommendations": true,
+	"extensions.experimental.affinity": {
+		"vscodevim.vim": 1,
+		"asvetliakov.vscode-neovim": 1
+	},
+
+	// ===========================================
+	// EMMET - Mở rộng HTML/CSS
+	// ===========================================
+	"emmet.triggerExpansionOnTab": true,
+	"emmet.showExpandedAbbreviation": "always",
+	"emmet.includeLanguages": {
+		"blade": "html",
+		"vue-html": "html",
+		"vue": "html",
+		"react": "html",
+		"javascript": "html"
+	},
+
+	// ===========================================
+	// LANGUAGE SPECIFIC - PHP
+	// ===========================================
+	"php.suggest.basic": false,
+	"php.format.rules.addCommaAfterLastArrayElement": false,
+	"php.format.rules.blankLinesAfterOpenTag": 1,
+	"php.format.rules.endWithNewLine": true,
+	"php.format.rules.spaceBeforeColonInControlStatements": true,
+	"php.format.rules.spaceBeforeColonInReturnType": false,
+	"php.format.rules.spaceAfterUnaryNot": true,
+
+	// ===========================================
+	// LANGUAGE SPECIFIC - JavaScript/TypeScript
+	// ===========================================
+	"javascript.suggest.paths": false,
+	"typescript.suggest.paths": false,
+
+	// ===========================================
+	// LANGUAGE SPECIFIC - HTML
+	// ===========================================
+	"html.format.extraLiners": "nul",
+	"html.format.preserveNewLines": true,
+
+	// ===========================================
+	// LANGUAGE SPECIFIC - Vue
+	// ===========================================
+	"vue.format.script.initialIndent": true,
+	"vue.format.style.initialIndent": true,
+	"vetur.format.options.tabSize": 4,
+	"vetur.format.options.useTabs": true,
+
+	// ===========================================
+	// PRETTIER - Định dạng code
+	// ===========================================
+	"prettier.tabWidth": 4,
+	"prettier.useTabs": true,
+
+	// ===========================================
+	// TAILWIND CSS - Framework CSS
+	// ===========================================
+	"tailwindCSS.includeLanguages": {
+		"plaintext": "html"
+	},
+	"tailwindCSS.experimental.configFile": null,
+
+	// ===========================================
+	// THIRD-PARTY EXTENSIONS - Extension bên thứ 3
+	// ===========================================
+	// Auto Rename Tag
+	"auto-rename-tag.activationOnLanguage": ["*"],
+
+	// Blade formatter
+	"blade.format.enable": true,
+	"blade.format.wrapAttributes": "auto",
+
+	// Live Server
+	"liveServer.settings.CustomBrowser": "firefox",
+
+	// New File
+	"newFile.defaultBaseFileName": "index",
+	"newFile.defaultFileExtension": ".jsx",
+	"newFile.expandBraces": true,
+	"newFile.relativeTo": "file",
+	"newFile.rootDirectory": "~",
+	"newFile.showPathRelativeTo": "project",
+
+	// Quokka.js
+	"quokka.automaticRestart": true,
+	"quokka.fontSize": 16,
+	"quokka.showOutputOnStart": false,
+	"quokka.useOutputPanel": false,
+
+	// ===========================================
+	// VIM EXTENSION - Vim emulation
+	// ===========================================
+	"vim.cursorStylePerMode.visualblock": "block-outline",
+	"vim.cursorStylePerMode.visualline": "block-outline",
+	"vim.cursorStylePerMode.visual": "block-outline",
+
+	"vim.argumentObjectSeparators": [","],
+	"vim.autoindent": true,
+	"vim.camelCaseMotion.enable": true,
+	"vim.changeWordIncludesWhitespace": false,
+	"vim.easymotion": true,
+	"vim.easymotionDimBackground": true,
+	"vim.easymotionDimColor": "#888888",
+	"vim.easymotionIncSearchForegroundColor": "#66cc66",
+	"vim.easymotionKeys": "asdfghjkl;",
+	"vim.easymotionMarkerFontWeight": "bold",
+	"vim.easymotionMarkerForegroundColorOneChar": "#ff6666",
+	"vim.easymotionMarkerForegroundColorTwoCharFirst": "#ffaa33",
+	"vim.easymotionMarkerForegroundColorTwoCharSecond": "#ffdd77",
+	"vim.foldfix": true,
+	"vim.gdefault": false,
+	"vim.highlightedyank.color": "#a9dc7660",
+	"vim.highlightedyank.duration": 200,
+	"vim.highlightedyank.enable": true,
+	"vim.hlsearch": true,
+	"vim.ignorecase": true,
+	"vim.incsearch": true,
+	"vim.inccommand": "replace",
+	"vim.joinspaces": false,
+	"vim.leader": "<space>",
+	"vim.maxmapdepth": 1000,
+	"vim.registers.useClipboard": true,
+	"vim.replaceWithRegister": true,
+	"vim.report": 2,
+	"vim.searchMatchTextColor": "#bbbbbb",
+	"vim.showcmd": true,
+	"vim.showmodename": true,
+	"vim.smartcase": true,
+	"vim.sneak": true,
+	"vim.sneakReplacesF": false,
+	"vim.sneakUseIgnorecaseAndSmartcase": true,
+	"vim.startInInsertMode": false,
+
+	"vim.surround": true,
+	"vim.textwidth": 80,
+	"vim.timeout": 800,
+	"vim.useCtrlKeys": true,
+	"vim.useSystemClipboard": true,
+	"vim.visualstar": true,
+	// "vim.vimrc.path": "/home/viethoang/.vimrc",
+	"vim.vimrc.path": "~/.vimrc",
+	"vim.vimrc.enable": true,
+	"vim.whichwrap": "b,s",
+	"vim.handleKeys": {
+		"<C-b>": true,
+		"<C-c>": true,
+		"<C-d>": true,
+		"<C-h>": true,
+		"<C-j>": true,
+		"<C-m>": true,
+		"<C-t>": true,
+		"<C-v>": true
+	},
+	"vim.normalModeKeyBindings": [
+		{
+			"before": ["K"],
+			"commands": ["lineBreakInsert"],
+			"silent": true
+		},
+		{
+			"before": ["<leader>", "h"],
+			"commands": ["editor.action.showHover"]
+		},
+		{
+			"before": ["<leader>", "n"],
+			"commands": ["newFile.createNewFile"]
+		},
+		{
+			"before": ["<C-,>"],
+			"commands": [
+				{
+					"command": "cursorEnd"
+				},
+				{
+					"command": "type",
+					"args": {
+						"text": ","
+					}
+				}
+			]
+		},
+		{
+			"before": ["<A-,>"],
+			"commands": [
+				{
+					"command": "cursorEnd"
+				},
+				{
+					"command": "type",
+					"args": {
+						"text": ","
+					}
+				},
+				{
+					"command": "editor.action.insertLineAfter"
+				}
+			]
+		}
+	],
+	"vim.insertModeKeyBindingsNonRecursive": [
+		{
+			"before": ["<C-,>"],
+			"after": ["<Esc>", "A", ",", "a"]
+		}
+	],
+
+	// ===========================================
+	// LANGUAGE FORMATTERS - Formatter cho từng ngôn ngữ
+	// ===========================================
+	"[javascriptreact]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
+	"[html]": {
+		"editor.defaultFormatter": "vscode.html-language-features"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
+	"[blade]": {
+		"editor.defaultFormatter": "shufo.vscode-blade-formatter",
+		"editor.autoClosingBrackets": "always",
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
+	"[php]": {
+		"editor.defaultFormatter": "DEVSENSE.phptools-vscode"
+	},
+	"[snippets]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+
+	// ===========================================
+	// THEME & ICONS - Giao diện và biểu tượng
+	// ===========================================
+	"workbench.colorTheme": "Dracula Theme",
+	"workbench.iconTheme": "material-icon-theme",
+	"material-icon-theme.activeIconPack": "vue",
+
+	// ===========================================
+	// COLOR CUSTOMIZATIONS - Tùy chỉnh màu sắc
+	// ===========================================
+	"workbench.colorCustomizations": {
+		"titleBar.activeBackground": "#282a36",
+		"titleBar.inactiveBackground": "#282a36",
+		"titleBar.inactiveForeground": "#8b8b8b",
+		"titleBar.border": "#282a36",
+		// "editorCursor.background": "#535254",
+		// "editorCursor.foreground": "#aeafad",
+
+          "editor.snippetTabstopHighlightBorder": "#786197",
+        //   "editor.snippetTabstopHighlightBackground": "#bd93f933",
+
+        "editor.snippetFinalTabstopHighlightBorder": "#53c970",
+
+		"editorGroupHeader.tabsBackground": "#282a36",
+		"editorGroup.border": "#282a36",
+		"editorGroupHeader.border": "#282a36",
+		"editorGroupHeader.tabsBorder": "#282a36",
+		"scrollbar.shadow": "#282a36",
+		"editor.background": "#282a36",
+		"tab.inactiveModifiedBorder": "#282a36",
+		"tab.border": "#282a36",
+		"tab.activeBackground": "#282a36",
+		// "tab.activeForeground": "#fff",
+		// "tab.inactiveForeground": "#b4b4b4",
+		"tab.inactiveBackground": "#282a36",
+		"tab.activeBorderTop": "#00000000",
+		"tab.activeBorder": "#00000000",
+		"statusBar.background": "#282a36",
+		"statusBar.border": "default",
+		"statusBar.noFolderBackground": "#282a36",
+		"sideBar.background": "#282a36",
+		"editorGutter.background": "#282a36",
+		"terminal.background": "#282a36",
+		"panelTitle.activeBorder": "#282a36",
+		"panel.background": "#282a36",
+		"panel.border": "#282a36",
+		"editor.findMatchHighlightBackground": "#00000000",
+		"editor.findMatchHighlightBorder": "#444444",
+		"editor.findMatchBackground": "#00000000",
+		"editor.findMatchBorder": "#796747",
+		"editor.wordHighlightBackground": "#1f2b3fc7",
+		"editor.wordHighlightBorder": "#233149",
+		"editor.wordHighlightStrongBackground": "#ffcc5522",
+		"editor.wordHighlightStrongBorder": "#ffcc5517"
+	},
+
+	// ===========================================
+	// CUSTOM CSS - CSS tùy chỉnh
+	// ===========================================
+	"vscode_custom_css.imports": [
+		"file://${userHome}/.config/Code/styles.css"
+		// "file://${userHome}/.config/Code/cat.css"
+	],
+	"[vue]": {
+		"editor.defaultFormatter": "octref.vetur"
+	},
+    "Laravel.bladeComponent.hover": false,
+
+    "cSpell.ignoreWords": [
+        "laravel",
+        "forelse",
+        "endif",
+        "endforeach",
+        "endsection",
+        "enderror",
+        "endforelse",
+        "vite",
+        // "section",
+        // "yield",
+        // "csrf",
+        // "method",
+        // "isset",
+        // "unless",
+        // "auth",
+        // "guest"
+    ]
+
+}
