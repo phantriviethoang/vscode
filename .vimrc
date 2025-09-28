@@ -37,8 +37,8 @@ nnoremap <C-]> g_
 vnoremap <C-[> g^
 vnoremap <C-]> g_
 
-inoremap <C-d> <Del>
-inoremap <C-t> <Tab>
+" inoremap <C-d> <Del>
+" inoremap <C-t> <Tab>
 
 nnoremap <C--> <C-x>
 nnoremap <C-=> <C-a>

@@ -463,7 +463,7 @@
 	},
 	"[blade]": {
 		"editor.defaultFormatter": "shufo.vscode-blade-formatter",
-		"editor.autoClosingBrackets": "always",
+		"editor.autoClosingBrackets": "always"
 	},
 	"[typescript]": {
 		"editor.defaultFormatter": "vscode.typescript-language-features"
@@ -474,11 +474,7 @@
 	"[snippets]": {
 		"editor.defaultFormatter": "vscode.json-language-features"
 	},
-
-	// ===========================================
-	// THEME & ICONS - Giao diện và biểu tượng
-	// ===========================================
-	"workbench.colorTheme": "Dracula Theme",
+	"workbench.colorTheme": "One Dark Code",
 	"workbench.iconTheme": "material-icon-theme",
 	"material-icon-theme.activeIconPack": "vue",
 
@@ -486,41 +482,40 @@
 	// COLOR CUSTOMIZATIONS - Tùy chỉnh màu sắc
 	// ===========================================
 	"workbench.colorCustomizations": {
-		"titleBar.activeBackground": "#282a36",
-		"titleBar.inactiveBackground": "#282a36",
+		"titleBar.activeBackground": "#282c35",
+		"titleBar.inactiveBackground": "#282c35",
 		"titleBar.inactiveForeground": "#8b8b8b",
-		"titleBar.border": "#282a36",
-		// "editorCursor.background": "#535254",
-		// "editorCursor.foreground": "#aeafad",
-
-          "editor.snippetTabstopHighlightBorder": "#786197",
-        //   "editor.snippetTabstopHighlightBackground": "#bd93f933",
-
-        "editor.snippetFinalTabstopHighlightBorder": "#53c970",
-
-		"editorGroupHeader.tabsBackground": "#282a36",
-		"editorGroup.border": "#282a36",
-		"editorGroupHeader.border": "#282a36",
-		"editorGroupHeader.tabsBorder": "#282a36",
-		"scrollbar.shadow": "#282a36",
-		"editor.background": "#282a36",
-		"tab.inactiveModifiedBorder": "#282a36",
-		"tab.border": "#282a36",
-		"tab.activeBackground": "#282a36",
+		"titleBar.border": "#282c35",
+		"editorCursor.background": "#535254",
+		"editorCursor.foreground": "#aeafad",
+		//   "editor.snippetTabstopHighlightBorder": "#786197",
+		//   "editor.snippetTabstopHighlightBackground": "#bd93f933",
+		// "editor.snippetFinalTabstopHighlightBorder": "#53c970",
+		"editorGroupHeader.tabsBackground": "#282c35",
+		"editorGroup.border": "#282c35",
+		"editorGroupHeader.border": "#282c35",
+		"editorGroupHeader.tabsBorder": "#282c35",
+		"scrollbar.shadow": "#282c35",
+		"editor.background": "#282c35",
+		"tab.inactiveModifiedBorder": "#282c35",
+		"tab.border": "#282c35",
+		"tab.activeBackground": "#282c35",
 		// "tab.activeForeground": "#fff",
 		// "tab.inactiveForeground": "#b4b4b4",
-		"tab.inactiveBackground": "#282a36",
+		"tab.inactiveBackground": "#282c35",
 		"tab.activeBorderTop": "#00000000",
 		"tab.activeBorder": "#00000000",
-		"statusBar.background": "#282a36",
+		"statusBar.background": "#282c35",
 		"statusBar.border": "default",
-		"statusBar.noFolderBackground": "#282a36",
-		"sideBar.background": "#282a36",
-		"editorGutter.background": "#282a36",
-		"terminal.background": "#282a36",
-		"panelTitle.activeBorder": "#282a36",
-		"panel.background": "#282a36",
-		"panel.border": "#282a36",
+		"statusBar.noFolderBackground": "#282c35",
+		"sideBar.background": "#282c35",
+		"sideBar.border": "#282c35",
+		"editorGutter.background": "#282c35",
+		"terminal.background": "#282c35",
+		"panelTitle.activeBorder": "#282c35",
+		"panel.background": "#282c35",
+		"panel.border": "#282c35",
+
 		"editor.findMatchHighlightBackground": "#00000000",
 		"editor.findMatchHighlightBorder": "#444444",
 		"editor.findMatchBackground": "#00000000",
@@ -531,35 +526,65 @@
 		"editor.wordHighlightStrongBorder": "#ffcc5517"
 	},
 
+	"editor.tokenColorCustomizations": {
+		"[One Dark Code]": {
+			"textMateRules": [
+				{
+					"scope": "variable",
+					"settings": {
+						"foreground": "#abb2bf"
+					}
+				},
+				{
+					"scope": [
+						"variable.other.property",
+						"variable.other.object.property"
+					],
+					"settings": {
+						"foreground": "#e06c75"
+					}
+				}
+			]
+		}
+	},
+	"editor.semanticTokenColorCustomizations": {
+		"[One Dark Code]": {
+			"rules": {
+				"variable": "#abb2bf",
+				"parameter": "#abb2bf",
+				"selfKeyword": "#abb2bf",
+				"property": "#e06c75"
+			}
+		}
+	},
+
 	// ===========================================
 	// CUSTOM CSS - CSS tùy chỉnh
 	// ===========================================
-	"vscode_custom_css.imports": [
-		"file://${userHome}/.config/Code/styles.css"
-		// "file://${userHome}/.config/Code/cat.css"
-	],
+	"vscode_custom_css.imports": ["file://${userHome}/.config/Code/styles.css"],
 	"[vue]": {
 		"editor.defaultFormatter": "octref.vetur"
 	},
-    "Laravel.bladeComponent.hover": false,
+	"Laravel.bladeComponent.hover": false,
 
-    "cSpell.ignoreWords": [
-        "laravel",
-        "forelse",
-        "endif",
-        "endforeach",
-        "endsection",
-        "enderror",
-        "endforelse",
-        "vite",
-        // "section",
-        // "yield",
-        // "csrf",
-        // "method",
-        // "isset",
-        // "unless",
-        // "auth",
-        // "guest"
-    ]
-
+	"cSpell.ignoreWords": [
+		"alpinejs",
+		"enderror",
+		"endforeach",
+		"endforelse",
+		"endif",
+		"endisset",
+		"endsection",
+		"forelse",
+		"isset",
+		"laravel",
+		"linecap",
+		"linejoin",
+		"vite"
+	],
+	"bladeFormatter.format.noMultipleEmptyLines": true,
+	"bladeFormatter.misc.dontShowNewVersionMessage": true,
+	"bladeFormatter.format.sortHtmlAttributes": "custom",
+	"bladeFormatter.format.sortTailwindcssClasses": true,
+	"bladeFormatter.format.wrapAttributes": "force-expand-multiline",
 }

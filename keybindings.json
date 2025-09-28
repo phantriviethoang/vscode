@@ -555,42 +555,7 @@
 		"command": "-workbench.action.togglePanel"
 	},
 
-	{
-		"key": "ctrl+b",
-		"command": "deleteLeft",
-		"when": "editorTextFocus && vim.mode == 'Insert'"
-	},
 
-	{
-		"key": "ctrl+h",
-		"command": "deleteWordLeft",
-		"when": "editorTextFocus && vim.mode == 'Insert'"
-	},
-
-	{
-		"key": "ctrl+m",
-		"command": "acceptSelectedSuggestion",
-		"when": "editorTextFocus && vim.mode == 'Insert' && suggestWidgetVisible"
-	},
-
-	{
-		"key": "ctrl+i",
-		"command": "editor.action.insertLineAfter",
-		"when": "editorTextFocus && vim.mode == 'Insert' && suggestWidgetVisible"
-	},
-
-	{
-		"key": "ctrl+i",
-		"command": "editor.action.insertLineAfter",
-		"when": "editorTextFocus && vim.mode == 'Insert' && !suggestWidgetVisible"
-	},
-
-	{
-		"key": "ctrl+m",
-		"command": "type",
-		"args": { "text": "\n" },
-		"when": "editorTextFocus && vim.mode == 'Insert' && !suggestWidgetVisible"
-	},
 
 	{
 		"key": "ctrl+t",
@@ -845,5 +810,54 @@
 		"command": "workbench.action.terminal.sendSequence",
 		"args": { "text": "\u0003" },
 		"when": "terminalFocus && terminalTextSelected == false"
-	}
+	},
+
+{
+    "key": "ctrl+e",
+    "command": "cursorEnd",
+    "when": "editorTextFocus && vim.mode == 'Insert'"
+},
+  {
+    "key": "ctrl+a",
+    "command": "cursorHome",
+    "when": "editorTextFocus && vim.mode == 'Insert'"
+  },
+
+{
+		"key": "ctrl+b",
+		"command": "deleteLeft",
+		"when": "editorTextFocus && vim.mode == 'Insert'"
+	},
+
+	{
+		"key": "ctrl+h",
+		"command": "deleteWordLeft",
+		"when": "editorTextFocus && vim.mode == 'Insert'"
+	},
+
+	{
+		"key": "ctrl+m",
+		"command": "acceptSelectedSuggestion",
+		"when": "editorTextFocus && vim.mode == 'Insert' && suggestWidgetVisible"
+	},
+
+	{
+		"key": "ctrl+i",
+		"command": "editor.action.insertLineAfter",
+		"when": "editorTextFocus && vim.mode == 'Insert' && suggestWidgetVisible"
+	},
+
+	{
+		"key": "ctrl+i",
+		"command": "editor.action.insertLineAfter",
+		"when": "editorTextFocus && vim.mode == 'Insert' && !suggestWidgetVisible"
+	},
+
+	{
+		"key": "ctrl+m",
+		"command": "type",
+		"args": { "text": "\n" },
+		"when": "editorTextFocus && vim.mode == 'Insert' && !suggestWidgetVisible"
+	},
+
 ]
