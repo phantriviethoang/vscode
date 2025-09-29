@@ -34,7 +34,7 @@
 		"command": "editor.action.addSelectionToNextFindMatch"
 	},
 	{
-		"key": "alt+g",
+		"key": "ctrl+shift+g",
 		"command": "editor.action.addSelectionToPreviousFindMatch"
 	},
 	{
@@ -85,17 +85,16 @@
 		"command": "workbench.action.closeOtherEditors"
 	},
 
-{
-    "key": "ctrl+1",
-    "command": "workbench.action.toggleSidebarVisibility",
-    "when": "sideBarVisible"
-},
-{
-    "key": "ctrl+1",
-    "command": "workbench.view.explorer",
-    "when": "!sideBarVisible"
-},
-
+	{
+		"key": "ctrl+1",
+		"command": "workbench.action.toggleSidebarVisibility",
+		"when": "sideBarVisible"
+	},
+	{
+		"key": "ctrl+1",
+		"command": "workbench.view.explorer",
+		"when": "!sideBarVisible"
+	},
 
 	// {
 	// 	"key": "ctrl+2",
@@ -290,13 +289,13 @@
 
 	// Combine Git
 	{
-		"key": "ctrl+2",
+		"key": "alt+g",
 		"command": "runCommands",
 		"args": {
 			"commands": [
 				"git.stageAll",
 				"gemcommit.suggestCommitMessage",
-				"git.commit",
+				"git.commit"
 				// "git.push"
 				// "workbench.action.toggleSidebarVisibility",
 				// "workbench.view.scm",
@@ -354,7 +353,7 @@
 
 	// combine command
 	{
-		"key": "ctrl+3",
+		"key": "ctrl+2",
 		"command": "runCommands",
 		"args": {
 			"commands": [
@@ -363,6 +362,12 @@
 				"workbench.action.focusActiveEditorGroup"
 			]
 		}
+	},
+
+	{
+		"key": "ctrl+2",
+		"command": "workbench.action.toggleSidebarVisibility",
+		"when": "sideBarVisible"
 	},
 
 	{
@@ -554,8 +559,6 @@
 		"key": "ctrl+j",
 		"command": "-workbench.action.togglePanel"
 	},
-
-
 
 	{
 		"key": "ctrl+t",
@@ -812,25 +815,30 @@
 		"when": "terminalFocus && terminalTextSelected == false"
 	},
 
-{
-    "key": "ctrl+e",
-    "command": "cursorEnd",
-    "when": "editorTextFocus && vim.mode == 'Insert'"
-},
-  {
-    "key": "ctrl+a",
-    "command": "cursorHome",
-    "when": "editorTextFocus && vim.mode == 'Insert'"
-  },
-
-{
-		"key": "ctrl+b",
-		"command": "deleteLeft",
+	{
+		"key": "ctrl+e",
+		"command": "cursorEnd",
+		"when": "editorTextFocus && vim.mode == 'Insert'"
+	},
+	{
+		"key": "ctrl+a",
+		"command": "cursorHome",
 		"when": "editorTextFocus && vim.mode == 'Insert'"
 	},
 
 	{
-		"key": "ctrl+h",
+		"key": "ctrl+b",
+		"command": "deleteLeft",
+		"when": "editorTextFocus && vim.mode == 'Insert'"
+	},
+	{
+		"key": "ctrl+d",
+		"command": "deleteRight",
+		"when": "editorTextFocus && vim.mode == 'Insert'"
+	},
+
+	{
+		"key": "ctrl+alt+h",
 		"command": "deleteWordLeft",
 		"when": "editorTextFocus && vim.mode == 'Insert'"
 	},
@@ -860,4 +868,24 @@
 		"when": "editorTextFocus && vim.mode == 'Insert' && !suggestWidgetVisible"
 	},
 
+	{
+		"key": "ctrl+h",
+		"command": "cursorLeft",
+		"when": "editorTextFocus && vim.mode == 'Insert'"
+	},
+	{
+		"key": "ctrl+l",
+		"command": "cursorRight",
+		"when": "editorTextFocus && vim.mode == 'Insert'"
+	},
+	{
+		"key": "ctrl+k",
+		"command": "cursorUp",
+		"when": "editorTextFocus && vim.mode == 'Insert' && !suggestWidgetVisible"
+	},
+	{
+		"key": "ctrl+j",
+		"command": "cursorDown",
+		"when": "editorTextFocus && vim.mode == 'Insert' && !suggestWidgetVisible"
+	}
 ]
