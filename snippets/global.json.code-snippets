@@ -46,12 +46,17 @@
         "body": "document",
         "description": "document"
     },
+    "dgebi - document.getElementById": {
+        "prefix": "dgebi",
+        "body": "document.getElementById(\"$1\")",
+        "description": "document.getElementById"
+    },
     "dq - document.querySelector": {
         "prefix": "dq",
         "body": "document.querySelector('.$1')",
         "description": "document.querySelector"
     },
-    "dqa - document.querySelector": {
+    "dqa - document.querySelectorAll": {
         "prefix": "dqa",
         "body": "document.querySelectorAll('.$1')",
         "description": "document.querySelectorAll"
