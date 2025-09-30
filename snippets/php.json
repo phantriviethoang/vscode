@@ -27,6 +27,13 @@
         ],
         "description": "Echo Variable statement"
     },
+    "PHP declare variable": {
+        "prefix": "va",
+        "body": [
+            "$$1;"
+        ],
+        "description": "PHP declare variable"
+    },
     "Var Dump": {
         "prefix": "vd",
         "body": [
@@ -43,8 +50,6 @@
         ],
         "description": "PHP function declaration"
     },
-
-
     "Laravel Route GET": {
         "prefix": "rget",
         "body": [
@@ -89,7 +94,4 @@
         ],
         "description": "Laravel route group with prefix and middleware"
     }
-
-
-
 }

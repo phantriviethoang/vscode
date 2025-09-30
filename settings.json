@@ -513,11 +513,7 @@
 				}
 			},
 			{
-				"scope": [
-					"entity.name.function",
-					// "meta.function-call",
-					"variable.function"
-				],
+				"scope": ["entity.name.function", "variable.function"],
 				"settings": {
 					"fontStyle": "bold"
 				}
@@ -529,27 +525,9 @@
 				}
 			},
 			{
-				"scope": "storage.type.function, storage.type.class, storage.type",
-				"settings": {
-					// "fontStyle": "bold"
-				}
-			},
-			{
-				"scope": "entity.name.type, support.type, storage.type.class",
-				"settings": {
-					// "fontStyle": "bold"
-				}
-			},
-			{
 				"scope": "entity.other.attribute-name.class.css, entity.other.attribute-name.id.css",
 				"settings": {
 					"fontStyle": "bold"
-				}
-			},
-			{
-				"scope": "support.type.property-name.css, keyword.other.unit.css",
-				"settings": {
-					"fontStyle": "italic"
 				}
 			},
 			{
@@ -573,7 +551,7 @@
 			{
 				"scope": "punctuation, keyword.operator",
 				"settings": {
-					"fontStyle": ""
+					"fontStyle": "bold"
 				}
 			}
 		]
