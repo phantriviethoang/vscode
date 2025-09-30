@@ -1,6 +1,6 @@
 {
 	// ===========================================
-	// EDITOR - Cấu hình cơ bản của editor
+	// EDITOR
 	// ===========================================
 	"editor.fontSize": 15,
 	"editor.lineHeight": 30,
@@ -23,9 +23,8 @@
 	"editor.autoIndentOnPaste": true,
 	"editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?",
 	"editor.semanticHighlighting.enabled": true,
-
 	// ===========================================
-	// EDITOR UI - Giao diện và hiển thị của editor
+	// EDITOR UI
 	// ===========================================
 	"editor.lineNumbers": "off",
 	"editor.minimap.enabled": false,
@@ -58,11 +57,9 @@
 	"editor.smoothScrolling": true,
 	"editor.scrollBeyondLastLine": true,
 	// "editor.colorDecorators": false,
-
 	// ===========================================
-	// EDITOR SUGGESTIONS - Gợi ý và tự động hoàn thành
+	// EDITOR SUGGESTIONS
 	// ===========================================
-
 	"editor.tabCompletion": "on",
 	"editor.snippetSuggestions": "inline",
 	"editor.suggest.snippetsPreventQuickSuggestions": false,
@@ -76,18 +73,16 @@
 	"editor.screenReaderAnnounceInlineSuggestion": false,
 	"editor.accessibilitySupport": "off",
 	"editor.multiCursorModifier": "ctrlCmd",
-
 	// ===========================================
-	// EDITOR NAVIGATION - Điều hướng trong code
+	// EDITOR NAVIGATION
 	// ===========================================
 	"editor.gotoLocation.multipleReferences": "goto",
 	"editor.gotoLocation.multipleDefinitions": "goto",
 	"editor.gotoLocation.multipleDeclarations": "goto",
 	"editor.gotoLocation.multipleImplementations": "goto",
 	"editor.gotoLocation.multipleTypeDefinitions": "goto",
-
 	// ===========================================
-	// WORKBENCH - Giao diện chính của VS Code
+	// WORKBENCH
 	// ===========================================
 	"workbench.startupEditor": "none",
 	"workbench.tips.enabled": false,
@@ -102,11 +97,11 @@
 	"workbench.quickOpen.closeOnFocusLost": false,
 	"workbench.layoutControl.enabled": false,
 	"workbench.navigationControl.enabled": false,
+	"workbench.panel.showLabels": false,
 	// "workbench.editor.showTabs": "none",
 	// "workbench.statusBar.visible": false,
-
 	// ===========================================
-	// WORKBENCH EDITOR TABS - Quản lý tab
+	// WORKBENCH EDITOR TABS
 	// ===========================================
 	"workbench.editor.scrollToSwitchTabs": true,
 	"workbench.editor.editorActionsLocation": "hidden",
@@ -115,9 +110,8 @@
 	"workbench.editor.highlightModifiedTabs": true,
 	"workbench.editor.openSideBySideDirection": "right",
 	"workbench.editor.pinnedTabSizing": "compact",
-
 	// ===========================================
-	// WINDOW - Cửa sổ và thanh tiêu đề
+	// WINDOW
 	// ===========================================
 	"window.newWindowDimensions": "inherit",
 	"window.autoDetectColorScheme": false,
@@ -127,9 +121,8 @@
 	"window.menuBarVisibility": "toggle",
 	"window.customTitleBarVisibility": "never",
 	"window.titleBarStyle": "native",
-
 	// ===========================================
-	// FILES - Quản lý file và tự động lưu
+	// FILES
 	// ===========================================
 	"files.autoSave": "afterDelay",
 	"files.autoSaveDelay": 500,
@@ -141,9 +134,8 @@
 		".php_cs": "php",
 		".php_cs.dist": "php"
 	},
-
 	// ===========================================
-	// EXPLORER - Trình duyệt file
+	// EXPLORER
 	// ===========================================
 	"explorer.compactFolders": false,
 	"explorer.confirmDragAndDrop": false,
@@ -163,17 +155,14 @@
 		"*.sdb": "${capture}.${extname}-*",
 		"*.s3db": "${capture}.${extname}-*"
 	},
-
 	// ===========================================
-	// SEARCH - Tìm kiếm và loại trừ
+	// SEARCH
 	// ===========================================
 	"search.searchOnType": false,
 	"search.smartCase": true,
 	"search.useIgnoreFiles": false,
 	"search.exclude": {
-		// Hide everything in /vendor, except the "laravel" and "livewire" folder.
 		"**/vendor/{[^l],?[^ai]}*": true,
-		// Hide everything in /public, except "index.php"
 		"**/public/{[^i],?[^n]}*": true,
 		"**/node_modules": true,
 		"**/dist": true,
@@ -183,9 +172,8 @@
 		"storage": true,
 		".phpunit.result.cache": true
 	},
-
 	// ===========================================
-	// TERMINAL - Terminal tích hợp
+	// TERMINAL
 	// ===========================================
 	"terminal.integrated.fontSize": 16,
 	"terminal.integrated.lineHeight": 1.5,
@@ -197,60 +185,51 @@
 	"terminal.integrated.tabs.location": "left",
 	"terminal.integrated.smoothScrolling": true,
 	"terminal.integrated.cursorBlinking": true,
-
 	// ===========================================
-	// DIFF EDITOR - Trình so sánh code
+	// DIFF EDITOR
 	// ===========================================
 	"diffEditor.hideUnchangedRegions.enabled": true,
 	"diffEditor.useInlineViewWhenSpaceIsLimited": false,
 	"diffEditor.ignoreTrimWhitespace": false,
 	"diffEditor.wordWrap": "on",
-
 	// ===========================================
-	// DEBUG - Debug và breakpoints
+	// DEBUG
 	// ===========================================
 	"debug.showBreakpointsInOverviewRuler": false,
-
 	// ===========================================
-	// SCM & GIT - Source control
+	// SCM & GIT
 	// ===========================================
 	"scm.diffDecorations": "none",
 	// "git.decorations.enabled": false,
 	"git.confirmSync": false,
-
 	// ===========================================
-	// PROBLEMS - Lỗi và cảnh báo
+	// PROBLEMS
 	// ===========================================
 	"problems.decorations.enabled": false,
-
 	// ===========================================
-	// BREADCRUMBS - Đường dẫn điều hướng
+	// BREADCRUMBS
 	// ===========================================
 	"breadcrumbs.enabled": false,
-
 	// ===========================================
-	// CHAT & AI - Chat và tính năng AI
+	// CHAT & AI
 	// ===========================================
 	"chat.commandCenter.enabled": false,
 	"chat.disableAIFeatures": true,
 	"chat.editor.wordWrap": "on",
-
 	// ===========================================
-	// SECURITY - Bảo mật workspace
+	// SECURITY
 	// ===========================================
 	"security.workspace.trust.untrustedFiles": "open",
-
 	// ===========================================
-	// EXTENSIONS - Quản lý extension
+	// EXTENSIONS
 	// ===========================================
 	"extensions.ignoreRecommendations": true,
 	"extensions.experimental.affinity": {
 		"vscodevim.vim": 1,
 		"asvetliakov.vscode-neovim": 1
 	},
-
 	// ===========================================
-	// EMMET - Mở rộng HTML/CSS
+	// EMMET
 	// ===========================================
 	"emmet.triggerExpansionOnTab": true,
 	"emmet.showExpandedAbbreviation": "always",
@@ -261,9 +240,8 @@
 		"react": "html",
 		"javascript": "html"
 	},
-
 	// ===========================================
-	// LANGUAGE SPECIFIC - PHP
+	// LANGUAGE SPECIFIC
 	// ===========================================
 	"php.suggest.basic": false,
 	"php.format.rules.addCommaAfterLastArrayElement": false,
@@ -272,54 +250,40 @@
 	"php.format.rules.spaceBeforeColonInControlStatements": true,
 	"php.format.rules.spaceBeforeColonInReturnType": false,
 	"php.format.rules.spaceAfterUnaryNot": true,
-
 	// ===========================================
-	// LANGUAGE SPECIFIC - JavaScript/TypeScript
+	// LANGUAGE SPECIFIC
 	// ===========================================
 	"javascript.suggest.paths": false,
 	"typescript.suggest.paths": false,
-
 	// ===========================================
-	// LANGUAGE SPECIFIC - HTML
+	// LANGUAGE SPECIFIC
 	// ===========================================
 	"html.format.extraLiners": "nul",
 	"html.format.preserveNewLines": true,
-
-	// ===========================================
-	// LANGUAGE SPECIFIC - Vue
-	// ===========================================
-	"vue.format.script.initialIndent": true,
-	"vue.format.style.initialIndent": true,
 	"vetur.format.options.tabSize": 4,
 	"vetur.format.options.useTabs": true,
-
 	// ===========================================
-	// PRETTIER - Định dạng code
+	// PRETTIER
 	// ===========================================
 	"prettier.tabWidth": 4,
 	"prettier.useTabs": true,
-
 	// ===========================================
-	// TAILWIND CSS - Framework CSS
+	// TAILWIND CSS
 	// ===========================================
 	"tailwindCSS.includeLanguages": {
 		"plaintext": "html"
 	},
 	"tailwindCSS.experimental.configFile": null,
-
 	// ===========================================
-	// THIRD-PARTY EXTENSIONS - Extension bên thứ 3
+	// THIRD-PARTY EXTENSIONS
 	// ===========================================
 	// Auto Rename Tag
 	"auto-rename-tag.activationOnLanguage": ["*"],
-
 	// Blade formatter
 	"blade.format.enable": true,
 	"blade.format.wrapAttributes": "auto",
-
 	// Live Server
 	"liveServer.settings.CustomBrowser": "firefox",
-
 	// New File
 	"newFile.defaultBaseFileName": "index",
 	"newFile.defaultFileExtension": ".jsx",
@@ -327,20 +291,17 @@
 	"newFile.relativeTo": "file",
 	"newFile.rootDirectory": "~",
 	"newFile.showPathRelativeTo": "project",
-
 	// Quokka.js
 	"quokka.automaticRestart": true,
 	"quokka.fontSize": 16,
 	"quokka.showOutputOnStart": false,
 	"quokka.useOutputPanel": false,
-
 	// ===========================================
-	// VIM EXTENSION - Vim emulation
+	// VIM EXTENSION
 	// ===========================================
 	"vim.cursorStylePerMode.visualblock": "block-outline",
 	"vim.cursorStylePerMode.visualline": "block-outline",
 	"vim.cursorStylePerMode.visual": "block-outline",
-
 	"vim.argumentObjectSeparators": [","],
 	"vim.autoindent": true,
 	"vim.camelCaseMotion.enable": true,
@@ -377,7 +338,6 @@
 	"vim.sneakReplacesF": false,
 	"vim.sneakUseIgnorecaseAndSmartcase": true,
 	"vim.startInInsertMode": false,
-
 	"vim.surround": true,
 	"vim.textwidth": 80,
 	"vim.timeout": 800,
@@ -450,9 +410,8 @@
 			"after": ["<Esc>", "A", ",", "a"]
 		}
 	],
-
 	// ===========================================
-	// LANGUAGE FORMATTERS - Formatter cho từng ngôn ngữ
+	// LANGUAGE FORMATTERS
 	// ===========================================
 	"[javascriptreact]": {
 		"editor.defaultFormatter": "vscode.typescript-language-features"
@@ -476,48 +435,46 @@
 	"[snippets]": {
 		"editor.defaultFormatter": "vscode.json-language-features"
 	},
-	"workbench.colorTheme": "JetBrains New UI Dark Theme",
+	"workbench.colorTheme": "Moondust: Far Side of the Moon",
 	"workbench.iconTheme": "material-icon-theme",
 	"material-icon-theme.activeIconPack": "vue",
-
 	// ===========================================
-	// COLOR CUSTOMIZATIONS - Tùy chỉnh màu sắc
+	// COLOR CUSTOMIZATIONS
 	// ===========================================
 	"workbench.colorCustomizations": {
-		"titleBar.activeBackground": "#1f1f22",
-		"titleBar.inactiveBackground": "#1f1f22",
+		"titleBar.activeBackground": "#1a1c1e",
+		"titleBar.inactiveBackground": "#1a1c1e",
 		"titleBar.inactiveForeground": "#8b8b8b",
-		"titleBar.border": "#1f1f22",
+		"titleBar.border": "#1a1c1e",
 		// "editorCursor.background": "#535254",
 		// "editorCursor.foreground": "#aeafad",
 		//   "editor.snippetTabstopHighlightBorder": "#786197",
 		//   "editor.snippetTabstopHighlightBackground": "#bd93f933",
 		// "editor.snippetFinalTabstopHighlightBorder": "#53c970",
-		"editorGroupHeader.tabsBackground": "#1f1f22",
-		"editorGroup.border": "#1f1f22",
-		"editorGroupHeader.border": "#1f1f22",
-		"editorGroupHeader.tabsBorder": "#1f1f22",
-		"scrollbar.shadow": "#1f1f22",
-		"editor.background": "#1f1f22",
-		"tab.inactiveModifiedBorder": "#1f1f22",
-		"tab.border": "#1f1f22",
-		"tab.activeBackground": "#1f1f22",
+		"editorGroupHeader.tabsBackground": "#1a1c1e",
+		"editorGroup.border": "#1a1c1e",
+		"editorGroupHeader.border": "#1a1c1e",
+		"editorGroupHeader.tabsBorder": "#1a1c1e",
+		"scrollbar.shadow": "#1a1c1e",
+		"editor.background": "#1a1c1e",
+		"tab.inactiveModifiedBorder": "#1a1c1e",
+		"tab.border": "#1a1c1e",
+		"tab.activeBackground": "#1a1c1e",
 		// "tab.activeForeground": "#fff",
 		// "tab.inactiveForeground": "#b4b4b4",
-		"tab.inactiveBackground": "#1f1f22",
+		"tab.inactiveBackground": "#1a1c1e",
 		"tab.activeBorderTop": "#00000000",
 		"tab.activeBorder": "#00000000",
-		"statusBar.background": "#1f1f22",
+		"statusBar.background": "#1a1c1e",
 		"statusBar.border": "default",
-		"statusBar.noFolderBackground": "#1f1f22",
-		"sideBar.background": "#1f1f22",
-		"sideBar.border": "#1f1f22",
-		"editorGutter.background": "#1f1f22",
-		"terminal.background": "#1f1f22",
-		"panelTitle.activeBorder": "#1f1f22",
-		"panel.background": "#1f1f22",
-		"panel.border": "#1f1f22",
-
+		"statusBar.noFolderBackground": "#1a1c1e",
+		"sideBar.background": "#1a1c1e",
+		"sideBar.border": "#1a1c1e",
+		"editorGutter.background": "#1a1c1e",
+		"terminal.background": "#1a1c1e",
+		"panelTitle.activeBorder": "#1a1c1e",
+		"panel.background": "#1a1c1e",
+		"panel.border": "#1a1c1e",
 		"editor.findMatchHighlightBackground": "#00000000",
 		"editor.findMatchHighlightBorder": "#444444",
 		"editor.findMatchBackground": "#00000000",
@@ -527,110 +484,92 @@
 		"editor.wordHighlightStrongBackground": "#ffcc5522",
 		"editor.wordHighlightStrongBorder": "#ffcc5517"
 	},
-
 	"editor.tokenColorCustomizations": {
-		"[One Dark Code]": {
-			"textMateRules": [
-				{
-					"scope": ["entity.name.tag.html"],
-					"settings": {
-						"foreground": "#d4b779"
-					}
-				},
-				{
-					"scope": "variable",
-					"settings": {
-						"foreground": "#abb2bf"
-					}
-				},
-				{
-					"scope": [
-						"variable.other.property",
-						"variable.other.object.property"
-					],
-					"settings": {
-						"foreground": "#e06c75"
-					}
-				},
-				{
-					"scope": ["entity.other.attribute-name"],
-					"settings": {
-						"foreground": "#b5b4b7"
-					}
-				},
-				{
-					"scope": [
-						"string.quoted.double",
-						"string.quoted.single",
-						"string.quoted.double.html"
-					],
-					"settings": {
-						"foreground": "#6aaa73"
-					}
+		"textMateRules": [
+			{
+				"scope": "entity.other.attribute-name.html",
+				"settings": {
+					"fontStyle": "italic"
 				}
-			]
-		},
-		"[JetBrains New UI Dark Theme]": {
-			"textMateRules": [
-				{
-					"scope": ["entity.name.tag.html"],
-					"settings": {
-						// "foreground": "#d4b779"
-					}
-				},
-				{
-					"scope": "variable",
-					"settings": {
-						// "foreground": "#abb2bf"
-					}
-				},
-				{
-					"scope": [
-						"variable.other.property",
-						"variable.other.object.property"
-					],
-					"settings": {
-						// "foreground": "#e06c75",
-						"foreground": "#ffc6cb"
-					}
-				},
-				{
-					"scope": ["entity.other.attribute-name"],
-					"settings": {
-						"foreground": "#c9a3a5fa",
-						"fontStyle": "italic"
-					}
-				},
-				{
-					"scope": ["entity.name.function"],
-					"settings": {
-						"fontStyle": "bold"
-					}
+			},
+			{
+				"scope": "entity.name.function, meta.function-call, variable.function",
+				"settings": {
+					"fontStyle": "bold"
 				}
-			]
-		}
-	},
-	"editor.semanticTokenColorCustomizations": {
-		"[JetBrains New UI Dark Theme]": {
-			"rules": {
-				"variable": "#abb2bf",
-				"parameter": "#abb2bf",
-				"selfKeyword": "#abb2bf",
-				// "property": "#e06c75",
-				"property": "#ffc6cb"
+			},
+			{
+				"scope": "variable.parameter.function, variable.parameter",
+				"settings": {
+					"fontStyle": "italic"
+				}
+			},
+			{
+				"scope": "storage.type.function, storage.type.class, storage.type",
+				"settings": {
+					"fontStyle": "bold"
+				}
+			},
+			{
+				"scope": "entity.name.type, support.type, storage.type.class",
+				"settings": {
+					"fontStyle": "bold"
+				}
+			},
+			{
+				"scope": "entity.other.attribute-name.class.css, entity.other.attribute-name.id.css",
+				"settings": {
+					"fontStyle": "bold"
+				}
+			},
+			{
+				"scope": "support.type.property-name.css, keyword.other.unit.css",
+				"settings": {
+					"fontStyle": "italic"
+				}
+			},
+			{
+				"scope": "entity.name.selector, selector",
+				"settings": {
+					"fontStyle": "bold"
+				}
+			},
+			{
+				"scope": "comment, punctuation.definition.comment",
+				"settings": {
+					"fontStyle": "italic"
+				}
+			},
+			{
+				"scope": "constant.numeric, constant.character, constant.language",
+				"settings": {
+					"fontStyle": "italic"
+				}
+			},
+			{
+				"scope": "punctuation, keyword.operator",
+				"settings": {
+					"fontStyle": ""
+				}
 			}
-		}
+		]
 	},
-
 	// ===========================================
-	// CUSTOM CSS - CSS tùy chỉnh
+	// CUSTOM CSS
 	// ===========================================
 	"vscode_custom_css.imports": ["file://${userHome}/.config/Code/styles.css"],
 	"[vue]": {
-		"editor.defaultFormatter": "octref.vetur"
+		"editor.defaultFormatter": "Vue.volar"
 	},
+	"vue.autoInsert.dotValue": true,
+	"vue.editor.templateInterpolationDecorators": false,
+	"vue.format.wrapAttributes": "force-expand-multiline",
 	"Laravel.bladeComponent.hover": false,
-
+	"bladeFormatter.format.noMultipleEmptyLines": true,
+	"bladeFormatter.misc.dontShowNewVersionMessage": true,
+	"bladeFormatter.format.sortHtmlAttributes": "custom",
+	"bladeFormatter.format.sortTailwindcssClasses": true,
+	"bladeFormatter.format.wrapAttributes": "force-expand-multiline",
 	"cSpell.ignoreWords": [
 		"alpinejs",
 		"enderror",
@@ -646,9 +585,24 @@
 		"linejoin",
 		"vite"
 	],
-	"bladeFormatter.format.noMultipleEmptyLines": true,
-	"bladeFormatter.misc.dontShowNewVersionMessage": true,
-	"bladeFormatter.format.sortHtmlAttributes": "custom",
-	"bladeFormatter.format.sortTailwindcssClasses": true,
-	"bladeFormatter.format.wrapAttributes": "force-expand-multiline"
+	"splitHTMLAttributes.closingBracketOnNewLine": true,
+	"splitHTMLAttributes.sortOrder": [
+		[
+			"^v-if",
+			"^v-else",
+			"^v-show",
+			"^v-model",
+			"^v-for",
+			"^:key",
+			"^key",
+			"^v-",
+			"^:",
+			"^@click",
+			"^@",
+			"^id",
+			"^class",
+			"^.*=\""
+		]
+	],
+	"splitHTMLAttributes.tabSize": 4
 }

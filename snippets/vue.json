@@ -1,13 +1,13 @@
 {
-  "Vue Method Boilerplate": {
-    "prefix": "mt",
-    "body": [
-      "methods: {",
-      "  ${1:name}() {",
-      "    $2",
-      "  }",
-      "}"
-    ],
-    "description": "Vue methods boilerplate"
-  }
+    "Vue Method Boilerplate": {
+        "prefix": "mt",
+        "body": [
+            "methods: {",
+            "   ${1:name}() {",
+            "       $2",
+            "   }",
+            "}"
+        ],
+        "description": "Vue methods boilerplate"
+    }
 }
