@@ -468,6 +468,7 @@
 		"statusBar.background": "#1f1f22",
 		"statusBar.border": "default",
 		"statusBar.noFolderBackground": "#1f1f22",
+		"editorGroup.emptyBackground": "#1f1f22",
 		"sideBar.background": "#1f1f22",
 		"sideBar.border": "#1f1f22",
 		"editorGutter.background": "#1f1f22",
@@ -488,13 +489,35 @@
 	"editor.tokenColorCustomizations": {
 		"textMateRules": [
 			{
+				"scope": ["string.quoted", "string.template", "string.regexp"],
+				"settings": {
+					"fontStyle": "bold"
+				}
+			},
+			{
+				"scope": "punctuation.section.embedded.begin.php",
+				"settings": {
+					"fontStyle": "bold"
+				}
+			},
+			{
+				"scope": "punctuation.section.embedded.end.php",
+				"settings": {
+					"fontStyle": "bold"
+				}
+			},
+			{
 				"scope": "entity.other.attribute-name.html",
 				"settings": {
 					"fontStyle": "italic"
 				}
 			},
 			{
-				"scope": "entity.name.function, meta.function-call, variable.function",
+				"scope": [
+					"entity.name.function",
+					// "meta.function-call",
+					"variable.function"
+				],
 				"settings": {
 					"fontStyle": "bold"
 				}
@@ -508,13 +531,13 @@
 			{
 				"scope": "storage.type.function, storage.type.class, storage.type",
 				"settings": {
-					"fontStyle": "bold"
+					// "fontStyle": "bold"
 				}
 			},
 			{
 				"scope": "entity.name.type, support.type, storage.type.class",
 				"settings": {
-					"fontStyle": "bold"
+					// "fontStyle": "bold"
 				}
 			},
 			{
