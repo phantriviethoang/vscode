@@ -1,5 +1,20 @@
+.monaco-workbench .codicon[class*="menu"],
+.monaco-workbench .titlebar-icon,
+.monaco-workbench .titlebar-left .window-appicon {
+	display: none !important;
+	visibility: hidden !important;
+}
+
+.titlebar-left {
+	justify-content: flex-end !important;
+	flex-grow: 0 !important;
+	width: 30px !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
 .quick-input-widget {
-	background: #1f1f22 !important;
+	background: #282c35 !important;
 	transform: translateY(-50%) !important;
 	top: 50% !important;
 	border-radius: 6px !important;
@@ -9,7 +24,7 @@
 .quick-input-list,
 .quick-input-list .list_id_6,
 .monaco-list-rows {
-	background: #1f1f22 !important;
+	background: #282c35 !important;
 }
 
 .quick-input-widget .monaco-inputbox {
@@ -21,7 +36,7 @@
 	border-radius: 7px !important;
 	padding: 10px !important;
 	border: none !important;
-	background: #1f1f22 !important;
+	background: #282c35 !important;
 	font-size: 16px !important;
 	margin-bottom: 10px !important;
 }
