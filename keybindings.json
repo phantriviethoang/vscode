@@ -749,7 +749,6 @@
 		"when": "terminalFocus"
 	},
 
-	// Ctrl+T = chuyển sang terminal tab kế tiếp
 	{
 		"key": "ctrl+t",
 		"command": "workbench.action.terminal.focusNext",
@@ -887,5 +886,9 @@
 		"key": "ctrl+j",
 		"command": "cursorDown",
 		"when": "editorTextFocus && vim.mode == 'Insert' && !suggestWidgetVisible"
+	},
+	{
+		"key": "ctrl+k f",
+		"command": "editor.action.formatSelection.multiple"
 	}
 ]
