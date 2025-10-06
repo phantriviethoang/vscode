@@ -3,7 +3,7 @@
 	"editor.fontSize": 15,
 	"editor.lineHeight": 30,
 	"editor.fontWeight": "500",
-	"editor.fontFamily": "JetBrains Mono, Maple Mono, GeistMono Nerd Font Mono,Dank Mono",
+	"editor.fontFamily": "JetBrains Mono, Maple Mono",
 	"editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'calt', 'dlig'",
 	"editor.detectIndentation": false,
 	"editor.wordWrap": "wordWrapColumn",
@@ -36,11 +36,12 @@
 	"editor.occurrencesHighlight": "off",
 	"editor.matchBrackets": "never",
 	"editor.lightbulb.enabled": "off",
-	"editor.padding.top": 10,
+	"editor.padding.top": 3,
 	"editor.stickyScroll.enabled": false,
 	"editor.cursorWidth": 2,
 	"editor.cursorSurroundingLines": 5,
-	"editor.cursorBlinking": "solid",
+	"editor.cursorBlinking": "smooth",
+	// "editor.cursorBlinking": "solid",
 	"editor.cursorSmoothCaretAnimation": "on",
 	"editor.smoothScrolling": true,
 	// EDITOR SUGGESTIONS
@@ -139,7 +140,7 @@
 	// TERMINAL
 	"terminal.integrated.fontSize": 16,
 	"terminal.integrated.lineHeight": 1.5,
-	"terminal.integrated.fontFamily": "JetBrains Mono, Maple Mono, GeistMono Nerd Font Mono,Dank Mono",
+	"terminal.integrated.fontFamily": "JetBrains Mono, Maple Mono",
 	"terminal.integrated.enableMultiLinePasteWarning": "never",
 	"terminal.integrated.suggest.enabled": true,
 	"terminal.integrated.suggest.showStatusBar": false,
@@ -213,6 +214,7 @@
 	"quokka.showOutputOnStart": false,
 	"quokka.useOutputPanel": false,
 	// VIM EXTENSION
+	"vim.cursorStylePerMode.insert": "block",
 	"vim.cursorStylePerMode.visualblock": "block-outline",
 	"vim.cursorStylePerMode.visualline": "block-outline",
 	"vim.cursorStylePerMode.visual": "block-outline",
@@ -235,7 +237,7 @@
 	"vim.searchMatchTextColor": "#bbbbbb",
 	"vim.sneak": true,
 	"vim.sneakUseIgnorecaseAndSmartcase": true,
-	"vim.timeout": 800,
+	"vim.timeout": 700,
 	"vim.useSystemClipboard": true,
 	"vim.visualstar": true,
 	// "vim.vimrc.path": "/home/viethoang/.vimrc",
@@ -259,11 +261,18 @@
 		},
 		{
 			"before": ["<leader>", "h"],
-			"commands": ["editor.action.showHover"]
+			"commands": ["editor.action.showHover"],
+			"silent": true
 		},
 		{
 			"before": ["<leader>", "n"],
-			"commands": ["newFile.createNewFile"]
+			"commands": ["explorer.newFile"],
+			"silent": true
+		},
+		{
+			"before": ["<leader>", "q"],
+			"commands": ["workbench.action.closeActiveEditor"],
+			"silent": true
 		},
 		{
 			"before": ["<C-,>"],
@@ -295,12 +304,22 @@
 					"command": "editor.action.insertLineAfter"
 				}
 			]
+		},
+		{
+			"before": ["<leader>", "f"],
+			"commands": ["editor.action.formatSelection.multiple"]
 		}
 	],
 	"vim.insertModeKeyBindingsNonRecursive": [
 		{
 			"before": ["<C-,>"],
 			"after": ["<Esc>", "A", ",", "a"]
+		}
+	],
+	"vim.visualModeKeyBindingsNonRecursive": [
+		{
+			"before": ["<leader>", "f"],
+			"commands": ["editor.action.formatSelection.multiple"]
 		}
 	],
 	// LANGUAGE FORMATTERS
@@ -320,7 +339,7 @@
 		"editor.defaultFormatter": "vscode.typescript-language-features"
 	},
 	"[vue]": {
-		"editor.defaultFormatter": "Vue.volar"
+		"editor.defaultFormatter": "octref.vetur"
 	},
 	"[php]": {
 		"editor.defaultFormatter": "DEVSENSE.phptools-vscode"
@@ -328,13 +347,10 @@
 	"[snippets]": {
 		"editor.defaultFormatter": "vscode.json-language-features"
 	},
-	"workbench.iconTheme": "pcode-icon-theme-dark-spesifik",
-	"workbench.colorTheme": "Catppuccin Mocha",
+	"workbench.iconTheme": "minimal-icons",
+	"workbench.colorTheme": "Moondust: Far Side of the Moon",
 	// CUSTOM CSS
-	"vscode_custom_css.imports": [
-		// "file://${userHome}/.config/Code/styles.css"
-		"file://${userHome}/.config/Code/index.css"
-	],
+	"vscode_custom_css.imports": ["file://${userHome}/.config/Code/min.css"],
 	"vue.autoInsert.dotValue": true,
 	"vue.editor.templateInterpolationDecorators": false,
 	"vue.format.wrapAttributes": "force-expand-multiline",
@@ -379,45 +395,43 @@
 		]
 	],
 	"splitHTMLAttributes.tabSize": 4,
-
 	"workbench.colorCustomizations": {
-		"titleBar.activeBackground": "#1f1e2e",
-		"titleBar.inactiveBackground": "#1f1e2e",
-		"titleBar.inactiveForeground": "#8b8b8b",
-		"titleBar.border": "#1f1e2e",
-		// "editorCursor.background": "#535254",
-		// "editorCursor.foreground": "#aeafad",
+		"titleBar.activeBackground": "#171b1c",
+		"titleBar.inactiveBackground": "#171b1c",
+		// "titleBar.inactiveForeground": "#171b1c",
+		"titleBar.border": "#171b1c",
+		"editorCursor.background": "#535254",
+		"editorCursor.foreground": "#aeafad",
 		// "editor.snippetTabstopHighlightBorder": "#786197",
 		// "editor.snippetTabstopHighlightBackground": "#bd93f933",
 		// "editor.snippetFinalTabstopHighlightBorder": "#53c970",
-		"editorGroupHeader.tabsBackground": "#1f1e2e",
-		"editorGroup.border": "#1f1e2e",
-		"editorGroupHeader.border": "#1f1e2e",
-		"editorGroupHeader.tabsBorder": "#1f1e2e",
-		"tab.unfocusedActiveBorder": "#1f1e2e",
-		"tab.unfocusedActiveBorderTop": "#1f1e2e",
-		"scrollbar.shadow": "#1f1e2e",
-		"editor.background": "#1f1e2e",
-		"tab.inactiveModifiedBorder": "#1f1e2e",
-		"tab.border": "#1f1e2e",
-		"tab.activeBackground": "#1f1e2e",
-		// "tab.activeForeground": "#fff",
-		// "tab.inactiveForeground": "#b4b4b4",
-		"tab.inactiveBackground": "#1f1e2e",
+		"editorGroupHeader.tabsBackground": "#171b1c",
+		"editorGroup.border": "#171b1c",
+		"editorGroupHeader.border": "#171b1c",
+		"editorGroupHeader.tabsBorder": "#171b1c",
+		"tab.unfocusedActiveBorder": "#171b1c",
+		"tab.unfocusedActiveBorderTop": "#171b1c",
+		"scrollbar.shadow": "#171b1c",
+		"editor.background": "#171b1c",
+		"tab.inactiveModifiedBorder": "#171b1c",
+		"tab.border": "#171b1c",
+		"tab.activeBackground": "#171b1c",
+		"tab.activeForeground": "#fff",
+		"tab.inactiveForeground": "#b4b4b4",
+		"tab.inactiveBackground": "#171b1c",
 		"tab.activeBorderTop": "#00000000",
 		"tab.activeBorder": "#00000000",
-		"statusBar.background": "#1f1e2e",
+		"statusBar.background": "#171b1c",
 		"statusBar.border": "default",
-		"statusBar.noFolderBackground": "#1f1e2e",
-		"editorGroup.emptyBackground": "#1f1e2e",
-		"sideBar.background": "#1f1e2e",
-		"sideBar.border": "#1f1e2e",
-		"editorGutter.background": "#1f1e2e",
-		"terminal.background": "#1f1e2e",
-		"panelTitle.activeBorder": "#1f1e2e",
-		"panel.background": "#1f1e2e",
-		"panel.border": "#1f1e2e",
-
+		"statusBar.noFolderBackground": "#171b1c",
+		"editorGroup.emptyBackground": "#171b1c",
+		"sideBar.background": "#171b1c",
+		"sideBar.border": "#171b1c",
+		"editorGutter.background": "#171b1c",
+		"terminal.background": "#171b1c",
+		"panelTitle.activeBorder": "#171b1c",
+		"panel.background": "#171b1c",
+		"panel.border": "#171b1c",
 		"editor.findMatchHighlightBackground": "#00000000",
 		"editor.findMatchHighlightBorder": "#444444",
 		"editor.findMatchBackground": "#00000000",
@@ -426,5 +440,24 @@
 		"editor.wordHighlightBorder": "#233149",
 		"editor.wordHighlightStrongBackground": "#ffcc5522",
 		"editor.wordHighlightStrongBorder": "#ffcc5517"
-	}
+	},
+	"editor.tokenColorCustomizations": {
+		"textMateRules": [
+			{
+				"scope": ["entity.name.function", "variable.function"],
+				"settings": {
+					"fontStyle": "bold"
+				}
+			},
+			{
+				"scope": ["text.html.derivative"],
+				"settings": {
+					"foreground": "#cfd1d3"
+				}
+			}
+		]
+	},
+	"prettier.singleAttributePerLine": true,
+	"vetur.format.defaultFormatter.ts": "vscode-typescript",
+	"vetur.format.defaultFormatter.html": "js-beautify-html"
 }

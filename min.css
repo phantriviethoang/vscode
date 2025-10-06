@@ -1,0 +1,171 @@
+.windows {
+	font-family: "Maple Mono" !important;
+}
+
+.monaco-workbench .codicon[class*="menu"],
+.monaco-workbench .titlebar-icon,
+.monaco-workbench .titlebar-left .window-appicon {
+	display: none !important;
+	visibility: hidden !important;
+}
+
+.window-title {
+	font-family: "Maple Mono" !important;
+	font-weight: 600 !important;
+	font-size: 14px !important;
+}
+
+.titlebar-left {
+	font-family: "Maple Mono" !important;
+	justify-content: flex-end !important;
+	flex-grow: 0 !important;
+	width: auto !important;
+	padding-left: 8px !important;
+}
+
+.composite.title h2 {
+	font-weight: bold !important;
+	font-size: 12px !important;
+	margin-left: -10px !important;
+}
+
+.monaco-workbench
+	.part.editor
+	> .content
+	.editor-group-container
+	> .title
+	.tabs-container
+	> .tab.selected.tab-border-top
+	> .tab-border-top-container {
+	display: none;
+}
+
+.tab.active {
+	font-family: "Maple Mono" !important;
+	font-weight: 600 !important;
+}
+
+.quick-input-widget {
+	background: #171b1c !important;
+	transform: translateY(-50%) !important;
+	top: 50% !important;
+	border-radius: 6px !important;
+	padding: 8px !important;
+	border: none !important;
+	box-shadow: none !important;
+}
+
+.quick-input-list,
+.quick-input-list .list_id_6,
+.monaco-list-rows {
+	font-family: "Maple Mono" !important;
+	font-size: 15px !important;
+	background: #171b1c !important;
+}
+
+.quick-input-widget .monaco-inputbox,
+.quick-input-filter .monaco-inputbox {
+	font-family: "Maple Mono" !important;
+	font-size: 14px !important;
+	padding: 10px !important;
+	border-radius: 7px !important;
+	border: none !important;
+	background: #171b1c !important;
+	margin-bottom: 10px !important;
+	box-shadow: none !important;
+}
+
+.quick-input-filter .monaco-inputbox.synthetic-focus,
+.quick-input-filter .monaco-inputbox input:focus,
+.quick-input-widget .monaco-inputbox.synthetic-focus {
+	border: none !important;
+	box-shadow: none !important;
+	outline: none !important;
+}
+
+.quick-input-widget,
+.quick-input-widget .monaco-inputbox,
+.quick-input-widget .monaco-list,
+.quick-input-widget .quick-open-part {
+	box-shadow: none !important;
+}
+
+.monaco-workbench .part.statusbar {
+	font-family: "Maple Mono" !important;
+	font-size: 11px !important;
+	padding: 0 !important;
+}
+
+.monaco-workbench .editor-group-watermark {
+	display: none !important;
+	visibility: hidden !important;
+	opacity: 0 !important;
+}
+
+.monaco-editor .cursors-layer > div[style*="width"] {
+	height: 20px !important;
+	transform: translateY(5px) !important;
+	line-height: 20px !important;
+	display: flex !important;
+	align-items: center !important;
+}
+
+.statusbar-item.right.__CUSTOM_CSS_JS_INDICATOR_CLS {
+	display: none !important;
+}
+
+#vscodevim\.vim\.primary[aria-label="-- NORMAL --"] {
+	font-family: "Maple Mono" !important;
+	background: transparent !important;
+	color: transparent !important;
+	border: none !important;
+	min-width: 0 !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+#vscodevim\.vim\.primary {
+	order: 2 !important;
+	background: #89b4fa !important;
+	color: #2d343a !important;
+	font-weight: 600 !important;
+}
+
+#vscodevim\.vim\.primary[aria-label="-- INSERT --"] {
+	display: block !important;
+	background: #a6e3a1 !important;
+	color: #2d343a !important;
+	padding: 2px 8px !important;
+}
+
+#vscodevim\.vim\.primary[aria-label="-- VISUAL --"],
+#vscodevim\.vim\.primary[aria-label="-- VISUAL LINE --"],
+#vscodevim\.vim\.primary[aria-label="-- VISUAL BLOCK --"] {
+	display: block !important;
+	background: #cba6f7 !important;
+	color: #2d343a !important;
+	padding: 2px 8px !important;
+}
+
+#vscodevim\.vim\.primary[aria-label="-- REPLACE --"] {
+	display: block !important;
+	background: #565a5e !important;
+	color: #2d343a !important;
+	padding: 2px 8px !important;
+}
+
+#vscodevim\.vim\.primary[aria-label="-- VIM: DISABLED --"] {
+	display: block !important;
+	background: #565a5e !important;
+	color: #2d343a !important;
+	padding: 2px 8px !important;
+}
+
+#vscodevim\.vim\.showcmd[aria-label="<ExtensionDisable>"] {
+	display: none !important;
+}
+
+#vscodevim\.vim\.showcmd > a.statusbar-item-label {
+	color: #afafaf !important;
+	font-weight: 600 !important;
+}

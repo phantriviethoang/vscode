@@ -4,21 +4,10 @@
 
 /* Code comment style */
 .mtk3.mtki {
-	font-family: "JetBrains Mono" !important;
-	font-weight: 600 !important;
+	font-family: "Maple Mono" !important;
+	font-weight: 500 !important;
 	color: #75be75 !important;
-	font-size: 16px !important;
-}
-
-.line-numbers {
-	font-size: 16px !important;
-	font-family: "JetBrains Mono" !important;
-	opacity: 0.3;
-}
-
-/* Code canvas top shadow */
-.monaco-editor .scroll-decoration {
-	top: -6px !important;
+	font-size: 15px !important;
 }
 
 /* Toolbars when tabs are enabled. */
@@ -44,6 +33,7 @@
 }
 
 .tab.active {
+	font-family: "Maple Mono" !important;
 	font-weight: 600 !important;
 	border: 1px solid #89b4fa !important;
 }
@@ -93,7 +83,7 @@
 
 /* Button */
 .monaco-button.monaco-text-button {
-	font-family: "JetBrains Mono" !important;
+	font-family: "Maple Mono" !important;
 }
 
 /* Incoming Outgoing line */
@@ -123,7 +113,7 @@
 /* File Explorer Item Label */
 .monaco-tree .monaco-tree-row .label-name,
 .monaco-list .monaco-list-row .monaco-icon-label .label-name {
-	font-family: "JetBrains Mono", monospace !important;
+	font-family: "Maple Mono", monospace !important;
 	font-size: 14px !important;
 	font-weight: 400 !important;
 	color: #fff !important;
@@ -132,7 +122,6 @@
 /* Sidebar top shadow */
 .monaco-scrollable-element > .shadow.top {
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75) !important;
-	/* top: -3px !important; */
 }
 
 /* Tooltip box style */
@@ -190,6 +179,11 @@
 	background: transparent !important;
 }
 
+.window-title {
+	font-family: "Maple Mono", sans-serif !important;
+	font-weight: 600 !important;
+}
+
 /* Project Title */
 .titlebar-left {
 	justify-content: flex-start !important;
@@ -199,7 +193,7 @@
 
 /* Search Label */
 .search-label {
-	font-family: "JetBrains Mono" !important;
+	font-family: "Maple Mono" !important;
 	font-size: 14px !important;
 	color: #fff;
 	display: block;
@@ -247,10 +241,6 @@
 	top: 12px !important;
 }
 
-.monaco-sash.vertical {
-	display: none !important;
-}
-
 /* Remove background for lists */
 .monaco-list-rows {
 	background: transparent !important;
@@ -282,6 +272,25 @@
 	line-height: 20px !important;
 	display: flex !important;
 	align-items: center !important;
+}
+
+.monaco-editor .cursor {
+	background: linear-gradient(
+		180deg,
+		#b845ff 0%,
+		#d955ff 50%,
+		#ff5dc8 100%
+	) !important;
+	border: none !important;
+}
+
+.monaco-editor .cursors-layer > div {
+	background: linear-gradient(
+		180deg,
+		#b845ff 0%,
+		#d955ff 50%,
+		#ff5dc8 100%
+	) !important;
 }
 
 #vscodevim\.vim\.primary[aria-label="-- NORMAL --"] {

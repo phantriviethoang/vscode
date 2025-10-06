@@ -76,10 +76,12 @@
 		"command": "workbench.action.quickOpen",
 		"when": "!inQuickOpen"
 	},
+
 	{
 		"key": "ctrl+0",
 		"command": "workbench.action.closeActiveEditor"
 	},
+
 	{
 		"key": "ctrl+k ctrl+w",
 		"command": "workbench.action.closeOtherEditors"
@@ -320,36 +322,89 @@
 			"after": ["5", "k"]
 		}
 	},
+
+	{
+		"key": "alt+j",
+		"command": "vim.remap",
+		"when": "editorTextFocus && vim.active && vim.mode == 'Normal' && !inDebugRepl",
+		"args": {
+			"after": ["5", "j"]
+		}
+	},
+	{
+		"key": "alt+k",
+		"command": "vim.remap",
+		"when": "editorTextFocus && vim.active && vim.mode == 'Normal' && !inDebugRepl",
+		"args": {
+			"after": ["5", "k"]
+		}
+	},
+
+	{
+		"key": "alt+j",
+		"command": "runCommands",
+		"when": "editorTextFocus && vim.active && vim.mode == 'Insert' && !inDebugRepl",
+		"args": {
+			"commands": [
+				"cursorDown",
+				"cursorDown",
+				"cursorDown",
+				"cursorDown",
+				"cursorDown"
+			]
+		}
+	},
+	{
+		"key": "alt+k",
+		"command": "runCommands",
+		"when": "editorTextFocus && vim.active && vim.mode == 'Insert' && !inDebugRepl",
+		"args": {
+			"commands": [
+				"cursorUp",
+				"cursorUp",
+				"cursorUp",
+				"cursorUp",
+				"cursorUp"
+			]
+		}
+	},
+
 	{
 		"key": "alt+h",
 		"command": "vim.remap",
-		"when": "editorTextFocus && vim.active && !inDebugRepl",
-		"args": {
-			"after": ["5", "h"]
-		}
+		"args": { "after": ["5", "h"] },
+		"when": "editorTextFocus && vim.active && vim.mode == 'Normal'"
 	},
 	{
 		"key": "alt+l",
 		"command": "vim.remap",
-		"when": "editorTextFocus && vim.active && !inDebugRepl",
-		"args": {
-			"after": ["5", "l"]
-		}
+		"args": { "after": ["5", "l"] },
+		"when": "editorTextFocus && vim.active && vim.mode == 'Normal'"
 	},
 
 	{
-		"key": "ctrl+alt+c",
-		"command": "notifications.clearAll"
+		"key": "alt+h",
+		"command": "vim.remap",
+		"args": { "after": ["5", "h"] },
+		"when": "editorTextFocus && vim.active && vim.mode == 'Visual'"
+	},
+	{
+		"key": "alt+l",
+		"command": "vim.remap",
+		"args": { "after": ["5", "l"] },
+		"when": "editorTextFocus && vim.active && vim.mode == 'Visual'"
 	},
 
-	// {
-	// 	"key": "ctrl+3",
-	// 	"command": "webBrowserPreviewView.focus"
-	// },
-	// {
-	// 	"key": "ctrl+shift+3",
-	// 	"command": "web-browser-preview.reload"
-	// },
+	{
+		"key": "alt+h",
+		"command": "cursorWordStartLeft",
+		"when": "editorTextFocus && vim.active && vim.mode == 'Insert'"
+	},
+	{
+		"key": "alt+l",
+		"command": "cursorWordEndRight",
+		"when": "editorTextFocus && vim.active && vim.mode == 'Insert'"
+	},
 
 	// combine command
 	{
@@ -749,6 +804,7 @@
 		"when": "terminalFocus"
 	},
 
+	// Ctrl+T = chuyển sang terminal tab kế tiếp
 	{
 		"key": "ctrl+t",
 		"command": "workbench.action.terminal.focusNext",
@@ -886,9 +942,5 @@
 		"key": "ctrl+j",
 		"command": "cursorDown",
 		"when": "editorTextFocus && vim.mode == 'Insert' && !suggestWidgetVisible"
-	},
-	{
-		"key": "ctrl+k f",
-		"command": "editor.action.formatSelection.multiple"
 	}
 ]
