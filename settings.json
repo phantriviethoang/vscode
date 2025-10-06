@@ -4,7 +4,7 @@
 	"editor.lineHeight": 30,
 	"editor.fontWeight": "500",
 	"editor.fontFamily": "JetBrains Mono, Maple Mono",
-	"editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'calt', 'dlig'",
+	"editor.fontLigatures": "'ss03', 'calt', 'dlig'",
 	"editor.detectIndentation": false,
 	"editor.wordWrap": "wordWrapColumn",
 	"editor.copyWithSyntaxHighlighting": false,
@@ -347,8 +347,8 @@
 	"[snippets]": {
 		"editor.defaultFormatter": "vscode.json-language-features"
 	},
-	"workbench.iconTheme": "minimal-icons",
-	"workbench.colorTheme": "Moondust: Far Side of the Moon",
+	"workbench.iconTheme": "quill-icons",
+	"workbench.colorTheme": "Subliminal",
 	// CUSTOM CSS
 	"vscode_custom_css.imports": ["file://${userHome}/.config/Code/min.css"],
 	"vue.autoInsert.dotValue": true,
@@ -396,42 +396,43 @@
 	],
 	"splitHTMLAttributes.tabSize": 4,
 	"workbench.colorCustomizations": {
-		"titleBar.activeBackground": "#171b1c",
-		"titleBar.inactiveBackground": "#171b1c",
-		// "titleBar.inactiveForeground": "#171b1c",
-		"titleBar.border": "#171b1c",
+		"titleBar.activeBackground": "#292d35",
+		"titleBar.inactiveBackground": "#292d35",
+		// "titleBar.inactiveForeground": "#292d35",
+		"titleBar.border": "#292d35",
 		"editorCursor.background": "#535254",
 		"editorCursor.foreground": "#aeafad",
 		// "editor.snippetTabstopHighlightBorder": "#786197",
 		// "editor.snippetTabstopHighlightBackground": "#bd93f933",
 		// "editor.snippetFinalTabstopHighlightBorder": "#53c970",
-		"editorGroupHeader.tabsBackground": "#171b1c",
-		"editorGroup.border": "#171b1c",
-		"editorGroupHeader.border": "#171b1c",
-		"editorGroupHeader.tabsBorder": "#171b1c",
-		"tab.unfocusedActiveBorder": "#171b1c",
-		"tab.unfocusedActiveBorderTop": "#171b1c",
-		"scrollbar.shadow": "#171b1c",
-		"editor.background": "#171b1c",
-		"tab.inactiveModifiedBorder": "#171b1c",
-		"tab.border": "#171b1c",
-		"tab.activeBackground": "#171b1c",
+		"editorGroupHeader.tabsBackground": "#292d35",
+		"editorGroup.border": "#292d35",
+		"editorGroupHeader.border": "#292d35",
+		"editorGroupHeader.tabsBorder": "#292d35",
+		"tab.unfocusedActiveBorder": "#292d35",
+		"tab.unfocusedActiveBorderTop": "#292d35",
+		"scrollbar.shadow": "#292d35",
+		"editor.background": "#292d35",
+		"tab.inactiveModifiedBorder": "#292d35",
+		"tab.border": "#292d35",
+		"tab.activeBackground": "#292d35",
 		"tab.activeForeground": "#fff",
 		"tab.inactiveForeground": "#b4b4b4",
-		"tab.inactiveBackground": "#171b1c",
+		"tab.inactiveBackground": "#292d35",
 		"tab.activeBorderTop": "#00000000",
 		"tab.activeBorder": "#00000000",
-		"statusBar.background": "#171b1c",
+		"statusBar.background": "#292d35",
 		"statusBar.border": "default",
-		"statusBar.noFolderBackground": "#171b1c",
-		"editorGroup.emptyBackground": "#171b1c",
-		"sideBar.background": "#171b1c",
-		"sideBar.border": "#171b1c",
-		"editorGutter.background": "#171b1c",
-		"terminal.background": "#171b1c",
-		"panelTitle.activeBorder": "#171b1c",
-		"panel.background": "#171b1c",
-		"panel.border": "#171b1c",
+		"statusBar.noFolderBackground": "#292d35",
+		"editorGroup.emptyBackground": "#292d35",
+		"sideBar.background": "#292d35",
+		"sideBar.foreground": "#959cab",
+		"sideBar.border": "#292d35",
+		"editorGutter.background": "#292d35",
+		"terminal.background": "#292d35",
+		"panelTitle.activeBorder": "#292d35",
+		"panel.background": "#292d35",
+		"panel.border": "#292d35",
 		"editor.findMatchHighlightBackground": "#00000000",
 		"editor.findMatchHighlightBorder": "#444444",
 		"editor.findMatchBackground": "#00000000",
@@ -448,13 +449,20 @@
 				"settings": {
 					"fontStyle": "bold"
 				}
-			},
-			{
-				"scope": ["text.html.derivative"],
-				"settings": {
-					"foreground": "#cfd1d3"
-				}
 			}
+			// {
+			// 	"scope": "text.html.derivative",
+			// 	"settings": {
+			// 		// "foreground": "#b1b2b3"
+			// 		"foreground": "#e2e2e2"
+			// 	}
+			// },
+			// {
+			// 	"scope": "meta.tag",
+			// 	"settings": {
+			// 		"foreground": "#b1b2b3"
+			// 	}
+			// },
 		]
 	},
 	"prettier.singleAttributePerLine": true,
