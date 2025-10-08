@@ -942,5 +942,9 @@
 		"key": "ctrl+j",
 		"command": "cursorDown",
 		"when": "editorTextFocus && vim.mode == 'Insert' && !suggestWidgetVisible"
+	},
+	{
+		"key": "ctrl+alt+c",
+		"command": "notifications.clearAll"
 	}
 ]

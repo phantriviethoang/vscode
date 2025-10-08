@@ -3,7 +3,9 @@
 	"editor.fontSize": 15,
 	"editor.lineHeight": 30,
 	"editor.fontWeight": "500",
-	"editor.fontFamily": "JetBrains Mono, Maple Mono",
+	// "editor.fontFamily": "MonoLisa, JetBrains Mono, Maple Mono",
+	"editor.fontFamily": "JetBrains Mono, MonoLisa, Maple Mono",
+	// "editor.fontFamily": "Maple Mono",
 	"editor.fontLigatures": "'ss03', 'calt', 'dlig'",
 	"editor.detectIndentation": false,
 	"editor.wordWrap": "wordWrapColumn",
@@ -61,7 +63,6 @@
 	"editor.gotoLocation.multipleDeclarations": "goto",
 	"editor.gotoLocation.multipleImplementations": "goto",
 	"editor.gotoLocation.multipleTypeDefinitions": "goto",
-	// WORKBENCH
 	"workbench.startupEditor": "none",
 	"workbench.tips.enabled": false,
 	"workbench.activityBar.location": "hidden",
@@ -78,8 +79,8 @@
 	"workbench.editor.editorActionsLocation": "hidden",
 	"workbench.navigationControl.enabled": false,
 	"window.commandCenter": false,
-	// "workbench.editor.showTabs": "none",
-	// "workbench.statusBar.visible": false,
+	"workbench.editor.showTabs": "none",
+	"workbench.statusBar.visible": false,
 	// WORKBENCH EDITOR TABS
 	"workbench.editor.scrollToSwitchTabs": true,
 	"workbench.editor.decorations.badges": false,
@@ -347,10 +348,11 @@
 	"[snippets]": {
 		"editor.defaultFormatter": "vscode.json-language-features"
 	},
-	"workbench.iconTheme": "quill-icons",
-	"workbench.colorTheme": "Subliminal",
 	// CUSTOM CSS
-	"vscode_custom_css.imports": ["file://${userHome}/.config/Code/min.css"],
+	"vscode_custom_css.imports": [
+		"file://${userHome}/.config/Code/min.css",
+		"file://${userHome}/.config/Code/min.js"
+	],
 	"vue.autoInsert.dotValue": true,
 	"vue.editor.templateInterpolationDecorators": false,
 	"vue.format.wrapAttributes": "force-expand-multiline",
@@ -396,43 +398,46 @@
 	],
 	"splitHTMLAttributes.tabSize": 4,
 	"workbench.colorCustomizations": {
-		"titleBar.activeBackground": "#292d35",
-		"titleBar.inactiveBackground": "#292d35",
-		// "titleBar.inactiveForeground": "#292d35",
-		"titleBar.border": "#292d35",
-		"editorCursor.background": "#535254",
-		"editorCursor.foreground": "#aeafad",
+
+		"titleBar.activeBackground": "#2e3440",
+		"titleBar.activeForeground": "#aeafad",
+		"titleBar.inactiveBackground": "#2e3440",
+		// "titleBar.inactiveForeground": "#2e3440",
+		"titleBar.border": "#2e3440",
+		// "editorCursor.background": "#535254",
+		// "editorCursor.foreground": "#aeafad",
 		// "editor.snippetTabstopHighlightBorder": "#786197",
 		// "editor.snippetTabstopHighlightBackground": "#bd93f933",
-		// "editor.snippetFinalTabstopHighlightBorder": "#53c970",
-		"editorGroupHeader.tabsBackground": "#292d35",
-		"editorGroup.border": "#292d35",
-		"editorGroupHeader.border": "#292d35",
-		"editorGroupHeader.tabsBorder": "#292d35",
-		"tab.unfocusedActiveBorder": "#292d35",
-		"tab.unfocusedActiveBorderTop": "#292d35",
-		"scrollbar.shadow": "#292d35",
-		"editor.background": "#292d35",
-		"tab.inactiveModifiedBorder": "#292d35",
-		"tab.border": "#292d35",
-		"tab.activeBackground": "#292d35",
+		// "editor.snippetFinalTabstopHighlightBorder": "#3e9453",
+		"editorGroupHeader.tabsBackground": "#2e3440",
+		"editorGroup.border": "#2e3440",
+		"editorGroupHeader.border": "#2e3440",
+		"editorGroupHeader.tabsBorder": "#2e3440",
+		"tab.unfocusedActiveBorder": "#2e3440",
+		"tab.unfocusedActiveBorderTop": "#2e3440",
+		"scrollbar.shadow": "#2e3440",
+		"editor.background": "#2e3440",
+		"tab.inactiveModifiedBorder": "#2e3440",
+		"tab.border": "#2e3440",
+		"tab.activeBackground": "#2e3440",
 		"tab.activeForeground": "#fff",
 		"tab.inactiveForeground": "#b4b4b4",
-		"tab.inactiveBackground": "#292d35",
+		"tab.inactiveBackground": "#2e3440",
 		"tab.activeBorderTop": "#00000000",
 		"tab.activeBorder": "#00000000",
-		"statusBar.background": "#292d35",
+		"statusBar.background": "#2e3440",
 		"statusBar.border": "default",
-		"statusBar.noFolderBackground": "#292d35",
-		"editorGroup.emptyBackground": "#292d35",
-		"sideBar.background": "#292d35",
-		"sideBar.foreground": "#959cab",
-		"sideBar.border": "#292d35",
-		"editorGutter.background": "#292d35",
-		"terminal.background": "#292d35",
-		"panelTitle.activeBorder": "#292d35",
-		"panel.background": "#292d35",
-		"panel.border": "#292d35",
+		"statusBar.noFolderBackground": "#2e3440",
+		"editorGroup.emptyBackground": "#2e3440",
+		"sideBar.background": "#2e3440",
+		"sideBar.foreground": "#cecece",
+		"sideBar.border": "#2e3440",
+		"editorGutter.background": "#2e3440",
+		"terminal.background": "#2e3440",
+		"panelTitle.activeBorder": "#2e3440",
+		"panel.background": "#2e3440",
+		"panel.border": "#2e3440",
+
 		"editor.findMatchHighlightBackground": "#00000000",
 		"editor.findMatchHighlightBorder": "#444444",
 		"editor.findMatchBackground": "#00000000",
@@ -450,22 +455,14 @@
 					"fontStyle": "bold"
 				}
 			}
-			// {
-			// 	"scope": "text.html.derivative",
-			// 	"settings": {
-			// 		// "foreground": "#b1b2b3"
-			// 		"foreground": "#e2e2e2"
-			// 	}
-			// },
-			// {
-			// 	"scope": "meta.tag",
-			// 	"settings": {
-			// 		"foreground": "#b1b2b3"
-			// 	}
-			// },
 		]
 	},
 	"prettier.singleAttributePerLine": true,
 	"vetur.format.defaultFormatter.ts": "vscode-typescript",
-	"vetur.format.defaultFormatter.html": "js-beautify-html"
+	"vetur.format.defaultFormatter.html": "js-beautify-html",
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
+	"workbench.colorTheme": "Nord Pastel",
+	"workbench.iconTheme": "quill-icons"
 }
