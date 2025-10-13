@@ -2,11 +2,10 @@
 	// EDITOR
 	"editor.fontSize": 15,
 	"editor.lineHeight": 30,
-	"editor.fontWeight": "500",
-	// "editor.fontFamily": "MonoLisa, JetBrains Mono, Maple Mono",
-	"editor.fontFamily": "JetBrains Mono, MonoLisa, Maple Mono",
-	// "editor.fontFamily": "Maple Mono",
+	// "editor.fontWeight": "500",
+	"editor.fontFamily": "JetBrains Mono, MonoLisa",
 	"editor.fontLigatures": "'ss03', 'calt', 'dlig'",
+	// "editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'calt', 'dlig'",
 	"editor.detectIndentation": false,
 	"editor.wordWrap": "wordWrapColumn",
 	"editor.copyWithSyntaxHighlighting": false,
@@ -14,6 +13,8 @@
 	"editor.formatOnSave": true,
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"editor.autoClosingBrackets": "always",
+	// "editor.colorDecorators": false,
+	// "editor.bracketPairColorization.enabled": false,
 	"editor.autoClosingQuotes": "always",
 	"editor.autoIndent": "advanced",
 	"editor.autoIndentOnPaste": true,
@@ -24,8 +25,8 @@
 	"editor.minimap.enabled": false,
 	"editor.minimap.maxColumn": 250,
 	"editor.glyphMargin": false,
-	"editor.scrollbar.vertical": "hidden",
 	"editor.scrollbar.horizontal": "hidden",
+	"editor.scrollbar.vertical": "hidden",
 	"editor.scrollbar.verticalScrollbarSize": 0,
 	"editor.codeLens": false,
 	"editor.guides.indentation": false,
@@ -40,10 +41,16 @@
 	"editor.lightbulb.enabled": "off",
 	"editor.padding.top": 3,
 	"editor.stickyScroll.enabled": false,
-	"editor.cursorWidth": 2,
+	"vim.cursorStylePerMode.insert": "block",
+	// "vim.cursorStylePerMode.visualblock": "line",
+	// "vim.cursorStylePerMode.visualline": "line",
+	// "vim.cursorStylePerMode.visual": "line",
+	// "vim.cursorStylePerMode.normal": "line",
+	// "editor.cursorHeight": 19,
+	// "editor.cursorWidth": 10,
 	"editor.cursorSurroundingLines": 5,
-	"editor.cursorBlinking": "smooth",
-	// "editor.cursorBlinking": "solid",
+	// "editor.cursorBlinking": "smooth",
+	"editor.cursorBlinking": "solid",
 	"editor.cursorSmoothCaretAnimation": "on",
 	"editor.smoothScrolling": true,
 	// EDITOR SUGGESTIONS
@@ -79,8 +86,11 @@
 	"workbench.editor.editorActionsLocation": "hidden",
 	"workbench.navigationControl.enabled": false,
 	"window.commandCenter": false,
-	"workbench.editor.showTabs": "none",
-	"workbench.statusBar.visible": false,
+	"workbench.colorTheme": "Hack The Box",
+	"workbench.iconTheme": "file-icons",
+	// "window.newWindowProfile": "Default"
+	// "workbench.editor.showTabs": "none",
+	// "workbench.statusBar.visible": false,
 	// WORKBENCH EDITOR TABS
 	"workbench.editor.scrollToSwitchTabs": true,
 	"workbench.editor.decorations.badges": false,
@@ -141,13 +151,16 @@
 	// TERMINAL
 	"terminal.integrated.fontSize": 16,
 	"terminal.integrated.lineHeight": 1.5,
-	"terminal.integrated.fontFamily": "JetBrains Mono, Maple Mono",
+	"terminal.integrated.fontFamily": "JetBrains Mono, MonoLisa",
 	"terminal.integrated.enableMultiLinePasteWarning": "never",
 	"terminal.integrated.suggest.enabled": true,
 	"terminal.integrated.suggest.showStatusBar": false,
 	"terminal.integrated.tabs.location": "left",
+	// "terminal.integrated.cursorStyle": "block",
 	"terminal.integrated.smoothScrolling": true,
 	"terminal.integrated.cursorBlinking": true,
+	"terminal.integrated.stickyScroll.enabled": false,
+	"terminal.external.linuxExec": "warp-terminal",
 	// DIFF EDITOR
 	"diffEditor.hideUnchangedRegions.enabled": true,
 	"diffEditor.useInlineViewWhenSpaceIsLimited": false,
@@ -163,7 +176,6 @@
 	"breadcrumbs.enabled": false,
 	// CHAT & AI
 	"chat.commandCenter.enabled": false,
-	"chat.disableAIFeatures": true,
 	"chat.editor.wordWrap": "on",
 	// SECURITY
 	"security.workspace.trust.untrustedFiles": "open",
@@ -193,9 +205,12 @@
 	"html.format.extraLiners": "nul",
 	"vetur.format.options.tabSize": 4,
 	"vetur.format.options.useTabs": true,
+	"vetur.format.defaultFormatter.ts": "vscode-typescript",
+	"vetur.format.defaultFormatter.html": "js-beautify-html",
 	// PRETTIER
 	"prettier.tabWidth": 4,
 	"prettier.useTabs": true,
+	"prettier.singleAttributePerLine": true,
 	// TAILWIND CSS
 	"tailwindCSS.includeLanguages": {
 		"plaintext": "html"
@@ -215,7 +230,6 @@
 	"quokka.showOutputOnStart": false,
 	"quokka.useOutputPanel": false,
 	// VIM EXTENSION
-	"vim.cursorStylePerMode.insert": "block",
 	"vim.cursorStylePerMode.visualblock": "block-outline",
 	"vim.cursorStylePerMode.visualline": "block-outline",
 	"vim.cursorStylePerMode.visual": "block-outline",
@@ -333,6 +347,9 @@
 	"[javascript]": {
 		"editor.defaultFormatter": "vscode.typescript-language-features"
 	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
 	"[blade]": {
 		"editor.defaultFormatter": "shufo.vscode-blade-formatter"
 	},
@@ -340,7 +357,7 @@
 		"editor.defaultFormatter": "vscode.typescript-language-features"
 	},
 	"[vue]": {
-		"editor.defaultFormatter": "octref.vetur"
+		"editor.defaultFormatter": "Vue.volar"
 	},
 	"[php]": {
 		"editor.defaultFormatter": "DEVSENSE.phptools-vscode"
@@ -350,8 +367,8 @@
 	},
 	// CUSTOM CSS
 	"vscode_custom_css.imports": [
-		"file://${userHome}/.config/Code/min.css",
-		"file://${userHome}/.config/Code/min.js"
+		"file://${userHome}/.config/Code/mm.css",
+		// "file://${userHome}/.config/Code/mm.js"
 	],
 	"vue.autoInsert.dotValue": true,
 	"vue.editor.templateInterpolationDecorators": false,
@@ -372,10 +389,13 @@
 		"endsection",
 		"forelse",
 		"isset",
+		"Laracasts",
 		"laravel",
 		"linecap",
 		"linejoin",
-		"vite"
+		"vite",
+		"extralight",
+		"Bobo"
 	],
 	"splitHTMLAttributes.closingBracketOnNewLine": true,
 	"splitHTMLAttributes.sortOrder": [
@@ -398,71 +418,60 @@
 	],
 	"splitHTMLAttributes.tabSize": 4,
 	"workbench.colorCustomizations": {
-
-		"titleBar.activeBackground": "#2e3440",
-		"titleBar.activeForeground": "#aeafad",
-		"titleBar.inactiveBackground": "#2e3440",
-		// "titleBar.inactiveForeground": "#2e3440",
-		"titleBar.border": "#2e3440",
-		// "editorCursor.background": "#535254",
-		// "editorCursor.foreground": "#aeafad",
+		// "titleBar.inactiveForeground": "#151c2b",
 		// "editor.snippetTabstopHighlightBorder": "#786197",
 		// "editor.snippetTabstopHighlightBackground": "#bd93f933",
 		// "editor.snippetFinalTabstopHighlightBorder": "#3e9453",
-		"editorGroupHeader.tabsBackground": "#2e3440",
-		"editorGroup.border": "#2e3440",
-		"editorGroupHeader.border": "#2e3440",
-		"editorGroupHeader.tabsBorder": "#2e3440",
-		"tab.unfocusedActiveBorder": "#2e3440",
-		"tab.unfocusedActiveBorderTop": "#2e3440",
-		"scrollbar.shadow": "#2e3440",
-		"editor.background": "#2e3440",
-		"tab.inactiveModifiedBorder": "#2e3440",
-		"tab.border": "#2e3440",
-		"tab.activeBackground": "#2e3440",
+
+		"titleBar.activeBackground": "#151c2b",
+		"titleBar.activeForeground": "#aeafad",
+		"titleBar.inactiveBackground": "#151c2b",
+		"titleBar.border": "#151c2b",
+		"editorCursor.background": "#535254",
+		"editorCursor.foreground": "#aeafad",
+		"editorGroupHeader.tabsBackground": "#151c2b",
+		"editorGroup.border": "#151c2b",
+		"editorGroupHeader.border": "#151c2b",
+		"editorGroupHeader.tabsBorder": "#151c2b",
+		"tab.unfocusedActiveBorder": "#151c2b",
+		"tab.unfocusedActiveBorderTop": "#151c2b",
+		"scrollbar.shadow": "#151c2b",
+		"editor.background": "#151c2b",
+		"tab.inactiveModifiedBorder": "#151c2b",
+		"tab.border": "#151c2b",
+		"tab.activeBackground": "#151c2b",
 		"tab.activeForeground": "#fff",
 		"tab.inactiveForeground": "#b4b4b4",
-		"tab.inactiveBackground": "#2e3440",
+		"tab.inactiveBackground": "#151c2b",
 		"tab.activeBorderTop": "#00000000",
 		"tab.activeBorder": "#00000000",
-		"statusBar.background": "#2e3440",
+		"statusBar.background": "#151c2b",
 		"statusBar.border": "default",
-		"statusBar.noFolderBackground": "#2e3440",
-		"editorGroup.emptyBackground": "#2e3440",
-		"sideBar.background": "#2e3440",
+		"statusBar.noFolderBackground": "#151c2b",
+		"editorGroup.emptyBackground": "#151c2b",
+		"sideBar.background": "#151c2b",
 		"sideBar.foreground": "#cecece",
-		"sideBar.border": "#2e3440",
-		"editorGutter.background": "#2e3440",
-		"terminal.background": "#2e3440",
-		"panelTitle.activeBorder": "#2e3440",
-		"panel.background": "#2e3440",
-		"panel.border": "#2e3440",
+		"sideBar.border": "#151c2b",
+		"editorGutter.background": "#151c2b",
+		"terminal.background": "#151c2b",
+		"panelTitle.activeBorder": "#151c2b",
+		"panel.background": "#151c2b",
+		"panel.border": "#151c2b",
 
-		"editor.findMatchHighlightBackground": "#00000000",
-		"editor.findMatchHighlightBorder": "#444444",
-		"editor.findMatchBackground": "#00000000",
-		"editor.findMatchBorder": "#796747",
-		"editor.wordHighlightBackground": "#1f2b3fc7",
-		"editor.wordHighlightBorder": "#233149",
-		"editor.wordHighlightStrongBackground": "#ffcc5522",
-		"editor.wordHighlightStrongBorder": "#ffcc5517"
+		"editor.findMatchHighlightBackground": "#0000",
+		"editor.findMatchHighlightBorder": "#343943",
+		"editor.findMatchBackground": "#0000",
+		"editor.findMatchBorder": "#535252"
 	},
+
 	"editor.tokenColorCustomizations": {
 		"textMateRules": [
 			{
-				"scope": ["entity.name.function", "variable.function"],
+				"scope": ["entity.name.function"],
 				"settings": {
 					"fontStyle": "bold"
 				}
 			}
 		]
-	},
-	"prettier.singleAttributePerLine": true,
-	"vetur.format.defaultFormatter.ts": "vscode-typescript",
-	"vetur.format.defaultFormatter.html": "js-beautify-html",
-	"[typescriptreact]": {
-		"editor.defaultFormatter": "vscode.typescript-language-features"
-	},
-	"workbench.colorTheme": "Nord Pastel",
-	"workbench.iconTheme": "quill-icons"
+	}
 }

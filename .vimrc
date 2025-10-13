@@ -51,6 +51,9 @@ nnoremap <C-m> S
 nnoremap <leader>j o<Esc>k
 nnoremap <leader>k O<Esc>j
 
+nnoremap zj <leader><leader>j
+nnoremap zk <leader><leader>k
+
 nnoremap zo o<Esc>o
 nnoremap yo O<Esc>O
 
@@ -73,6 +76,3 @@ nnoremap n nzz
 nnoremap N Nzz
 nnoremap * *zz
 nnoremap # #zz
-
-nnoremap <leader>ev :edit ~/.vimrc<CR>
-nnoremap <leader>sv :source ~/.vimrc<CR>

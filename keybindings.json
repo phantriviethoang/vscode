@@ -268,9 +268,21 @@
 	// Git
 	{
 		"key": "ctrl+4",
-		"command": "workbench.view.scm",
-		"when": "workbench.scm.active"
+		"command": "workbench.action.toggleSidebarVisibility",
+		"when": "viewContainer.workbench.view.scm.focused || sideBarVisible"
 	},
+	{
+		"key": "ctrl+4",
+		"command": "runCommands",
+		"args": {
+			"commands": [
+				"workbench.view.scm",
+				"workbench.action.focusActiveEditorGroup"
+			]
+		},
+		"when": "!sideBarVisible"
+	},
+
 	{
 		"key": "ctrl+5",
 		"command": "git.stageAll"
@@ -818,6 +830,45 @@
 	},
 
 	{
+		"key": "ctrl+u",
+		"command": "runCommands",
+		"args": {
+			"commands": [
+				{
+					"command": "workbench.action.terminal.sendSequence",
+					"args": { "text": "\u001b[A" }
+				},
+				{
+					"command": "workbench.action.terminal.sendSequence",
+					"args": { "text": "\r" }
+				}
+			]
+		},
+		"when": "terminalFocus"
+	},
+
+	{
+		"key": "ctrl+i",
+		"command": "runCommands",
+		"args": {
+			"commands": [
+				{
+					"command": "workbench.action.terminal.clear"
+				},
+				{
+					"command": "workbench.action.terminal.sendSequence",
+					"args": { "text": "\u001b[A" }
+				},
+				{
+					"command": "workbench.action.terminal.sendSequence",
+					"args": { "text": "\r" }
+				}
+			]
+		},
+		"when": "terminalFocus"
+	},
+
+	{
 		"key": "ctrl+m",
 		"command": "acceptSelectedSuggestion",
 		"when": "suggestWidgetVisible && textInputFocus"
@@ -943,8 +994,70 @@
 		"command": "cursorDown",
 		"when": "editorTextFocus && vim.mode == 'Insert' && !suggestWidgetVisible"
 	},
+
 	{
 		"key": "ctrl+alt+c",
 		"command": "notifications.clearAll"
+	},
+
+	// {
+	// 	"key": "ctrl+alt+c",
+	// 	"command": "fileutils.copyFileName",
+	// 	"when": "vim.mode == 'Normal'"
+	// },
+
+	{
+		"key": "alt+p",
+		"command": "runCommands",
+		"when": "terminalFocus",
+		"args": {
+			"commands": [
+				"fileutils.copyFileName",
+				{
+					"command": "workbench.action.terminal.sendSequence",
+					"args": { "text": "php " }
+				},
+				{
+					"command": "workbench.action.terminal.paste"
+				},
+				{
+					"command": "workbench.action.terminal.sendSequence",
+					"args": { "text": "\u000D" }
+				}
+			]
+		}
+	},
+
+	{
+		"key": "alt+n",
+		"command": "runCommands",
+		"when": "terminalFocus",
+		"args": {
+			"commands": [
+				"fileutils.copyFileName",
+				{
+					"command": "workbench.action.terminal.sendSequence",
+					"args": { "text": "node " }
+				},
+				{
+					"command": "workbench.action.terminal.paste"
+				},
+				{
+					"command": "workbench.action.terminal.sendSequence",
+					"args": { "text": "\u000D" }
+				}
+			]
+		}
+	},
+
+	{
+		"key": "alt+i",
+		"command": "vim.remap",
+		"when": "editorTextFocus && vim.active && vim.mode == 'Normal'",
+		"args": {
+			"after": ["F", ">", "i", " "]
+		}
 	}
+
+	// test
 ]
