@@ -22,6 +22,11 @@ inoremap jk <Esc>l
 inoremap jf <C-o>m`<C-o>$<C-o>a,<C-o>``
 inoremap jd <C-o>m`<C-o>$<C-o>a;<C-o>``
 
+nnoremap <leader>j m`o<Esc>``
+nnoremap <leader>k m`O<Esc>``
+
+nnoremap K i<CR><Esc>
+
 nnoremap H ^
 nnoremap L $
 
@@ -48,14 +53,11 @@ nnoremap s cl
 nnoremap m s
 nnoremap <C-m> S
 
-nnoremap <leader>j o<Esc>k
-nnoremap <leader>k O<Esc>j
-
 nnoremap zj <leader><leader>j
 nnoremap zk <leader><leader>k
 
-nnoremap zo o<Esc>o
-nnoremap yo O<Esc>O
+nnoremap zo o<CR>
+nnoremap yo O<CR><Esc>kA
 
 nnoremap <leader><Esc> :nohlsearch<CR>
 

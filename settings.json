@@ -1,37 +1,37 @@
 {
+	"breadcrumbs.enabled": false,
+	"editor.renderLineHighlight": "none",
+	"scm.diffDecorations": "none",
+	"editor.glyphMargin": false,
 	// EDITOR
 	"editor.fontSize": 15,
 	"editor.lineHeight": 30,
-	// "editor.fontWeight": "500",
 	"editor.fontFamily": "JetBrains Mono, MonoLisa",
 	"editor.fontLigatures": "'ss03', 'calt', 'dlig'",
-	// "editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'calt', 'dlig'",
 	"editor.detectIndentation": false,
 	"editor.wordWrap": "wordWrapColumn",
 	"editor.copyWithSyntaxHighlighting": false,
 	"editor.linkedEditing": true,
+	"editor.formatOnPaste": true,
 	"editor.formatOnSave": true,
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"editor.autoClosingBrackets": "always",
-	// "editor.colorDecorators": false,
+	"editor.colorDecorators": false,
 	// "editor.bracketPairColorization.enabled": false,
 	"editor.autoClosingQuotes": "always",
 	"editor.autoIndent": "advanced",
 	"editor.autoIndentOnPaste": true,
 	"editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?",
-	"editor.semanticHighlighting.enabled": true,
 	// EDITOR UI
 	"editor.lineNumbers": "off",
 	"editor.minimap.enabled": false,
 	"editor.minimap.maxColumn": 250,
-	"editor.glyphMargin": false,
 	"editor.scrollbar.horizontal": "hidden",
 	"editor.scrollbar.vertical": "hidden",
 	"editor.scrollbar.verticalScrollbarSize": 0,
 	"editor.codeLens": false,
 	"editor.guides.indentation": false,
 	"editor.inlayHints.enabled": "off",
-	"editor.renderLineHighlight": "none",
 	"editor.renderControlCharacters": false,
 	"editor.overviewRulerBorder": false,
 	"editor.hideCursorInOverviewRuler": true,
@@ -39,17 +39,9 @@
 	"editor.occurrencesHighlight": "off",
 	"editor.matchBrackets": "never",
 	"editor.lightbulb.enabled": "off",
-	"editor.padding.top": 3,
+	"editor.padding.top": 10,
 	"editor.stickyScroll.enabled": false,
-	"vim.cursorStylePerMode.insert": "block",
-	// "vim.cursorStylePerMode.visualblock": "line",
-	// "vim.cursorStylePerMode.visualline": "line",
-	// "vim.cursorStylePerMode.visual": "line",
-	// "vim.cursorStylePerMode.normal": "line",
-	// "editor.cursorHeight": 19,
-	// "editor.cursorWidth": 10,
 	"editor.cursorSurroundingLines": 5,
-	// "editor.cursorBlinking": "smooth",
 	"editor.cursorBlinking": "solid",
 	"editor.cursorSmoothCaretAnimation": "on",
 	"editor.smoothScrolling": true,
@@ -86,11 +78,11 @@
 	"workbench.editor.editorActionsLocation": "hidden",
 	"workbench.navigationControl.enabled": false,
 	"window.commandCenter": false,
-	"workbench.colorTheme": "Hack The Box",
-	"workbench.iconTheme": "file-icons",
-	// "window.newWindowProfile": "Default"
-	// "workbench.editor.showTabs": "none",
-	// "workbench.statusBar.visible": false,
+	"workbench.colorTheme": "Dracula Theme",
+	"workbench.iconTheme": "material-icon-theme",
+	"material-icon-theme.activeIconPack": "vue",
+	"workbench.editor.showTabs": "none",
+	"workbench.statusBar.visible": false,
 	// WORKBENCH EDITOR TABS
 	"workbench.editor.scrollToSwitchTabs": true,
 	"workbench.editor.decorations.badges": false,
@@ -99,7 +91,8 @@
 	"workbench.editor.pinnedTabSizing": "compact",
 	// WINDOW
 	"window.newWindowDimensions": "inherit",
-	"window.title": "${activeEditorShort}${separator}${activeFolderShort}",
+	// "window.title": "${activeEditorShort}${separator}${activeFolderShort}",
+	"window.title": "${activeEditorShort}",
 	"window.density.editorTabHeight": "compact",
 	"window.menuBarVisibility": "toggle",
 	"window.customTitleBarVisibility": "never",
@@ -114,6 +107,8 @@
 		".php_cs": "php",
 		".php_cs.dist": "php"
 	},
+	"fileutils.inputBox.pathType": "workspace",
+	"fileutils.moveFile.typeahead.enabled": true,
 	// EXPLORER
 	"explorer.compactFolders": false,
 	"explorer.confirmDragAndDrop": false,
@@ -156,24 +151,22 @@
 	"terminal.integrated.suggest.enabled": true,
 	"terminal.integrated.suggest.showStatusBar": false,
 	"terminal.integrated.tabs.location": "left",
-	// "terminal.integrated.cursorStyle": "block",
+	"terminal.integrated.cursorStyle": "block",
 	"terminal.integrated.smoothScrolling": true,
 	"terminal.integrated.cursorBlinking": true,
 	"terminal.integrated.stickyScroll.enabled": false,
-	"terminal.external.linuxExec": "warp-terminal",
+	"terminal.integrated.fontLigatures.enabled": true,
+	"terminal.integrated.shellIntegration.decorationsEnabled": "never",
+	"terminal.integrated.tabs.title": "${cwdFolder}",
 	// DIFF EDITOR
 	"diffEditor.hideUnchangedRegions.enabled": true,
 	"diffEditor.useInlineViewWhenSpaceIsLimited": false,
 	"diffEditor.ignoreTrimWhitespace": false,
 	"diffEditor.wordWrap": "on",
-	// SCM & GIT
-	"scm.diffDecorations": "none",
 	// "git.decorations.enabled": false,
 	"git.confirmSync": false,
 	// PROBLEMS
 	"problems.decorations.enabled": false,
-	// BREADCRUMBS
-	"breadcrumbs.enabled": false,
 	// CHAT & AI
 	"chat.commandCenter.enabled": false,
 	"chat.editor.wordWrap": "on",
@@ -230,6 +223,7 @@
 	"quokka.showOutputOnStart": false,
 	"quokka.useOutputPanel": false,
 	// VIM EXTENSION
+	// "vim.cursorStylePerMode.insert": "block",
 	"vim.cursorStylePerMode.visualblock": "block-outline",
 	"vim.cursorStylePerMode.visualline": "block-outline",
 	"vim.cursorStylePerMode.visual": "block-outline",
@@ -270,11 +264,6 @@
 	},
 	"vim.normalModeKeyBindings": [
 		{
-			"before": ["K"],
-			"commands": ["lineBreakInsert"],
-			"silent": true
-		},
-		{
 			"before": ["<leader>", "h"],
 			"commands": ["editor.action.showHover"],
 			"silent": true
@@ -290,45 +279,8 @@
 			"silent": true
 		},
 		{
-			"before": ["<C-,>"],
-			"commands": [
-				{
-					"command": "cursorEnd"
-				},
-				{
-					"command": "type",
-					"args": {
-						"text": ","
-					}
-				}
-			]
-		},
-		{
-			"before": ["<A-,>"],
-			"commands": [
-				{
-					"command": "cursorEnd"
-				},
-				{
-					"command": "type",
-					"args": {
-						"text": ","
-					}
-				},
-				{
-					"command": "editor.action.insertLineAfter"
-				}
-			]
-		},
-		{
 			"before": ["<leader>", "f"],
 			"commands": ["editor.action.formatSelection.multiple"]
-		}
-	],
-	"vim.insertModeKeyBindingsNonRecursive": [
-		{
-			"before": ["<C-,>"],
-			"after": ["<Esc>", "A", ",", "a"]
 		}
 	],
 	"vim.visualModeKeyBindingsNonRecursive": [
@@ -357,7 +309,7 @@
 		"editor.defaultFormatter": "vscode.typescript-language-features"
 	},
 	"[vue]": {
-		"editor.defaultFormatter": "Vue.volar"
+		"editor.defaultFormatter": "octref.vetur"
 	},
 	"[php]": {
 		"editor.defaultFormatter": "DEVSENSE.phptools-vscode"
@@ -367,7 +319,7 @@
 	},
 	// CUSTOM CSS
 	"vscode_custom_css.imports": [
-		"file://${userHome}/.config/Code/mm.css",
+		"file://${userHome}/.config/Code/mm.css"
 		// "file://${userHome}/.config/Code/mm.js"
 	],
 	"vue.autoInsert.dotValue": true,
@@ -418,60 +370,60 @@
 	],
 	"splitHTMLAttributes.tabSize": 4,
 	"workbench.colorCustomizations": {
-		// "titleBar.inactiveForeground": "#151c2b",
+		"scrollbar.shadow": "#282a37",
+		"sideBar.background": "#282a37",
+		"sideBar.foreground": "#cecece",
+		"panelTitle.activeBorder": "#282a37",
+		"panel.border": "#282a37",
+		"titleBar.activeBackground": "#282a37",
+		"titleBar.inactiveBackground": "#282a37",
+		"titleBar.activeForeground": "#aeafad",
+		"editor.snippetFinalTabstopHighlightBorder": "#3e9453",
 		// "editor.snippetTabstopHighlightBorder": "#786197",
 		// "editor.snippetTabstopHighlightBackground": "#bd93f933",
-		// "editor.snippetFinalTabstopHighlightBorder": "#3e9453",
+		// "titleBar.inactiveForeground": "#282a37",
 
-		"titleBar.activeBackground": "#151c2b",
-		"titleBar.activeForeground": "#aeafad",
-		"titleBar.inactiveBackground": "#151c2b",
-		"titleBar.border": "#151c2b",
-		"editorCursor.background": "#535254",
-		"editorCursor.foreground": "#aeafad",
-		"editorGroupHeader.tabsBackground": "#151c2b",
-		"editorGroup.border": "#151c2b",
-		"editorGroupHeader.border": "#151c2b",
-		"editorGroupHeader.tabsBorder": "#151c2b",
-		"tab.unfocusedActiveBorder": "#151c2b",
-		"tab.unfocusedActiveBorderTop": "#151c2b",
-		"scrollbar.shadow": "#151c2b",
-		"editor.background": "#151c2b",
-		"tab.inactiveModifiedBorder": "#151c2b",
-		"tab.border": "#151c2b",
-		"tab.activeBackground": "#151c2b",
-		"tab.activeForeground": "#fff",
-		"tab.inactiveForeground": "#b4b4b4",
-		"tab.inactiveBackground": "#151c2b",
-		"tab.activeBorderTop": "#00000000",
-		"tab.activeBorder": "#00000000",
-		"statusBar.background": "#151c2b",
-		"statusBar.border": "default",
-		"statusBar.noFolderBackground": "#151c2b",
-		"editorGroup.emptyBackground": "#151c2b",
-		"sideBar.background": "#151c2b",
-		"sideBar.foreground": "#cecece",
-		"sideBar.border": "#151c2b",
-		"editorGutter.background": "#151c2b",
-		"terminal.background": "#151c2b",
-		"panelTitle.activeBorder": "#151c2b",
-		"panel.background": "#151c2b",
-		"panel.border": "#151c2b",
+		// "titleBar.border": "#282a37",
+		// "editorCursor.background": "#535254",
+		// "editorCursor.foreground": "#aeafad",
+		// "editorGroupHeader.tabsBackground": "#282a37",
+		// "editorGroup.border": "#282a37",
+		// "editorGroupHeader.border": "#282a37",
+		// "editorGroupHeader.tabsBorder": "#282a37",
+		// "tab.unfocusedActiveBorder": "#282a37",
+		// "tab.unfocusedActiveBorderTop": "#282a37",
+		// "editor.background": "#282a37",
+		// "tab.inactiveModifiedBorder": "#282a37",
+		// "tab.border": "#282a37",
+		// "tab.activeBackground": "#282a37",
+		// "tab.activeForeground": "#fff",
+		// "tab.inactiveForeground": "#b4b4b4",
+		// "tab.inactiveBackground": "#282a37",
+		// "tab.activeBorderTop": "#00000000",
+		// "tab.activeBorder": "#00000000",
+		// "statusBar.background": "#282a37",
+		// "statusBar.border": "default",
+		// "statusBar.noFolderBackground": "#282a37",
+		// "editorGroup.emptyBackground": "#282a37",
+		// "sideBar.border": "#282a37",
+		// "editorGutter.background": "#282a37",
+		// "terminal.background": "#282a37",
+		// "panel.background": "#282a37",
 
 		"editor.findMatchHighlightBackground": "#0000",
-		"editor.findMatchHighlightBorder": "#343943",
+		"editor.findMatchHighlightBorder": "#323333",
 		"editor.findMatchBackground": "#0000",
-		"editor.findMatchBorder": "#535252"
+		"editor.findMatchBorder": "#525253"
 	},
 
-	"editor.tokenColorCustomizations": {
-		"textMateRules": [
-			{
-				"scope": ["entity.name.function"],
-				"settings": {
-					"fontStyle": "bold"
-				}
+	"editor.semanticTokenColorCustomizations": {
+		"enabled": true,
+		"rules": {
+			"method": {
+				"fontStyle": "bold"
 			}
-		]
+		}
 	}
+
+	//test
 }

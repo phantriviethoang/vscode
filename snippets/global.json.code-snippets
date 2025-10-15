@@ -20,6 +20,13 @@
         ],
         "description": "Vue CDN"
     },
+    "console log": {
+        "prefix": "cl",
+        "body": [
+            "console.log($1)",
+        ],
+        "description": "console.log"
+    },
     "return": {
         "prefix": "re",
         "body": "return ",

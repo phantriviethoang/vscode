@@ -707,6 +707,7 @@
 		"key": "ctrl+,",
 		"command": "-workbench.action.openSettings"
 	},
+
 	{
 		"key": "ctrl+,",
 		"command": "runCommands",
@@ -739,7 +740,6 @@
 		},
 		"when": "vim.active && vim.mode == 'Insert' && editorTextFocus"
 	},
-
 	{
 		"key": "ctrl+,",
 		"command": "vim.remap",
@@ -748,7 +748,6 @@
 		},
 		"when": "vim.active && vim.mode == 'Normal' && editorTextFocus"
 	},
-
 	{
 		"key": "alt+,",
 		"command": "runCommands",
@@ -764,6 +763,7 @@
 		},
 		"when": "vim.active && vim.mode == 'Normal' && editorTextFocus"
 	},
+
 	{
 		"key": "f2",
 		"command": "fileutils.renameFile"
