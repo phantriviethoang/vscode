@@ -1,97 +1,79 @@
 {
-    "PHP open tag inline": {
-        "prefix": "pt",
-        "body": [
-            "<?php $0 ?>"
-        ],
-        "description": "PHP open and close tags on one line"
-    },
-    "PHP echo simple": {
-        "prefix": "ek",
-        "body": [
-            "echo $1;"
-        ],
-        "description": "Echo simple statement"
-    },
-    "PHP echo string": {
-        "prefix": "ec",
-        "body": [
-            "echo \"$1\";"
-        ],
-        "description": "Echo String statement"
-    },
-    "PHP echo variable": {
-        "prefix": "ev",
-        "body": [
-            "echo $$1;"
-        ],
-        "description": "Echo Variable statement"
-    },
-    "PHP declare variable": {
-        "prefix": "va",
-        "body": [
-            "$$1;"
-        ],
-        "description": "PHP declare variable"
-    },
-    "Var Dump": {
-        "prefix": "vd",
-        "body": [
-            "var_dump($1);"
-        ],
-        "description": "Var Dump dd function"
-    },
-    "PHP Function": {
-        "prefix": "fnc",
-        "body": [
-            "function ${1:}($${2:$param}) {",
-            "    ${3:// code...}",
-            "}"
-        ],
-        "description": "PHP function declaration"
-    },
-    "Laravel Route GET": {
-        "prefix": "rget",
-        "body": [
-            "Route::get('${1:/path}', [${2:Controller}::class, '${3:index}']);"
-        ],
-        "description": "Laravel GET route"
-    },
-    "Laravel Route POST": {
-        "prefix": "rpost",
-        "body": [
-            "Route::post('${1:/path}', [${2:Controller}::class, '${3:store}']);"
-        ],
-        "description": "Laravel POST route"
-    },
-    "Laravel Route PUT": {
-        "prefix": "rput",
-        "body": [
-            "Route::put('${1:/path}/{${2:id}}', [${3:Controller}::class, '${4:update}']);"
-        ],
-        "description": "Laravel PUT route"
-    },
-    "Laravel Route DELETE": {
-        "prefix": "rdel",
-        "body": [
-            "Route::delete('${1:/path}/{${2:id}}', [${3:Controller}::class, '${4:destroy}']);"
-        ],
-        "description": "Laravel DELETE route"
-    },
-    "Laravel Route Resource": {
-        "prefix": "rres",
-        "body": [
-            "Route::resource('${1:name}', ${2:Controller}::class);"
-        ],
-        "description": "Laravel resource route"
-    },
-    "Laravel Route Group": {
-        "prefix": "rgroup",
-        "body": [
-            "Route::prefix('${1:prefix}')->middleware('${2:middleware}')->group(function() {",
-            "    $0",
-            "});"
-        ],
-        "description": "Laravel route group with prefix and middleware"
-    }
+	"PHP open tag inline": {
+		"prefix": "pt",
+		"body": ["<?php $0 ?>"],
+		"description": "PHP open and close tags on one line"
+	},
+	"PHP echo simple": {
+		"prefix": "ek",
+		"body": ["echo $1;"],
+		"description": "Echo simple statement"
+	},
+	"PHP echo string": {
+		"prefix": "ec",
+		"body": ["echo \"$1\";"],
+		"description": "Echo String statement"
+	},
+	"PHP echo variable": {
+		"prefix": "ev",
+		"body": ["echo $$1;"],
+		"description": "Echo Variable statement"
+	},
+	"PHP declare variable": {
+		"prefix": "va",
+		"body": ["$$1;"],
+		"description": "PHP declare variable"
+	},
+	"Var Dump": {
+		"prefix": "vd",
+		"body": ["var_dump($1);"],
+		"description": "Var Dump dd function"
+	},
+	"PHP Function": {
+		"prefix": "fnc",
+		"body": ["function ${1:}($${2:$param}) {", "    ${3:// code...}", "}"],
+		"description": "PHP function declaration"
+	},
+	"Laravel Route GET": {
+		"prefix": "rget",
+		"body": [
+			"Route::get('${1:/path}', [${2:Controller}::class, '${3:index}']);"
+		],
+		"description": "Laravel GET route"
+	},
+	"Laravel Route POST": {
+		"prefix": "rpost",
+		"body": [
+			"Route::post('${1:/path}', [${2:Controller}::class, '${3:store}']);"
+		],
+		"description": "Laravel POST route"
+	},
+	"Laravel Route PUT": {
+		"prefix": "rput",
+		"body": [
+			"Route::put('${1:/path}/{${2:id}}', [${3:Controller}::class, '${4:update}']);"
+		],
+		"description": "Laravel PUT route"
+	},
+	"Laravel Route DELETE": {
+		"prefix": "rdel",
+		"body": [
+			"Route::delete('${1:/path}/{${2:id}}', [${3:Controller}::class, '${4:destroy}']);"
+		],
+		"description": "Laravel DELETE route"
+	},
+	"Laravel Route Resource": {
+		"prefix": "rres",
+		"body": ["Route::resource('${1:name}', ${2:Controller}::class);"],
+		"description": "Laravel resource route"
+	},
+	"Laravel Route Group": {
+		"prefix": "rgroup",
+		"body": [
+			"Route::prefix('${1:prefix}')->middleware('${2:middleware}')->group(function() {",
+			"    $0",
+			"});"
+		],
+		"description": "Laravel route group with prefix and middleware"
+	}
 }

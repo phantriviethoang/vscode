@@ -770,13 +770,6 @@
 	},
 
 	{
-		"key": "ctrl+j",
-		"command": "workbench.action.terminal.sendSequence",
-		"args": { "text": "\u001b[B" },
-		"when": "terminalFocus"
-	},
-
-	{
 		"key": "ctrl+k",
 		"command": "workbench.action.terminal.sendSequence",
 		"args": { "text": "\u001b[A" },
@@ -809,14 +802,14 @@
 		"args": { "text": "\u000D" },
 		"when": "terminalFocus"
 	},
-	{
-		"key": "ctrl+i",
-		"command": "workbench.action.terminal.sendSequence",
-		"args": { "text": "\u0009" },
-		"when": "terminalFocus"
-	},
 
-	// Ctrl+T = chuyển sang terminal tab kế tiếp
+	// {
+	// 	"key": "ctrl+i",
+	// 	"command": "workbench.action.terminal.sendSequence",
+	// 	"args": { "text": "\u0009" },
+	// 	"when": "terminalFocus"
+	// },
+
 	{
 		"key": "ctrl+t",
 		"command": "workbench.action.terminal.focusNext",
@@ -1000,11 +993,21 @@
 		"command": "notifications.clearAll"
 	},
 
-	// {
-	// 	"key": "ctrl+alt+c",
-	// 	"command": "fileutils.copyFileName",
-	// 	"when": "vim.mode == 'Normal'"
-	// },
+	{
+		"key": "alt+r",
+		"command": "runCommands",
+		"when": "editorTextFocus || terminalFocus",
+		"args": {
+			"commands": [
+				"workbench.action.terminal.focus",
+				"workbench.action.terminal.clear",
+				{
+					"command": "workbench.action.terminal.sendSequence",
+					"args": { "text": "\u001b[A\r" }
+				}
+			]
+		}
+	},
 
 	{
 		"key": "alt+p",
@@ -1057,6 +1060,31 @@
 		"args": {
 			"after": ["F", ">", "i", " "]
 		}
+	},
+	{
+		"key": "ctrl+3",
+		"command": "workbench.view.explorer",
+		"when": "viewContainer.workbench.view.explorer.enabled"
+	},
+	{
+		"key": "ctrl+shift+alt+s",
+		"command": "extension.vim_ctrl+s",
+		"when": "editorTextFocus && vim.active && vim.use<C-s> && !inDebugRepl"
+	},
+	{
+		"key": "ctrl+s",
+		"command": "-extension.vim_ctrl+s",
+		"when": "editorTextFocus && vim.active && vim.use<C-s> && !inDebugRepl"
+	},
+	{
+		"key": "ctrl+alt+z",
+		"command": "extension.vim_ctrl+z",
+		"when": "editorTextFocus && vim.active && vim.use<C-z> && !inDebugRepl"
+	},
+	{
+		"key": "ctrl+z",
+		"command": "-extension.vim_ctrl+z",
+		"when": "editorTextFocus && vim.active && vim.use<C-z> && !inDebugRepl"
 	}
 
 	// test

@@ -1,7 +1,7 @@
 
 # ~/.bashrc
 #
-export PATH=/usr/bin:/usr/local/bin:/bin:$HOME/.local/bin:$PATH
+
 
 export PATH="$HOME/.fly/bin:$PATH"
 
@@ -11,7 +11,7 @@ export PATH="$HOME/.fly/bin:$PATH"
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-PS1='[\u@\h \W]\$\n'
+PS1=' [\u \W]\n'
 export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 
 
@@ -79,7 +79,26 @@ p() {
   fi
 }
 
+pf() {
+  if [ $# -eq 0 ]; then
+    echo "⚠️  Bạn phải truyền file PHP, ví dụ: pf index.php"
+    return 1
+  fi
 
+  file="$1"
+  shift
+
+  if [ ! -f "$file" ]; then
+    if [ -f "${file}.php" ]; then
+      file="${file}.php"
+    else
+      echo "❌ File không tồn tại: $file hoặc ${file}.php" >&2
+      return 2
+    fi
+  fi
+
+  php -S localhost:8888 "$file" "$@"
+}
 
 
 vreact() {
