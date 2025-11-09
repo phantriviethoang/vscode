@@ -1,0 +1,117 @@
+" .ideavimrc is a configuration file for IdeaVim plugin. It uses
+"   the same commands as the original .vimrc configuration.
+" You can find a list of commands here: https://jb.gg/h38q75
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+" Source your .vimrc
+source ~/.vimrc
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+
+" Do incremental searching.
+set incsearch
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+
+" Highlight copied text
+Plug 'machakann/vim-highlightedyank'
+" Commentary plugin
+Plug 'tpope/vim-commentary'
+
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+"map \r <Action>(ReformatCode)
+
+"" Map <leader>d to start debug
+"map <leader>d <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+"map \b <Action>(ToggleLineBreakpoint)
+
+set autoindent
+set hlsearch
+set ignorecase
+set smartcase
+set incsearch
+set showcmd
+set textwidth=80
+set timeout
+set timeoutlen=200
+
+set report=2
+set whichwrap=b,s
+
+let mapleader = " "
+set nogdefault
+
+set nojoinspaces
+
+inoremap jj <Esc>
+inoremap jk <Esc>l
+
+inoremap jf <C-o>m`<C-o>$<C-o>a,<C-o>``
+inoremap jd <C-o>m`<C-o>$<C-o>a;<C-o>``
+
+nnoremap <leader>j m`o<Esc>``
+nnoremap <leader>k m`O<Esc>``
+
+nnoremap K i<CR><Esc>
+
+nnoremap H ^
+nnoremap L $
+
+vnoremap H ^
+vnoremap L $
+
+onoremap H ^
+onoremap L $
+
+nnoremap <C-[> g^
+nnoremap <C-]> g_
+
+vnoremap <C-[> g^
+vnoremap <C-]> g_
+
+nnoremap <C--> <C-x>
+nnoremap <C-=> <C-a>
+
+vnoremap <C-c> y
+vnoremap <C-x> d
+
+nnoremap s cl
+
+nnoremap m s
+nnoremap <C-m> S
+
+nnoremap zj <leader><leader>j
+nnoremap zk <leader><leader>k
+
+nnoremap zo o<CR>
+nnoremap yo O<CR><Esc>kA
+
+nnoremap <leader><Esc> :nohlsearch<CR>
+
+vnoremap ; <Esc>
+
+vnoremap > >gv
+vnoremap < <gv
+
+vnoremap p pgvy
+
+vnoremap s c
+vnoremap m s
+
+cnoremap jj <Esc>
+cnoremap jk <Esc>
+
+nnoremap n nzz
+nnoremap N Nzz
+nnoremap * *zz
+nnoremap # #zz
