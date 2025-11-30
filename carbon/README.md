@@ -1,0 +1,3 @@
+# Canary Theme README
+
+**Enjoy!**
