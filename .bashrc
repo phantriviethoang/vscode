@@ -15,6 +15,8 @@ PS1=' [\u \W]\n'
 export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 
 
+alias c.="code ."
+
 alias vue="npm create vue@latest"
 
 
@@ -50,12 +52,39 @@ alias c="clear"
 alias x="exit"
 
 # git
+
+alias g="git"
+
 alias gs="git status"
-alias gl="git log"
-alias gcom="git checkout master"
-alias gaa="git add ."
+alias gss="git status -s"
+
+alias gl="git --no-pager log --oneline --decorate --graph --all"
+alias gll="git --no-pager log"
+
+alias gcom="git checkout main"
+alias gcomt="git checkout master"
+
+alias ga="git add ."
+alias gadd="git add "
 alias gc="git commit -m "
+
 alias gp="git push"
+alias gpl="git pull"
+
+alias gco="git checkout"
+alias gcb="git checkout -b"
+alias gb="git branch"
+alias gba="git branch -a"
+
+alias gcl="git clone "
+
+alias grm="git remote -v"
+
+gclc() {
+    git clone "$1" && cd "$(basename "$1" .git)"
+}
+
+
 alias nah="git reset --hard && git clean -df"
 
 
