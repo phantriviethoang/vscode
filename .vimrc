@@ -55,6 +55,11 @@ nnoremap <C-m> S
 
 nnoremap zj <leader><leader>j
 nnoremap zk <leader><leader>k
+nnoremap zh <leader><leader>e
+nnoremap zl <leader><leader>ge
+
+nnoremap gh <leader><leader>f
+nnoremap gl <leader><leader>F
 
 nnoremap zo o<CR>
 nnoremap yo O<CR><Esc>kA
