@@ -1,118 +1,127 @@
 {
-    "Tailwind CDN": {
-        "prefix": "tailwind",
-        "body": [
-            "<script src=\"https://cdn.tailwindcss.com\"></script>"
-        ],
-        "description": "Tailwind CDN"
-    },
-    "Alpine CDN": {
-        "prefix": "alpinecdn",
-        "body": [
-            "<script src=\"//unpkg.com/alpinejs\" defer></script>"
-        ],
-        "description": "Alpine.js CDN"
-    },
-    "Vue CDN": {
-        "prefix": "vuecdn",
-        "body": [
-            "<script src=\"https://unpkg.com/vue@3/dist/vue.global.js\"></script>"
-        ],
-        "description": "Vue CDN"
-    },
-    "console log": {
-        "prefix": "cl",
-        "body": [
-            "console.log($1)",
-        ],
-        "description": "console.log"
-    },
-    "return": {
-        "prefix": "re",
-        "body": "return ",
-        "description": "return"
-    },
-    "document": {
-        "prefix": "dcm",
-        "body": "document",
-        "description": "document"
-    },
-    "dq - document.querySelector": {
-        "prefix": "dq",
-        "body": "document.querySelector('.$1')",
-        "description": "document.querySelector"
-    },
-    "dqa - document.querySelector": {
-        "prefix": "dqa",
-        "body": "document.querySelectorAll('.$1')",
-        "description": "document.querySelectorAll"
-    },
-    "fn - function name()": {
-        "prefix": "fn",
-        "body": [
-            "function $1($2) {",
-            "    $3",
-            "}"
-        ],
-        "description": "Function declaration"
-    },
-    "afun - arrow function": {
-        "prefix": "arfn",
-        "body": [
-            "const $1 = ($2) => {",
-            "    $3",
-            "};"
-        ],
-        "description": "Arrow function declaration"
-    },
-    "arrow - () => {}": {
-        "prefix": "ar",
-        "body": [
-            "($1) => {",
-            "    $2",
-            "}"
-        ],
-        "description": "Anonymous arrow function"
-    },
-    "each - .forEach(() => {})": {
-        "prefix": "each",
-        "body": [
-            "forEach(($1) => {",
-            "    $2",
-            "});"
-        ],
-        "description": "Array forEach arrow function"
-    },
-    "ael - .addEventListener()": {
-        "prefix": "ael",
-        "body": [
-            "addEventListener('$1', ($2) => {",
-            "    $3",
-            "});"
-        ],
-        "description": "addEventListener with arrow function"
-    },
-    "Class Method snippet": {
-        "prefix": "met",
-        "body": [
-            "${1:methodName}($2) {",
-            "\t$0",
-            "}"
-        ],
-        "description": "Create a class method with parentheses and body"
-    },
-    "PHP open tag inline": {
-        "prefix": "pt",
-        "body": [
-            "<?php $0 ?>"
-        ],
-        "description": "PHP open and close tags on one line"
-    },
-    "PHP short echo tag": {
-        "prefix": "et",
-        "body": [
-            "<?= $1 ?>"
-        ],
-        "description": "PHP short echo tag"
-    },
+  "Tailwind CDN": {
+    "prefix": "tailwind",
+    "body": [
+      "<script src=\"https://cdn.tailwindcss.com\"></script>"
+    ],
+    "description": "Tailwind CDN"
+  },
+  "Alpine CDN": {
+    "prefix": "alpinecdn",
+    "body": [
+      "<script src=\"//unpkg.com/alpinejs\" defer></script>"
+    ],
+    "description": "Alpine.js CDN"
+  },
+  "Vue CDN": {
+    "prefix": "vuecdn",
+    "body": [
+      "<script src=\"https://unpkg.com/vue@3/dist/vue.global.js\"></script>"
+    ],
+    "description": "Vue CDN"
+  },
+  "console log": {
+    "prefix": "cl",
+    "body": [
+      "console.log($1)",
+    ],
+    "description": "console.log"
+  },
+  "return": {
+    "prefix": "re",
+    "body": "return ",
+    "description": "return"
+  },
+  "document": {
+    "prefix": "dcm",
+    "body": "document",
+    "description": "document"
+  },
+  "dq - document.querySelector": {
+    "prefix": "dq",
+    "body": "document.querySelector('.$1')",
+    "description": "document.querySelector"
+  },
+  "dqa - document.querySelector": {
+    "prefix": "dqa",
+    "body": "document.querySelectorAll('.$1')",
+    "description": "document.querySelectorAll"
+  },
+  "fn - function name()": {
+    "prefix": "fn",
+    "body": [
+      "function $1($2) {",
+      "    $3",
+      "}"
+    ],
+    "description": "Function declaration"
+  },
+  "function": {
+    "prefix": "fnc",
+    "body": [
+      "function ${1:}(${2}) {",
+      "    ${3}",
+      "}"
+    ],
+    "description": "fnc function declaration"
+  },
+  "afun - arrow function": {
+    "prefix": "arfn",
+    "body": [
+      "const $1 = ($2) => {",
+      "    $3",
+      "};"
+    ],
+    "description": "Arrow function declaration"
+  },
+  "arrow - () => {}": {
+    "prefix": "ar",
+    "body": [
+      "($1) => {",
+      "    $2",
+      "}"
+    ],
+    "description": "Anonymous arrow function"
+  },
+  "each - .forEach(() => {})": {
+    "prefix": "each",
+    "body": [
+      "forEach(($1) => {",
+      "    $2",
+      "});"
+    ],
+    "description": "Array forEach arrow function"
+  },
+  "ael - .addEventListener()": {
+    "prefix": "ael",
+    "body": [
+      "addEventListener('$1', ($2) => {",
+      "    $3",
+      "});"
+    ],
+    "description": "addEventListener with arrow function"
+  },
+  "Class Method snippet": {
+    "prefix": "met",
+    "body": [
+      "${1:methodName}($2) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Create a class method with parentheses and body"
+  },
+  "PHP open tag inline": {
+    "prefix": "pt",
+    "body": [
+      "<?php $0 ?>"
+    ],
+    "description": "PHP open and close tags on one line"
+  },
+  "PHP short echo tag": {
+    "prefix": "et",
+    "body": [
+      "<?= $1 ?>"
+    ],
+    "description": "PHP short echo tag"
+  },
 }
