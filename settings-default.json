@@ -62,7 +62,7 @@
 	"workbench.tips.enabled": false,
 	"workbench.activityBar.location": "hidden",
 	"workbench.sideBar.location": "right",
-	"workbench.tree.indent": 10,
+	"workbench.tree.indent": 12,
 	"workbench.tree.enableStickyScroll": false,
 	"workbench.tree.renderIndentGuides": "none",
 	"workbench.list.smoothScrolling": true,
@@ -102,12 +102,22 @@
 		".php_cs.dist": "php"
 	},
 	"files.exclude": {
+		"**/.git": true,
+		"**/.svn": true,
+		"**/.hg": true,
+		"**/.DS_Store": true,
+		"**/Thumbs.db": true,
 		"**/node_modules": true,
+		"**/.eslintrc.json": true,
 		"**/.gitignore": true,
 		"**/.gitattributes": true,
 		"**/.vscode": true,
-		"**/.DS_Store": true,
 		"**/vite.config.js": true,
+		"**/jsconfig.json": true,
+		"**/tsconfig.json": true,
+		"**/next.config.*": true,
+		"**/next-env.d.ts": true,
+		"**/tailwind.config.js": true,
 		"**/package.json": true,
 		"**/package-lock.json": true,
 		"**/yarn.lock": true,
@@ -117,7 +127,9 @@
 		"**/postcss.config.*": true,
 		"**/README.md": true,
 		"**/dist": true,
-		"**/build": true
+		"**/build": true,
+		"**/.idea": true,
+		"**/.next": true
 	},
 	"fileutils.inputBox.pathType": "workspace",
 	"fileutils.moveFile.typeahead.enabled": true,
@@ -150,9 +162,8 @@
 		"storage": true,
 		".phpunit.result.cache": true
 	},
-	"terminal.integrated.defaultProfile.linux": "fish",
-	"terminal.integrated.fontSize": 16,
-	"terminal.integrated.lineHeight": 1.5,
+	"terminal.integrated.fontSize": 15,
+	"terminal.integrated.lineHeight": 1.1,
 	"terminal.integrated.fontFamily": "JetBrains Mono, MonoLisa",
 	"terminal.integrated.enableMultiLinePasteWarning": "never",
 	"terminal.integrated.suggest.enabled": true,
@@ -217,11 +228,11 @@
 	"vim.cursorStylePerMode.visual": "block-outline",
 	"vim.camelCaseMotion.enable": true,
 	"vim.easymotion": true,
-	"vim.easymotionDimColor": "#888888",
-	"vim.easymotionIncSearchForegroundColor": "#66cc66",
-	"vim.easymotionKeys": "sadfjklewcmpgh",
-	"vim.easymotionMarkerForegroundColorOneChar": "#ff6666",
-	"vim.easymotionMarkerForegroundColorTwoCharFirst": "#ffaa33",
+	"vim.easymotionDimColor": "#bcbec4a8",
+	"vim.easymotionIncSearchForegroundColor": "#BCBEC4",
+	"vim.easymotionKeys": "asdfghjklewcmp",
+	"vim.easymotionMarkerForegroundColorOneChar": "#FFAE8F",
+	"vim.easymotionMarkerForegroundColorTwoCharFirst": "#EB6689",
 	"vim.easymotionMarkerForegroundColorTwoCharSecond": "#ffdd77",
 	"vim.foldfix": true,
 	"vim.highlightedyank.color": "#a9dc7660",
@@ -231,7 +242,6 @@
 	"vim.leader": "<space>",
 	"vim.registers.useClipboard": true,
 	"vim.replaceWithRegister": true,
-	"vim.searchMatchTextColor": "#bbbbbb",
 	"vim.sneak": true,
 	"vim.sneakUseIgnorecaseAndSmartcase": true,
 	"vim.timeout": 700,
@@ -251,17 +261,13 @@
 	},
 	"vim.normalModeKeyBindings": [
 		{
-			"before": ["<leader>", "/"],
-			"commands": ["periscope.searchCurrentFile"]
+			"before": ["<leader>", "s"],
+			"commands": ["workbench.action.files.save"],
+			"silent": true
 		},
 		{
 			"before": ["<leader>", "h"],
 			"commands": ["editor.action.showHover"],
-			"silent": true
-		},
-		{
-			"before": ["<leader>", "n"],
-			"commands": ["explorer.newFile"],
 			"silent": true
 		},
 		{

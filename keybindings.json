@@ -56,11 +56,6 @@
 		"when": "editorTextFocus"
 	},
 
-	// {
-	// 	"key": "ctrl+1",
-	// 	"command": "workbench.action.toggleSidebarVisibility"
-	// },
-
 	{
 		"key": "ctrl+r",
 		"command": "workbench.action.gotoSymbol",
@@ -89,23 +84,14 @@
 
 	{
 		"key": "ctrl+1",
-		"command": "workbench.action.toggleSidebarVisibility",
-		// "command": "workbench.view.explorer",
-		"when": "sideBarVisible"
+		"command": "workbench.action.toggleSidebarVisibility"
 	},
 
 	{
-		"key": "ctrl+1",
+		"key": "ctrl+2",
 		"command": "workbench.view.explorer",
-		// "command": "workbench.action.toggleSidebarVisibility",
-		"when": "!sideBarVisible"
+		"when": "viewContainer.workbench.view.explorer.enabled"
 	},
-
-	// {
-	// 	"key": "ctrl+2",
-	// 	"command": "workbench.view.explorer",
-	// 	"when": "viewContainer.workbench.view.explorer.enabled"
-	// },
 
 	{
 		"key": "ctrl+alt+b",
@@ -650,12 +636,13 @@
 		"when": "editorTextFocus && !inSnippetMode && !suggestWidgetVisible && vim.mode == 'Insert'"
 	},
 
+	// easy motion
 	{
 		"key": "ctrl+h",
 		"command": "vim.remap",
 		"when": "editorTextFocus && vim.mode == 'Normal'",
 		"args": {
-			"after": ["<leader>", "<leader>", "b"]
+			"after": ["<leader>", "<leader>", "w"]
 		}
 	},
 	{
@@ -663,7 +650,7 @@
 		"command": "vim.remap",
 		"when": "editorTextFocus && vim.mode == 'Normal'",
 		"args": {
-			"after": ["<leader>", "<leader>", "f"]
+			"after": ["<leader>", "<leader>", "j"]
 		}
 	},
 	{
@@ -671,9 +658,10 @@
 		"command": "vim.remap",
 		"when": "editorTextFocus && vim.mode == 'Normal'",
 		"args": {
-			"after": ["<leader>", "<leader>", "w"]
+			"after": ["<leader>", "<leader>", "b"]
 		}
 	},
+
 	{
 		"key": "ctrl+=",
 		"command": "extension.vim_ctrl+a",
@@ -1167,11 +1155,6 @@
 		"args": { "after": ["F", "/", "h", "i", " "] }
 	},
 
-	{
-		"key": "ctrl+3",
-		"command": "workbench.view.explorer",
-		"when": "viewContainer.workbench.view.explorer.enabled"
-	},
 	{
 		"key": "ctrl+shift+alt+s",
 		"command": "extension.vim_ctrl+s",
