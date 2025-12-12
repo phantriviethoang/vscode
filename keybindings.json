@@ -782,7 +782,7 @@
 				"cursorEnd",
 				{
 					"command": "type",
-					"args": { "text": "," }
+					"args": { "text": ";" }
 				},
 				{
 					"command": "type",
