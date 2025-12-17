@@ -13,13 +13,13 @@
 	"React useState amount snippet": {
 		"prefix": "ust",
 		"body": [
-			"const [${1:state}, set${1/(.*)/${1:/capitalize}/}] = useState(${2});"
+			"const [${1:state}, set${1/(.*)/${1:/capitalize}/}] = useState(${2})"
 		],
 		"description": "useState snippet"
 	},
 	"useEffect minimal": {
 		"prefix": "uef",
-		"body": ["useEffect(() => {", "    ${1}", "}, [${2}]);"],
+		"body": ["useEffect(() => {", "    ${1}", "}, [${2}])"],
 		"description": "Simple useEffect with $1 as body and $2 as dependencies"
 	}
 }
