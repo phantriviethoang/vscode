@@ -1,0 +1,25 @@
+.monaco-editor .cursors-layer > div[style*="width"] {
+	height: 20px !important;
+	transform: translateY(5px) !important;
+	line-height: 20px !important;
+	display: flex !important;
+	align-items: center !important;
+}
+
+.monaco-workbench .titlebar-left .window-appicon {
+	display: none !important;
+	visibility: hidden !important;
+}
+
+/* .monaco-workbench .part.titlebar .window-title {
+	font-weight: 600 !important;
+	color: #c9c9c9 !important;
+} */
+
+/* .monaco-workbench .part.titlebar .window-title::before {
+	content: "⚡";
+	margin-right: 6px;
+	font-family: "JetBrainsMono Nerd Font";
+} */
+
+/* // test */

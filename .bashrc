@@ -1,4 +1,3 @@
-
 # ~/.bashrc
 #
 
@@ -21,20 +20,82 @@ alias vue="npm create vue@latest"
 
 
 # alias p="php -S localhost:8888"
+alias pp="php -S localhost:8888 -t public"
 alias s="php artisan serve"
 
+am() {
+  if [ $# -eq 0 ]; then
+    echo "⚠️ Usage: am <type> <name> [options]"
+    echo "👉 Example: am controller UserController"
+    return 1
+  fi
+
+  php artisan make:"$1" "${@:2}"
+}
+
+
+
+# Alias viết tắt cho các loại hay dùng
+alias mc="am controller"    # mc UserController --resource
+alias mm="am model"         # mm Post -m → model + migration
+alias mmgr="am migration"   # mgr create_posts_table
+alias ms="am seeder"        # ms UserSeeder
+alias mr="am request"       # mr StoreUserRequest
+alias mres="am resource"       # mres ProjectResource
+alias mmw="am middleware"   # mmw AuthMiddleware
+alias mj="am job"           # mj SendEmailJob
+alias me="am event"         # me UserRegistered
+alias menum="am enum"         # menum Enum\PermissionsEnum
+alias ml="am listener"      # ml SendWelcomeEmail
+alias mp="am policy"        # mp PostPolicy
+alias mf="am factory"       # mf PostFactory
+alias mcmm="am command"     # mcmm ClearCacheCommand
+alias mmail="am mail"           # mmail OrderShipped
+alias mt="am test"
+alias mview="am view"
+alias mcom="am component"
+
+
+mgr() {
+    if [ $# -eq 0 ]; then
+        php artisan migrate
+    else
+        php artisan migrate:$1 "${@:2}"
+    fi
+}
+
+
 alias a="php artisan"
-alias mgt="php artisan migrate"
+
 alias seed="php artisan db:seed"
-alias fresh="php artisan migrate:fresh --seed"
+
+alias mgr='php artisan migrate'
+alias fresh="php artisan migrate:fresh"
+alias refresh='php artisan migrate:refresh'
+alias mgri='php artisan migrate:install'
+
+alias mrs='php artisan migrate:reset'
+
+alias mrb="php artisan migrate:rollback" # rollback
+alias mrs='php artisan migrate:status'
+
+alias mfs="php artisan migrate:fresh --seed"
+
+alias sqlit="sed -e 's/\(DB_.*\)/# \\1/g' -e 's/# \(DB_CONNECTION=\).*/\\1sqlite/g' -i .env"
+alias lenv="cp -n .env.example .env && (grep '^APP_KEY=.\+' .env > /dev/null || artisan key:generate)"
+alias laravel-setup="composer install && lenv && sqlit && artisan migrate --force --seed"
+
 alias tinker="php artisan tinker"
 alias clearall='php artisan cache:clear && php artisan config:clear && php artisan route:clear && php artisan view:clear'
+alias opcl='php artisan optimize:clear'
+
+alias route='php artisan route:list'     # list route
+
+alias qwork='php artisan queue:work'     # list route
 
 alias test='php artisan test'
+
 alias nrt="npm run test"
-
-
-alias mgt="php artisan migrate"
 
 alias i="install"
 alias n="npm"
@@ -46,6 +107,7 @@ alias ni="npm install"
 alias nr="npm run"
 
 alias d="npm run dev"
+alias rd="composer run dev"
 
 alias nf="neofetch"
 alias c="clear"
@@ -68,9 +130,21 @@ alias ga="git add ."
 alias gadd="git add "
 alias gc="git commit -m "
 
+alias wip='git commit -m "wip"'
+
+gcm() {
+  if [ -z "$*" ]; then
+    echo "❌ Commit message is required"
+    return 1
+  fi
+  git commit -m "$*"
+}
+
+
 alias gp="git push"
 alias gpl="git pull"
 
+alias co="git checkout"
 alias gco="git checkout"
 alias gcb="git checkout -b"
 alias gb="git branch"
@@ -176,6 +250,10 @@ vreact() {
 
 alias cb="cd .."
 alias macd='f(){ mkdir -p "$1" && cd "$1"; }; f'
+
+md() {
+  mkdir -p "$1"
+}
 
 
 alias vbash='vim ~/.bashrc'
