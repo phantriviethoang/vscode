@@ -10,3 +10,38 @@
 	display: none !important;
 	visibility: hidden !important;
 }
+
+.breadcrumbs-control {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+.custom-window-title {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	padding: 0 8px;
+	flex: 1;
+	min-width: 0;
+	overflow: hidden;
+}
+
+.custom-title-content {
+	display: inline-flex;
+	align-items: center;
+	gap: 0;
+	min-width: 0;
+	max-width: 100%;
+	overflow: hidden;
+}
+
+.custom-title-text {
+	color: var(--vscode-titleBar-activeForeground);
+	font-weight: 600;
+	font-size: 13px;
+	line-height: 22px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	min-width: 0;
+}

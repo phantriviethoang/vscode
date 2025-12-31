@@ -1,2 +1,104 @@
-// VSCode Custom Title - Minified
-(function () { 'use strict'; function updateCustomTitle() { const breadcrumbsControl = document.querySelector('.breadcrumbs-control'); if (!breadcrumbsControl) return; const breadcrumbs = breadcrumbsControl.querySelector('.monaco-breadcrumbs'); if (!breadcrumbs) return; let customTitle = document.querySelector('.custom-window-title'); if (!customTitle) { customTitle = document.createElement('div'); customTitle.className = 'custom-window-title'; const windowTitle = document.querySelector('.window-title'); if (!windowTitle) return; windowTitle.style.display = 'none'; windowTitle.parentElement.insertBefore(customTitle, windowTitle) } const allItems = breadcrumbs.querySelectorAll('.monaco-breadcrumb-item'); if (allItems.length === 0) return; const lastItem = allItems[allItems.length - 1]; const iconLabel = lastItem.querySelector('.monaco-icon-label'); if (!iconLabel) return; if (!iconLabel.classList.contains('file-icon') && !iconLabel.classList.contains('folder-icon')) return; const container = document.createElement('div'); container.className = 'custom-title-content'; const beforeStyles = window.getComputedStyle(iconLabel, '::before'); const iconElement = document.createElement('span'); iconElement.className = 'custom-title-icon'; iconElement.style.display = 'inline-block'; iconElement.style.width = beforeStyles.width; iconElement.style.height = '16px'; iconElement.style.backgroundImage = beforeStyles.backgroundImage; iconElement.style.backgroundSize = '16px 16px'; iconElement.style.backgroundPosition = 'center'; iconElement.style.backgroundRepeat = 'no-repeat'; iconElement.style.marginRight = '4px'; iconElement.style.marginBottom = '2px'; iconElement.style.flexShrink = '0'; iconElement.style.verticalAlign = 'middle'; const content = beforeStyles.content; if (content && content !== 'none' && content !== '""' && content !== '" "') { const cleanContent = content.replace(/^["']|["']$/g, ''); if (cleanContent && cleanContent !== ' ') { iconElement.textContent = cleanContent; iconElement.style.fontFamily = beforeStyles.fontFamily; iconElement.style.fontSize = beforeStyles.fontSize; iconElement.style.color = beforeStyles.color; iconElement.style.lineHeight = '16px' } } const labelName = iconLabel.querySelector('.label-name'); const fileName = labelName ? labelName.textContent : iconLabel.textContent; const textElement = document.createElement('span'); textElement.className = 'custom-title-text'; textElement.textContent = fileName; textElement.style.fontSize = '13.5px'; textElement.style.fontWeight = '600'; container.appendChild(iconElement); container.appendChild(textElement); while (customTitle.firstChild) customTitle.removeChild(customTitle.firstChild); customTitle.appendChild(container) } const observer = new MutationObserver(function () { updateCustomTitle() }); function startObserving() { const breadcrumbsControl = document.querySelector('.breadcrumbs-control'); if (breadcrumbsControl) { observer.observe(breadcrumbsControl, { childList: true, subtree: true, characterData: true }); updateCustomTitle() } else { setTimeout(startObserving, 500) } } if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', startObserving) } else { startObserving() } window.addEventListener('focus', updateCustomTitle) })();
+(function () {
+	"use strict";
+	function updateCustomTitle() {
+		const breadcrumbsControl = document.querySelector(
+			".breadcrumbs-control"
+		);
+		if (!breadcrumbsControl) return;
+		const breadcrumbs = breadcrumbsControl.querySelector(
+			".monaco-breadcrumbs"
+		);
+		if (!breadcrumbs) return;
+		let customTitle = document.querySelector(".custom-window-title");
+		if (!customTitle) {
+			customTitle = document.createElement("div");
+			customTitle.className = "custom-window-title";
+			const windowTitle = document.querySelector(".window-title");
+			if (!windowTitle) return;
+			windowTitle.style.display = "none";
+			windowTitle.parentElement.insertBefore(customTitle, windowTitle);
+		}
+		const allItems = breadcrumbs.querySelectorAll(
+			".monaco-breadcrumb-item"
+		);
+		if (allItems.length === 0) return;
+		const lastItem = allItems[allItems.length - 1];
+		const iconLabel = lastItem.querySelector(".monaco-icon-label");
+		if (!iconLabel) return;
+		if (
+			!iconLabel.classList.contains("file-icon") &&
+			!iconLabel.classList.contains("folder-icon")
+		)
+			return;
+		const container = document.createElement("div");
+		container.className = "custom-title-content";
+		const beforeStyles = window.getComputedStyle(iconLabel, "::before");
+		const iconElement = document.createElement("span");
+		iconElement.className = "custom-title-icon";
+		iconElement.style.display = "inline-block";
+		iconElement.style.width = beforeStyles.width;
+		iconElement.style.height = "16px";
+		iconElement.style.backgroundImage = beforeStyles.backgroundImage;
+		iconElement.style.backgroundSize = "16px 16px";
+		iconElement.style.backgroundPosition = "center";
+		iconElement.style.backgroundRepeat = "no-repeat";
+		iconElement.style.marginRight = "4px";
+		iconElement.style.marginBottom = "2.2px";
+		iconElement.style.flexShrink = "0";
+		iconElement.style.verticalAlign = "middle";
+		const content = beforeStyles.content;
+		if (
+			content &&
+			content !== "none" &&
+			content !== '""' &&
+			content !== '" "'
+		) {
+			const cleanContent = content.replace(/^["']|["']$/g, "");
+			if (cleanContent && cleanContent !== " ") {
+				iconElement.textContent = cleanContent;
+				iconElement.style.fontFamily = beforeStyles.fontFamily;
+				iconElement.style.fontSize = beforeStyles.fontSize;
+				iconElement.style.color = beforeStyles.color;
+				iconElement.style.lineHeight = "16px";
+			}
+		}
+		const labelName = iconLabel.querySelector(".label-name");
+		const fileName = labelName
+			? labelName.textContent
+			: iconLabel.textContent;
+		const textElement = document.createElement("span");
+		textElement.className = "custom-title-text";
+		textElement.textContent = fileName;
+		textElement.style.fontSize = "13.3px";
+		textElement.style.fontWeight = "550";
+		container.appendChild(iconElement);
+		container.appendChild(textElement);
+		while (customTitle.firstChild)
+			customTitle.removeChild(customTitle.firstChild);
+		customTitle.appendChild(container);
+	}
+	const observer = new MutationObserver(function () {
+		updateCustomTitle();
+	});
+	function startObserving() {
+		const breadcrumbsControl = document.querySelector(
+			".breadcrumbs-control"
+		);
+		if (breadcrumbsControl) {
+			observer.observe(breadcrumbsControl, {
+				childList: true,
+				subtree: true,
+				characterData: true,
+			});
+			updateCustomTitle();
+		} else {
+			setTimeout(startObserving, 500);
+		}
+	}
+	if (document.readyState === "loading") {
+		document.addEventListener("DOMContentLoaded", startObserving);
+	} else {
+		startObserving();
+	}
+	window.addEventListener("focus", updateCustomTitle);
+})();
