@@ -22,6 +22,9 @@ inoremap jk <Esc>l
 inoremap jh <Esc>I
 inoremap jl <Esc>A
 
+inoremap jg <Esc>o
+inoremap jm <CR>
+
 inoremap j, <Esc>A,<Esc>
 inoremap j; <Esc>A;<Esc>
 
@@ -31,11 +34,6 @@ inoremap jd <C-o>m`<C-o>$<C-o>a;<C-o>``
 nnoremap <leader>j m`o<Esc>``
 nnoremap <leader>k m`O<Esc>``
 
-" class helpers
-" nnoremap <leader>u f>i <Esc>a
-" nnoremap <leader>i F>i <Esc>a
-" nnoremap <leader>y f/i <Esc>i
-" nnoremap <leader>o F/hi <Esc>a
 
 nnoremap <leader>uc f>i class=
 nnoremap <leader>ur f>i className=
@@ -113,6 +111,7 @@ vnoremap ; <Esc>
 vnoremap > >gv
 vnoremap < <gv
 
+xnoremap y y`>
 vnoremap p pgvy
 
 vnoremap s c
