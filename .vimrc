@@ -34,52 +34,37 @@ inoremap jd <C-o>m`<C-o>$<C-o>a;<C-o>``
 nnoremap <leader>j m`o<Esc>``
 nnoremap <leader>k m`O<Esc>``
 
+" nnoremap H ^
+" nnoremap L $
 
-nnoremap <leader>uc f>i class=
-nnoremap <leader>ur f>i className=
-nnoremap <leader>ui f>i id=
-nnoremap <leader>un f>i name=
-nnoremap <leader>up f>i placeholder=
-nnoremap <leader>ut f>i type=
-nnoremap <leader>uv f>i value=
+nnoremap J :bprevious<CR>
+nnoremap K :bnext<CR>
 
-nnoremap <leader>ic F>i class=
-nnoremap <leader>ir F>i className=
-nnoremap <leader>ii F>i id=
-nnoremap <leader>in F>i name=
-nnoremap <leader>ip F>i placeholder=
-nnoremap <leader>it F>i type=
-nnoremap <leader>iv F>i value=
+nnoremap H <C-o>
 
-nnoremap <leader>yc f/hi class=
-nnoremap <leader>yr f/hi className=
-nnoremap <leader>yi f/hi id=
-nnoremap <leader>yn f/hi name=
-nnoremap <leader>yp f/hi placeholder=
-nnoremap <leader>yt f/hi type=
-nnoremap <leader>yv f/hi value=
+nnoremap L <C-i>
 
-nnoremap <leader>oc F/hi class=
-nnoremap <leader>or F/hi className=
-nnoremap <leader>oi F/hi id=
-nnoremap <leader>on F/hi name=
-nnoremap <leader>op F/hi placeholder=
-nnoremap <leader>ot F/hi type=
-nnoremap <leader>ov F/hi value=
+" vnoremap H ^
+" vnoremap L $
 
-nnoremap K i<CR><Esc>
+onoremap gh ^
+onoremap gl $
 
-nnoremap H ^
-nnoremap L $
+" nnoremap gh <leader><leader>f
+" nnoremap gl <leader><leader>F
 
-vnoremap H ^
-vnoremap L $
+nnoremap gh ^
+vnoremap gh ^
 
-onoremap H ^
-onoremap L $
+nnoremap gl $
+vnoremap gl $
 
-nnoremap <C-[> g^
-nnoremap <C-]> g_
+" nnoremap gs 0
+" vnoremap gs 0
+
+" nnoremap K i<CR><Esc>
+
+nnoremap <C-]> i<CR><Esc>
 
 vnoremap <C-[> g^
 vnoremap <C-]> g_
@@ -97,9 +82,6 @@ nnoremap <C-m> S
 
 nnoremap zh <leader><leader>e
 nnoremap zl <leader><leader>ge
-
-nnoremap gh <leader><leader>f
-nnoremap gl <leader><leader>F
 
 nnoremap zo o<CR>
 nnoremap yo O<CR><Esc>kA

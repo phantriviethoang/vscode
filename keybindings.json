@@ -1182,6 +1182,20 @@
 	{
 		"key": "alt+s alt+b",
 		"command": "simpleBrowser.show"
+	},
+
+	{
+		"key": "ctrl+alt+3",
+		"command": "runCommands",
+		"when": "editorTextFocus",
+		"args": {
+			"commands": ["editor.toggleImportFold", "namespaceResolver.sort"]
+		}
+	},
+
+	{
+		"key": "ctrl+[",
+		"command": "editor.action.joinLines"
 	}
 
 	// test

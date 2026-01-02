@@ -42,44 +42,49 @@ alias mmgr="am migration"   # mgr create_posts_table
 alias ms="am seeder"        # ms UserSeeder
 alias mr="am request"       # mr StoreUserRequest
 alias mres="am resource"       # mres ProjectResource
-alias mmw="am middleware"   # mmw AuthMiddleware
+alias mmdw="am middleware"   # mmw AuthMiddleware
 alias mj="am job"           # mj SendEmailJob
 alias me="am event"         # me UserRegistered
 alias menum="am enum"         # menum Enum\PermissionsEnum
 alias ml="am listener"      # ml SendWelcomeEmail
 alias mp="am policy"        # mp PostPolicy
 alias mf="am factory"       # mf PostFactory
-alias mcmm="am command"     # mcmm ClearCacheCommand
+alias mcm="am command"     # mcmm ClearCacheCommand
 alias mmail="am mail"           # mmail OrderShipped
 alias mt="am test"
 alias mview="am view"
 alias mcom="am component"
 
+# Migrate Laravel
 
-mgr() {
-    if [ $# -eq 0 ]; then
+function mgr {
+    if [ "$#" -eq 0 ]; then
         php artisan migrate
-    else
-        php artisan migrate:$1 "${@:2}"
+        return
     fi
-}
 
+    php artisan migrate:"$1" "${@:2}"
+}
 
 alias a="php artisan"
 
 alias seed="php artisan db:seed"
 
-alias mgr='php artisan migrate'
+
 alias fresh="php artisan migrate:fresh"
 alias refresh='php artisan migrate:refresh'
+
+#alias mgr='php artisan migrate'
+
+alias mgrf='php artisan migrate:fresh'
 alias mgri='php artisan migrate:install'
-
-alias mrs='php artisan migrate:reset'
-
-alias mrb="php artisan migrate:rollback" # rollback
-alias mrs='php artisan migrate:status'
+alias mgrrf='php artisan migrate:refresh'
+alias mgrrs='php artisan migrate:reset'
+alias mgrrb="php artisan migrate:rollback" # rollback
+alias mgrst='php artisan migrate:status'
 
 alias mfs="php artisan migrate:fresh --seed"
+
 
 alias sqlit="sed -e 's/\(DB_.*\)/# \\1/g' -e 's/# \(DB_CONNECTION=\).*/\\1sqlite/g' -i .env"
 alias lenv="cp -n .env.example .env && (grep '^APP_KEY=.\+' .env > /dev/null || artisan key:generate)"
@@ -91,7 +96,7 @@ alias opcl='php artisan optimize:clear'
 
 alias route='php artisan route:list'     # list route
 
-alias qwork='php artisan queue:work'     # list route
+alias qwork='php artisan queue:work'
 
 alias test='php artisan test'
 
@@ -108,6 +113,12 @@ alias nr="npm run"
 
 alias d="npm run dev"
 alias rd="composer run dev"
+
+alias cps='composer require'
+alias ci='composer install'
+
+alias ln='laravel new'
+
 
 alias nf="neofetch"
 alias c="clear"
@@ -160,6 +171,11 @@ gclc() {
 
 
 alias nah="git reset --hard && git clean -df"
+
+
+shcn() {
+  npx shadcn@latest add "$@"
+}
 
 
 alias vite="npm create vite@latest"
