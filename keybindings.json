@@ -101,8 +101,7 @@
     },
     {
         "key": "ctrl+l",
-        "command": "workbench.action.terminal.clear",
-        "when": "terminalFocus"
+        "command": "workbench.action.terminal.clear"
     },
     {
         "key": "ctrl+c",
