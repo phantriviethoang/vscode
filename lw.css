@@ -1,9 +1,37 @@
+/* Sidebar title */
+.composite.title {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+}
+.composite.title h2 {
+  font-weight: bold !important;
+  font-size: 12px !important;
+  color: #bc9abc !important;
+}
+
+
 .monaco-editor .cursors-layer > div[style*="width"] {
 	height: 20px !important;
-	transform: translateY(5px) !important;
+	transform: translateY(8px) !important;
 	line-height: 20px !important;
 	display: flex !important;
 	align-items: center !important;
+}
+
+/* File Explorer Item Label */
+.monaco-tree .monaco-tree-row .label-name,
+.monaco-list .monaco-list-row
+.monaco-icon-label .label-name {
+    font-family: 'DankMono Nerd Font', monospace !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    color: #FFF !important;
+}
+
+.explorer-item-edited {
+  font-family: DankMono Nerd Font !important;
+  font-size: 14px !important;
 }
 
 .monaco-workbench .titlebar-left .window-appicon {
@@ -11,25 +39,49 @@
 	visibility: hidden !important;
 }
 
+/* Search Label */
+.search-label {
+    font-family: 'DankMono Nerd Font' !important;
+    font-size: 14px !important;
+    color: #fff;
+    display: block;
+}
+
+/* Command palette text input */
+.quick-input-filter .monaco-inputbox {
+    border-radius: 12px !important;
+    padding: 7px !important;
+    border: none !important;
+    font-family: "DankMono Nerd Font" !important;
+    font-size: 18px !important;
+    margin-bottom: 16px !important;
+}
+
 /* Hide breadcrumbs bar */
 .breadcrumbs-control {
     display: none !important;
     visibility: hidden !important;
+    font-size: 18px !important;
+    font-family: "DankMono Nerd Font" !important;
 }
 
 .custom-window-title {
 	display: flex;
 	align-items: center;
+    font-family: "DankMono Nerd Font" !important;
 	height: 100%;
 	padding: 0 8px;
 	flex: 1;
 	min-width: 0;
+    font-size: 18px !important;
 	overflow: hidden;
 }
 
 .custom-title-content {
 	display: inline-flex;
 	align-items: center;
+    font-family: "DankMono Nerd Font" !important;
+    font-size: 18px !important;
 	gap: 0;
 	min-width: 0;
 	max-width: 100%;
@@ -38,8 +90,9 @@
 
 .custom-title-text {
 	color: var(--vscode-titleBar-activeForeground);
-	font-weight: 600;
-	font-size: 13px;
+	font-weight: 800;
+    font-size: 15px !important;
+    font-family: "DankMono Nerd Font" !important;
 	line-height: 22px;
 	white-space: nowrap;
 	overflow: hidden;
@@ -68,4 +121,64 @@
 
     width: 150% !important;
     height: 150% !important;
+}
+
+/* ===== FORCE FONT FOR SOURCE CONTROL ===== */
+
+/* Title: Source Control */
+.monaco-workbench .part.scm-viewlet h2,
+.monaco-workbench .part.scm-viewlet h2 * {
+    font-family: 'DankMono Nerd Font', monospace !important;
+}
+
+/* "Changes" label */
+.monaco-workbench .part.scm-viewlet .name,
+.monaco-workbench .part.scm-viewlet .name * {
+    font-family: 'DankMono Nerd Font', monospace !important;
+}
+
+/* Change list lines */
+.monaco-workbench .part.scm-viewlet .view-line,
+.monaco-workbench .part.scm-viewlet .view-line * {
+    font-family: 'DankMono Nerd Font', monospace !important;
+}
+
+/* SCM tree items (files, folders, status text) */
+.monaco-workbench .part.scm-viewlet,
+.monaco-workbench .part.scm-viewlet * {
+    font-family: 'DankMono Nerd Font', monospace !important;
+}
+/* ===== COMMAND PALETTE INPUT ===== */
+
+/* Ô input gõ lệnh */
+.monaco-workbench .quick-input-widget .quick-input-box input {
+    font-family: 'DankMono Nerd Font', monospace !important;
+    font-size: 18px !important;      /* chỉnh to/nhỏ tại đây */
+    line-height: 1.6 !important;
+}
+
+/* Placeholder text */
+.monaco-workbench .quick-input-widget .quick-input-box input::placeholder {
+    font-size: 16px !important;
+}
+
+/* Danh sách kết quả bên dưới */
+.monaco-workbench .quick-input-widget .monaco-list-row,
+.monaco-workbench .quick-input-widget .monaco-list-row * {
+    font-family: 'DankMono Nerd Font', monospace !important;
+    font-size: 15px !important;
+}
+
+.windows {
+    font-family: 'DankMono Nerd Font', monospace !important;
+}
+
+
+/* Button */
+.monaco-button.monaco-text-button {
+    font-family: 'DankMono Nerd Font', monospace !important;
+}
+/* Incoming Outgoing line */
+[aria-label="Incoming and outgoing changes"].monaco-list-row {
+  border-top: 1px solid #fff !important;
 }
