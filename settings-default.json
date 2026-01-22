@@ -85,9 +85,9 @@
     "workbench.editor.editorActionsLocation": "hidden",
     "workbench.navigationControl.enabled": false,
     "window.commandCenter": false,
-    "workbench.colorTheme": "Carbon Theme VSCode",
-    "workbench.iconTheme": "JetBrains Icons",
-    "workbench.productIconTheme": "feather-icons",
+    "workbench.colorTheme": "jetbrains-phpstorm",
+    "workbench.iconTheme": "jetbrains-phpstorm",
+    "workbench.productIconTheme": "Feather Icons",
     "workbench.editor.scrollToSwitchTabs": true,
     "workbench.editor.decorations.badges": false,
     "workbench.editor.decorations.colors": false,
@@ -263,6 +263,24 @@
         },
         {
             "before": [
+                "z",
+                "k"
+            ],
+            "commands": [
+                "workbench.action.nextEditor"
+            ]
+        },
+        {
+            "before": [
+                "z",
+                "j"
+            ],
+            "commands": [
+                "workbench.action.previousEditor"
+            ]
+        },
+        {
+            "before": [
                 "<leader>",
                 "m"
             ],
@@ -363,14 +381,6 @@
                 "workbench.action.closeActiveEditor"
             ],
             "silent": true
-        },
-        {
-            "before": [
-                "q"
-            ],
-            "commands": [
-                "workbench.action.navigateLast"
-            ]
         },
         {
             "before": [
@@ -535,7 +545,6 @@
         "upsert",
         "Usuario",
         "WEBPUSH",
-        "Workopia",
         "alpinejs",
         "enctype",
         "endsection",

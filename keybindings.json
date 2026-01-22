@@ -101,7 +101,8 @@
     },
     {
         "key": "ctrl+l",
-        "command": "workbench.action.terminal.clear"
+        "command": "workbench.action.terminal.clear",
+        "when": "terminalFocus"
     },
     {
         "key": "ctrl+c",
@@ -243,11 +244,15 @@
         "key": "alt+n",
         "command": "fileutils.newFolderAtRoot"
     },
+    // // Git
+    // {
+    // 	"key": "ctrl+4",
+    // 	"command": "workbench.view.scm",
+    // },
     // Git
     {
         "key": "ctrl+4",
         "command": "workbench.view.scm"
-        // "when": "viewContainer.workbench.view.scm.focused || sideBarVisible"
     },
     // {
     // 	"key": "ctrl+4",
@@ -1289,11 +1294,22 @@
             ]
         },
         "when": "editorTextFocus && vim.mode == 'Normal'"
-    }
+    },
+    {
+        "key": "ctrl+t",
+        "command": "-workbench.action.showAllSymbols"
+    },
     // {
-    //     "key": "z k",
-    //     "when": "editorTextFocus && vim.active && vim.mode == 'Normal'",
-    //     "command": "lineBreakInsert"
-    // }
+    //     "key": "ctrl+t",
+    //     "command": "better-pest.run"
+    // },
+    {
+        "key": "meta+k meta+r",
+        "command": "-better-pest.run"
+    },
+    {
+        "key": "ctrl+alt+p",
+        "command": "better-pest.run"
+    }
     // test
 ]
