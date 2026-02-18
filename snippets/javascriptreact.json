@@ -1,25 +1,63 @@
 {
-	"Export default React Function Component": {
-		"prefix": "ef",
-		"body": [
-			"export default function ${1:${TM_FILENAME_BASE}}(${2}) {",
-			"    return (",
-			"        $0",
-			"    )",
-			"}"
-		],
-		"description": "Export default React Function Component"
-	},
-	"React useState amount snippet": {
-		"prefix": "ust",
-		"body": [
-			"const [${1:state}, set${1/(.*)/${1:/capitalize}/}] = useState(${2})"
-		],
-		"description": "useState snippet"
-	},
-	"useEffect minimal": {
-		"prefix": "uef",
-		"body": ["useEffect(() => {", "    ${1}", "}, [${2}])"],
-		"description": "Simple useEffect with $1 as body and $2 as dependencies"
-	}
+    "Export default React Function Component": {
+        "prefix": "ef",
+        "body": [
+            "export default function ${1:${TM_FILENAME_BASE}}(${2}) {",
+            "    return (",
+            "        $0",
+            "    )",
+            "}"
+        ],
+        "description": "Export default React Function Component"
+    },
+    "React useState amount snippet": {
+        "prefix": "ust",
+        "body": [
+            "const [${1:state}, set${1/(.*)/${1:/capitalize}/}] = useState(${2})"
+        ],
+        "description": "useState snippet"
+    },
+    "useEffect minimal": {
+        "prefix": "uef",
+        "body": [
+            "useEffect(() => {",
+            "    ${1}",
+            "}, [${2}])"
+        ],
+        "description": "Simple useEffect with $1 as body and $2 as dependencies"
+    },
+    "useForm declaration": {
+        "prefix": "uf",
+        "body": [
+            "const { data, setData, post, put, patch, delete: destroy, processing, errors, reset } = useForm(${1});"
+        ]
+    },
+    "usePage props": {
+        "prefix": "up",
+        "body": [
+            "const { ${1} } = usePage().props;"
+        ]
+    },
+    "preventDefault inline": {
+        "prefix": "pd",
+        "body": [
+            "(e) => {",
+            "    e.preventDefault();",
+            "}"
+        ]
+    },
+    "Import tailwindcss vite": {
+        "prefix": "itw",
+        "body": [
+            "import tailwindcss from '@tailwindcss/vite'"
+        ],
+        "description": "Import tailwindcss plugin for Vite"
+    },
+    "Tailwindcss plugin call": {
+        "prefix": "twplg",
+        "body": [
+            "tailwindcss()"
+        ],
+        "description": "tailwindcss() plugin for Vite"
+    }
 }

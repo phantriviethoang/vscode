@@ -1,7 +1,0 @@
-{
-	"Insert {{  }} blade template php": {
-		"prefix": "bk",
-		"body": ["{{ $1 }}"],
-		"description": "Insert curly bracket"
-	}
-}

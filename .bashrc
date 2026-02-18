@@ -17,6 +17,8 @@ export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 alias c.="code ."
 
 alias vue="npm create vue@latest"
+alias daisy="npm i -D daisyui@latest"
+alias tw="npm install tailwindcss @tailwindcss/vite"
 
 
 # alias p="php -S localhost:8888"
@@ -34,7 +36,6 @@ am() {
 }
 
 
-
 # Alias viết tắt cho các loại hay dùng
 alias mc="am controller"    # mc UserController --resource
 alias mm="am model"         # mm Post -m → model + migration
@@ -47,6 +48,7 @@ alias mj="am job"           # mj SendEmailJob
 alias me="am event"         # me UserRegistered
 alias menum="am enum"         # menum Enum\PermissionsEnum
 alias ml="am listener"      # ml SendWelcomeEmail
+alias mlw="am livewire"      # mlw hello-world
 alias mp="am policy"        # mp PostPolicy
 alias mf="am factory"       # mf PostFactory
 alias mcm="am command"     # mcmm ClearCacheCommand
@@ -68,8 +70,9 @@ function mgr {
 
 alias a="php artisan"
 
-alias seed="php artisan db:seed"
+alias wfd="php artisan wayfinder:generate"
 
+alias seed="php artisan db:seed"
 
 alias fresh="php artisan migrate:fresh"
 alias refresh='php artisan migrate:refresh'
@@ -90,11 +93,19 @@ alias sqlit="sed -e 's/\(DB_.*\)/# \\1/g' -e 's/# \(DB_CONNECTION=\).*/\\1sqlite
 alias lenv="cp -n .env.example .env && (grep '^APP_KEY=.\+' .env > /dev/null || artisan key:generate)"
 alias laravel-setup="composer install && lenv && sqlit && artisan migrate --force --seed"
 
+alias breeze="composer require laravel/breeze --dev"
+alias breezei="php artisan breeze:install"
+
 alias tinker="php artisan tinker"
 alias clearall='php artisan cache:clear && php artisan config:clear && php artisan route:clear && php artisan view:clear'
 alias opcl='php artisan optimize:clear'
 
 alias route='php artisan route:list'     # list route
+alias rlist='php artisan route:list'     # list route
+
+alias rlev='php artisan route:list --except-vendor'     # list route
+
+alias slink='php artisan storage:link'
 
 alias qwork='php artisan queue:work'
 
@@ -111,18 +122,24 @@ alias ni="npm install"
 
 alias nr="npm run"
 
+alias nrw="npm run watch"
+alias nrb="npm run build"
 alias d="npm run dev"
 alias rd="composer run dev"
 
 alias cps='composer require'
 alias ci='composer install'
 
+alias vdpl='php artisan vendor:publish'
+
 alias ln='laravel new'
 
+alias pest='./vendor/bin/pest'
+alias rector='./vendor/bin/rector'
 
 alias nf="neofetch"
 alias c="clear"
-alias x="exit"
+alias q="exit"
 
 # git
 
@@ -153,6 +170,7 @@ gcm() {
 
 
 alias gp="git push"
+alias gpf="git push origin main -f"
 alias gpl="git pull"
 
 alias co="git checkout"
@@ -169,11 +187,14 @@ gclc() {
     git clone "$1" && cd "$(basename "$1" .git)"
 }
 
+alias grb="git rebase -i HEAD~5"
+alias grs="git reset --soft HEAD~1"
+
 
 alias nah="git reset --hard && git clean -df"
 
 
-shcn() {
+sh() {
   npx shadcn@latest add "$@"
 }
 

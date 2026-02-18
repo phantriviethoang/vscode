@@ -1,79 +1,556 @@
 {
-	"PHP open tag inline": {
-		"prefix": "pt",
-		"body": ["<?php $0 ?>"],
-		"description": "PHP open and close tags on one line"
-	},
-	"PHP echo simple": {
-		"prefix": "ek",
-		"body": ["echo $1;"],
-		"description": "Echo simple statement"
-	},
-	"PHP echo string": {
-		"prefix": "ec",
-		"body": ["echo \"$1\";"],
-		"description": "Echo String statement"
-	},
-	"PHP echo variable": {
-		"prefix": "ev",
-		"body": ["echo $$1;"],
-		"description": "Echo Variable statement"
-	},
-	"PHP declare variable": {
-		"prefix": "va",
-		"body": ["$$1;"],
-		"description": "PHP declare variable"
-	},
-	"Var Dump": {
-		"prefix": "vd",
-		"body": ["var_dump($1);"],
-		"description": "Var Dump dd function"
-	},
-	"PHP Function": {
-		"prefix": "fnc",
-		"body": ["function ${1:}($${2:$param}) {", "    ${3:// code...}", "}"],
-		"description": "PHP function declaration"
-	},
-	"Laravel Route GET": {
-		"prefix": "rget",
-		"body": [
-			"Route::get('${1:/path}', [${2:Controller}::class, '${3:index}']);"
-		],
-		"description": "Laravel GET route"
-	},
-	"Laravel Route POST": {
-		"prefix": "rpost",
-		"body": [
-			"Route::post('${1:/path}', [${2:Controller}::class, '${3:store}']);"
-		],
-		"description": "Laravel POST route"
-	},
-	"Laravel Route PUT": {
-		"prefix": "rput",
-		"body": [
-			"Route::put('${1:/path}/{${2:id}}', [${3:Controller}::class, '${4:update}']);"
-		],
-		"description": "Laravel PUT route"
-	},
-	"Laravel Route DELETE": {
-		"prefix": "rdel",
-		"body": [
-			"Route::delete('${1:/path}/{${2:id}}', [${3:Controller}::class, '${4:destroy}']);"
-		],
-		"description": "Laravel DELETE route"
-	},
-	"Laravel Route Resource": {
-		"prefix": "rres",
-		"body": ["Route::resource('${1:name}', ${2:Controller}::class);"],
-		"description": "Laravel resource route"
-	},
-	"Laravel Route Group": {
-		"prefix": "rgroup",
-		"body": [
-			"Route::prefix('${1:prefix}')->middleware('${2:middleware}')->group(function() {",
-			"    $0",
-			"});"
-		],
-		"description": "Laravel route group with prefix and middleware"
-	}
+    "PHP open tag inline": {
+        "prefix": "pt",
+        "body": [
+            "<?php $0 ?>"
+        ],
+        "description": "PHP open and close tags on one line"
+    },
+    "PHP echo simple": {
+        "prefix": "ek",
+        "body": [
+            "echo $1;"
+        ],
+        "description": "Echo simple statement"
+    },
+    "PHP echo string": {
+        "prefix": "ec",
+        "body": [
+            "echo \"$1\";"
+        ],
+        "description": "Echo String statement"
+    },
+    "PHP echo variable": {
+        "prefix": "ev",
+        "body": [
+            "echo $$1;"
+        ],
+        "description": "Echo Variable statement"
+    },
+    "PHP declare variable": {
+        "prefix": "va",
+        "body": [
+            "$$1;"
+        ],
+        "description": "PHP declare variable"
+    },
+    "Var Dump": {
+        "prefix": "vd",
+        "body": [
+            "var_dump($1);"
+        ],
+        "description": "Var Dump dd function"
+    },
+    "PHP Function": {
+        "prefix": "fnc",
+        "body": [
+            "function ${1:}($${2:$param}) {",
+            "    ${3:// code...}",
+            "}"
+        ],
+        "description": "PHP function declaration"
+    },
+    "eco": {
+        "prefix": "eco",
+        "body": [
+            "echo \"$0\";"
+        ],
+        "description": "'echo' statement"
+    },
+    "fore": {
+        "prefix": "fore",
+        "body": [
+            "foreach ($1 as $${2:item}) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "foreach(iterable_expr as $value) {...}"
+    },
+    "forek": {
+        "prefix": "forek",
+        "body": [
+            "foreach ($1 as $${2:key} => $${3:index}) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "foreach(iterable_expr as $key => $value) {...}"
+    },
+    "inc": {
+        "prefix": "inc",
+        "body": [
+            "include \"$0\";"
+        ],
+        "description": "'include' statement"
+    },
+    "inco": {
+        "prefix": "inco",
+        "body": [
+            "include_once \"$0\";"
+        ],
+        "description": "'include_once' statement"
+    },
+    "prif": {
+        "prefix": "prif",
+        "body": [
+            "private function $1($2)",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "private function."
+    },
+    "prisf": {
+        "prefix": "prisf",
+        "body": [
+            "private static function $1($2)",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "private static function."
+    },
+    "prof": {
+        "prefix": "prof",
+        "body": [
+            "protected function $1($2)",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "protected function."
+    },
+    "prosf": {
+        "prefix": "prosf",
+        "body": [
+            "protected static function $1($2)",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "protected static function."
+    },
+    "pubf": {
+        "prefix": "pubf",
+        "body": [
+            "public function $1($2)",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "public function."
+    },
+    "pubsf": {
+        "prefix": "pubsf",
+        "body": [
+            "public static function $1($2)",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "public static function."
+    },
+    "rqr": {
+        "prefix": "rqr",
+        "body": [
+            "require \"$0\";"
+        ],
+        "description": "'require' statement"
+    },
+    "rqro": {
+        "prefix": "rqro",
+        "body": [
+            "require_once \"$0\";"
+        ],
+        "description": "'require_once' statement"
+    },
+    "thr": {
+        "prefix": "thr",
+        "body": [
+            "throw new ${1:\\Exception}(\"${2:Error Processing Request}\");"
+        ],
+        "description": "throw new"
+    },
+    "Route get function close": {
+        "prefix": "rfn",
+        "body": [
+            "Route::get('/${1:}', function () {",
+            "    return view('${2:}');",
+            "});"
+        ],
+        "description": "Route get function close"
+    },
+    "Laravel Route GET": {
+        "prefix": "rget",
+        "body": [
+            "Route::get('${1:uri}', [${2:Controller}::class, '${3:method}']);"
+        ],
+        "description": "Route::get"
+    },
+    "Laravel Route POST": {
+        "prefix": "rpost",
+        "body": [
+            "Route::post('${1:uri}', [${2:Controller}::class, '${3:method}']);"
+        ],
+        "description": "Route::post"
+    },
+    "Laravel Route PUT": {
+        "prefix": "rput",
+        "body": [
+            "Route::put('${1:uri}', [${2:Controller}::class, '${3:method}']);"
+        ],
+        "description": "Route::put"
+    },
+    "Laravel Route PATCH": {
+        "prefix": "rpatch",
+        "body": [
+            "Route::patch('${1:uri}', [${2:Controller}::class, '${3:method}']);"
+        ],
+        "description": "Route::patch"
+    },
+    "Laravel Route DELETE": {
+        "prefix": "rdel",
+        "body": [
+            "Route::delete('${1:uri}', [${2:Controller}::class, '${3:method}']);"
+        ],
+        "description": "Route::delete"
+    },
+    "Laravel Route Match": {
+        "prefix": "rmatch",
+        "body": [
+            "Route::match(['${1:get}', '${2:post}'], '${3:uri}', [${4:Controller}::class, '${5:method}']);"
+        ],
+        "description": "Route::match"
+    },
+    "Laravel Route Any": {
+        "prefix": "rany",
+        "body": [
+            "Route::any('${1:uri}', [${2:Controller}::class, '${3:method}']);"
+        ],
+        "description": "Route::any"
+    },
+    "Laravel Route View": {
+        "prefix": "rview",
+        "body": [
+            "Route::view('${1:uri}', '${2:view}');"
+        ],
+        "description": "Route::view"
+    },
+    "Laravel Route View Name": {
+        "prefix": "rviewn",
+        "body": [
+            "Route::view('${1:uri}', '${2:view}')->name('${3:route.name}');"
+        ],
+        "description": "Route::view + name"
+    },
+    "Laravel Route Redirect": {
+        "prefix": "rredirect",
+        "body": [
+            "Route::redirect('${1:from}', '${2:to}', ${3:301});"
+        ],
+        "description": "Route::redirect"
+    },
+    "Laravel Route Resource": {
+        "prefix": "rres",
+        "body": [
+            "Route::resource('${1:resource}', ${2:Controller}::class);"
+        ],
+        "description": "Route::resource"
+    },
+    "Laravel Route API Resource": {
+        "prefix": "rapires",
+        "body": [
+            "Route::apiResource('${1:resource}', ${2:Controller}::class);"
+        ],
+        "description": "Route::apiResource"
+    },
+    "Laravel Route Resource Only": {
+        "prefix": "rresonly",
+        "body": [
+            "Route::resource('${1:resource}', ${2:Controller}::class)->only(['${3:index}']);"
+        ],
+        "description": "Route::resource only"
+    },
+    "Laravel Route Resource Except": {
+        "prefix": "rresexcept",
+        "body": [
+            "Route::resource('${1:resource}', ${2:Controller}::class)->except(['${3:destroy}']);"
+        ],
+        "description": "Route::resource except"
+    },
+    "Laravel Route Middleware Group": {
+        "prefix": "rgroup",
+        "body": [
+            "Route::middleware(['${1:auth}'])->group(function () {",
+            "    ${2:// routes}",
+            "});"
+        ],
+        "description": "Route middleware group"
+    },
+    "Laravel Route Prefix Group": {
+        "prefix": "rprefix",
+        "body": [
+            "Route::prefix('${1:prefix}')->group(function () {",
+            "    ${2:// routes}",
+            "});"
+        ],
+        "description": "Route prefix group"
+    },
+    "Laravel Route Name Group": {
+        "prefix": "rnameg",
+        "body": [
+            "Route::name('${1:admin.}')->group(function () {",
+            "    ${2:// routes}",
+            "});"
+        ],
+        "description": "Route name group"
+    },
+    "Laravel Route Domain": {
+        "prefix": "rdomain",
+        "body": [
+            "Route::domain('${1:{account}.example.com}')->group(function () {",
+            "    ${2:// routes}",
+            "});"
+        ],
+        "description": "Route domain group"
+    },
+    "Laravel Route Controller Group": {
+        "prefix": "rcontroller",
+        "body": [
+            "Route::controller(${1:Controller}::class)->group(function () {",
+            "    ${2:// routes}",
+            "});"
+        ],
+        "description": "Route controller group"
+    },
+    "Laravel Route Name": {
+        "prefix": "rname",
+        "body": [
+            "Route::get('${1:uri}', [${2:Controller}::class, '${3:method}'])->name('${4:route.name}');"
+        ],
+        "description": "Route with name"
+    },
+    "Laravel Route Fallback": {
+        "prefix": "rfallback",
+        "body": [
+            "Route::fallback(function () {",
+            "    abort(404);",
+            "});"
+        ],
+        "description": "Route fallback"
+    },
+    "Laravel table column generic": {
+        "prefix": "ta",
+        "body": [
+            "\\$table->${1:type}('${2:column}')${3};"
+        ],
+        "description": "Laravel migration generic table column"
+    },
+    "Laravel belongsTo only": {
+        "prefix": "belongsTo",
+        "body": [
+            "\\$this->belongsTo($1);"
+        ],
+        "description": "Laravel belongsTo relationship only"
+    },
+    "Laravel belongsToMany only": {
+        "prefix": "belongsToMany",
+        "body": [
+            "\\$this->belongsToMany($1);"
+        ],
+        "description": "Laravel belongsToMany relationship only"
+    },
+    "Laravel hasOne only": {
+        "prefix": "hasOne",
+        "body": [
+            "\\$this->hasOne($1);"
+        ],
+        "description": "Laravel hasOne relationship only"
+    },
+    "Laravel hasMany only": {
+        "prefix": "hasMany",
+        "body": [
+            "\\$this->hasMany($1);"
+        ],
+        "description": "Laravel hasMany relationship only"
+    },
+    "Laravel hasManyThrough only": {
+        "prefix": "hasManyThrough",
+        "body": [
+            "\\$this->hasManyThrough($1, $2);"
+        ],
+        "description": "Laravel hasManyThrough relationship only"
+    },
+    "Laravel morphOne only": {
+        "prefix": "morphOne",
+        "body": [
+            "\\$this->morphOne($1, $2);"
+        ],
+        "description": "Laravel morphOne relationship only"
+    },
+    "Laravel morphMany only": {
+        "prefix": "morphMany",
+        "body": [
+            "\\$this->morphMany($1, $2);"
+        ],
+        "description": "Laravel morphMany relationship only"
+    },
+    "Laravel morphTo only": {
+        "prefix": "morphTo",
+        "body": [
+            "\\$this->morphTo();"
+        ],
+        "description": "Laravel morphTo relationship only"
+    },
+    "Laravel morphToMany only": {
+        "prefix": "morphToMany",
+        "body": [
+            "\\$this->morphToMany($1, $2);"
+        ],
+        "description": "Laravel morphToMany relationship only"
+    },
+    "Laravel morphedByMany only": {
+        "prefix": "morphedByMany",
+        "body": [
+            "\\$this->morphedByMany($1, $2);"
+        ],
+        "description": "Laravel morphedByMany relationship only"
+    },
+    "Laravel belongsTo with type hint": {
+        "prefix": "userBelongsTo",
+        "body": [
+            "public function ${1:user}(): \\Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
+            "{",
+            "    return \\$this->belongsTo(${2:User}::class);",
+            "}"
+        ],
+        "description": "Laravel belongsTo relationship with type hint"
+    },
+    "Laravel return view simple": {
+        "prefix": "rv",
+        "body": [
+            "return view('${1:view.name}');"
+        ],
+        "description": "Return a view in Laravel"
+    },
+    "Laravel return view": {
+        "prefix": "lrv",
+        "body": [
+            "return view('${1:view_name}', [",
+            "    '${2:key}' => ${3:value},",
+            "]);"
+        ],
+        "description": "Return a view with optional data"
+    },
+    "Laravel redirect": {
+        "prefix": "rdr",
+        "body": [
+            "return redirect('/${1}');"
+        ],
+        "description": "Redirect to a named route with optional parameters and flash message"
+    },
+    "Laravel redirect route": {
+        "prefix": "rr",
+        "body": [
+            "return redirect()->route('${1:route_name}', [",
+            "    '${2:param}' => ${3:value},",
+            "])->with('${4:status}', '${5:message}');"
+        ],
+        "description": "Redirect to a named route with optional parameters and flash message"
+    },
+    "Laravel redirect back": {
+        "prefix": "rb",
+        "body": [
+            "return redirect()->back()->with('${1:status}', '${2:message}');"
+        ],
+        "description": "Redirect back with flash message"
+    },
+    "Laravel redirect to url": {
+        "prefix": "rt",
+        "body": [
+            "return redirect()->to('${1:url}')->with('${2:status}', '${3:message}');"
+        ],
+        "description": "Redirect to a URL with flash message"
+    },
+    "Laravel redirect action": {
+        "prefix": "ra",
+        "body": [
+            "return redirect()->action([${1:Controller}::class, '${2:method}'], [",
+            "    '${3:param}' => ${4:value},",
+            "])->with('${5:status}', '${6:message}');"
+        ],
+        "description": "Redirect to a controller action with parameters and flash message"
+    },
+    "Laravel view with compact": {
+        "prefix": "lvc",
+        "body": [
+            "return view('${1:view_name}', compact('${2:var1}', '${3:var2}'));"
+        ],
+        "description": "Return view using compact()"
+    },
+    "Laravel timezone UTC+7": {
+        "prefix": "utc7",
+        "body": [
+            "'timezone' => 'Asia/Ho_Chi_Minh',"
+        ],
+        "description": "Laravel timezone UTC+7"
+    },
+    "Inertia render simple": {
+        "prefix": "rird",
+        "body": [
+            "return Inertia::render('${1}');"
+        ]
+    },
+    "Inertia helper render": {
+        "prefix": "ri",
+        "body": [
+            "return inertia('${1}');"
+        ]
+    },
+    "Laravel validate": {
+        "prefix": "vld",
+        "body": [
+            "$$request->validate([",
+            "    '${1}' => '${2}',",
+            "]);"
+        ]
+    },
+    "Redirect to route": {
+        "prefix": "rtr",
+        "body": [
+            "return to_route('${1}');"
+        ]
+    },
+    "Laravel Validation Rules": {
+        "prefix": "vld-user",
+        "body": [
+            "'name' => ['required'],",
+            "'email' => ['required', 'email', 'max:254'],",
+            "'email_verified_at' => ['nullable', 'date'],",
+            "'password' => ['required'],",
+            "'remember_token' => ['nullable'],"
+        ],
+        "description": "Snippet for Laravel User validation rules"
+    },
+    "Laravel Validation Rules Employer": {
+        "prefix": "vld-employer",
+        "body": [
+            "'user_id' => ['required', 'exists:users'],",
+            "'name'    => ['required'],",
+            "'logo'    => ['required'],"
+        ],
+        "description": "Snippet for Laravel Employer validation rules"
+    },
+    "Laravel Validation Rules Job": {
+        "prefix": "vld-job",
+        "body": [
+            "'employer_id' => ['required', 'exists:employers'],",
+            "'title'       => ['required'],",
+            "'salary'      => ['required'],",
+            "'location'    => ['required'],",
+            "'schedule'    => ['required'],",
+            "'url'         => ['required'],",
+            "'featured'    => ['boolean'],"
+        ],
+        "description": "Snippet for Laravel Job validation rules"
+    }
 }

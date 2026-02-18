@@ -1,0 +1,32 @@
+{
+    "Export default React Function Component": {
+        "prefix": "ef",
+        "body": [
+            "export default function ${1:${TM_FILENAME_BASE/(^|-)(\\w)/${2:/upcase}/g}}(${2}) {",
+            "    return (",
+            "        $0",
+            "    )",
+            "}"
+        ]
+    },
+    "useForm declaration": {
+        "prefix": "uf",
+        "body": [
+            "const { data, setData, post, put, patch, delete: destroy, processing, errors, reset } = useForm(${1});"
+        ]
+    },
+    "usePage props": {
+        "prefix": "up",
+        "body": [
+            "const { ${1} } = usePage().props;"
+        ]
+    },
+    "preventDefault inline": {
+        "prefix": "pd",
+        "body": [
+            "(e) => {",
+            "    e.preventDefault();",
+            "}"
+        ]
+    }
+}

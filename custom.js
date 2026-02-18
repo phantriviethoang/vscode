@@ -1,4 +1,3 @@
-// VSCode Custom Title - Minified
 (function () {
     "use strict";
     function updateCustomTitle() {

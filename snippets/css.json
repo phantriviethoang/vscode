@@ -1,0 +1,9 @@
+{
+    "Import tailwindcss css": {
+        "prefix": "itw",
+        "body": [
+            "@import \"tailwindcss\";"
+        ],
+        "description": "Import tailwindcss for CSS"
+    }
+}

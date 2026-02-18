@@ -64,10 +64,11 @@ vnoremap gl $
 
 " nnoremap K i<CR><Esc>
 
-nnoremap <C-]> i<CR><Esc>
+" nnoremap <C-]> i<CR><Esc>
+" nnoremap <C-S-k> i<CR><Esc>
 
-vnoremap <C-[> g^
-vnoremap <C-]> g_
+" vnoremap <C-[> g^
+" vnoremap <C-]> g_
 
 nnoremap <C--> <C-x>
 nnoremap <C-=> <C-a>
@@ -83,8 +84,13 @@ nnoremap <C-m> S
 nnoremap zh <leader><leader>e
 nnoremap zl <leader><leader>ge
 
+nnoremap zj <leader><leader>j
+nnoremap zk <leader><leader>k
+
 nnoremap zo o<CR>
 nnoremap yo O<CR><Esc>kA
+
+" nnoremap zk i<CR><Esc>
 
 nnoremap <leader><Esc> :nohlsearch<CR>
 
