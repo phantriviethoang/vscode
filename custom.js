@@ -1,3 +1,4 @@
+// VSCode Custom Title - Minified
 (function () {
     "use strict";
     function updateCustomTitle() {
@@ -21,7 +22,17 @@
         const allItems = breadcrumbs.querySelectorAll(
             ".monaco-breadcrumb-item"
         );
-        if (allItems.length === 0) return;
+        // if (allItems.length === 0) return;
+        // new
+
+        if (allItems.length === 0) {
+            if (customTitle) {
+                customTitle.innerHTML = "";
+                // customTitle.style.display = "none";
+            }
+            return;
+        }
+
         const lastItem = allItems[allItems.length - 1];
         const iconLabel = lastItem.querySelector(".monaco-icon-label");
         if (!iconLabel) return;
@@ -73,6 +84,8 @@
         textElement.style.fontWeight = "550";
         container.appendChild(iconElement);
         container.appendChild(textElement);
+        // new
+        customTitle.style.display = "flex";
         while (customTitle.firstChild)
             customTitle.removeChild(customTitle.firstChild);
         customTitle.appendChild(container);

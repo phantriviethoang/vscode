@@ -5,5 +5,21 @@
             "@import \"tailwindcss\";"
         ],
         "description": "Import tailwindcss for CSS"
+    },
+    "DaisyUI Plugin": {
+        "prefix": "ids",
+        "body": [
+            "@plugin \"daisyui\";"
+        ],
+        "description": "Insert DaisyUI plugin"
+    },
+    "DaisyUI Full Themes": {
+        "prefix": "idsthemes",
+        "body": [
+            "@plugin \"daisyui\" {",
+            "  themes: all;",
+            "}"
+        ],
+        "description": "Import daisyUI with all themes"
     }
 }

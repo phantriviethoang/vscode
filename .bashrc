@@ -17,6 +17,9 @@ export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 alias c.="code ."
 
 alias vue="npm create vue@latest"
+
+alias alpine="npm install alpinejs"
+
 alias daisy="npm i -D daisyui@latest"
 alias tw="npm install tailwindcss @tailwindcss/vite"
 
@@ -39,6 +42,8 @@ am() {
 # Alias viết tắt cho các loại hay dùng
 alias mc="am controller"    # mc UserController --resource
 alias mm="am model"         # mm Post -m → model + migration
+alias mn="am notification"
+alias mnt="am notifications-table"
 alias mmgr="am migration"   # mgr create_posts_table
 alias ms="am seeder"        # ms UserSeeder
 alias mr="am request"       # mr StoreUserRequest
@@ -146,6 +151,7 @@ alias q="exit"
 alias g="git"
 
 alias gs="git status"
+alias gi="git init"
 alias gss="git status -s"
 
 alias gl="git --no-pager log --oneline --decorate --graph --all"
@@ -156,7 +162,11 @@ alias gcomt="git checkout master"
 
 alias ga="git add ."
 alias gadd="git add "
-alias gc="git commit -m "
+
+# alias gc="git commit -m "
+gc() {
+  git commit -m "$*"
+}
 
 alias wip='git commit -m "wip"'
 
@@ -171,6 +181,7 @@ gcm() {
 
 alias gp="git push"
 alias gpf="git push origin main -f"
+alias gpfm="git push origin master -f"
 alias gpl="git pull"
 
 alias co="git checkout"

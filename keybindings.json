@@ -55,7 +55,6 @@
 		"command": "endline.new",
 		"when": "editorTextFocus"
 	},
-
 	{
 		"key": "ctrl+r",
 		"command": "workbench.action.gotoSymbol",
@@ -65,34 +64,28 @@
 		"key": "ctrl+shift+r",
 		"command": "workbench.action.showAllSymbols"
 	},
-
 	{
 		"key": "ctrl+p",
 		"command": "workbench.action.quickOpen",
 		"when": "!inQuickOpen"
 	},
-
 	{
 		"key": "ctrl+0",
 		"command": "workbench.action.closeActiveEditor"
 	},
-
 	{
 		"key": "ctrl+k ctrl+w",
 		"command": "workbench.action.closeOtherEditors"
 	},
-
 	{
 		"key": "ctrl+1",
 		"command": "workbench.action.toggleSidebarVisibility"
 	},
-
 	{
 		"key": "ctrl+2",
 		"command": "workbench.view.explorer",
 		"when": "viewContainer.workbench.view.explorer.enabled"
 	},
-
 	{
 		"key": "ctrl+alt+b",
 		"command": "workbench.action.focusNextGroup"
@@ -101,13 +94,11 @@
 		"key": "ctrl+shift+alt+r",
 		"command": "workbench.action.reloadWindow"
 	},
-
 	{
 		"key": "ctrl+q",
 		"command": "workbench.action.terminal.kill",
 		"when": "terminalFocus"
 	},
-
 	{
 		"key": "ctrl+l",
 		"command": "workbench.action.terminal.clear",
@@ -136,7 +127,6 @@
 		"key": "ctrl+alt+2",
 		"command": "workbench.files.action.refreshFilesExplorer"
 	},
-
 	// File Explorer
 	{
 		"key": "r",
@@ -210,7 +200,6 @@
 		"command": "list.toggleExpand",
 		"when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && explorerResourceIsFolder && !inputFocus"
 	},
-
 	{
 		"key": "ctrl+c",
 		"command": "filesExplorer.copy",
@@ -221,19 +210,16 @@
 		"command": "filesExplorer.paste",
 		"when": "filesExplorerFocus && foldersViewVisible && !explorerResourceReadonly && !inputFocus"
 	},
-
 	{
 		"key": "ctrl+n",
 		"command": "workbench.action.terminal.new",
 		"when": "terminalFocus"
 	},
-
 	{
 		"key": "ctrl+n",
 		"command": "fileutils.newFileAtRoot",
 		"when": "!terminalFocus"
 	},
-
 	{
 		"key": "ctrl+shift+n",
 		"command": "fileutils.newFile"
@@ -258,31 +244,10 @@
 		"key": "alt+n",
 		"command": "fileutils.newFolderAtRoot"
 	},
-
-	// // Git
-	// {
-	// 	"key": "ctrl+4",
-	// 	"command": "workbench.view.scm",
-	// },
-
-	// Git
 	{
 		"key": "ctrl+4",
 		"command": "workbench.view.scm"
 	},
-
-	// {
-	// 	"key": "ctrl+4",
-	// 	"command": "runCommands",
-	// 	"args": {
-	// 		"commands": [
-	// 			"workbench.view.scm",
-	// 			"workbench.action.focusActiveEditorGroup"
-	// 		]
-	// 	},
-	// 	"when": "!sideBarVisible"
-	// },
-
 	{
 		"key": "ctrl+5",
 		"command": "git.stageAll"
@@ -299,8 +264,6 @@
 		"key": "ctrl+8",
 		"command": "git.push"
 	},
-	// EndGit
-
 	// Combine Git
 	{
 		"key": "alt+g",
@@ -318,7 +281,6 @@
 		}
 	},
 	// End Combine Git
-
 	{
 		"key": "alt+j",
 		"command": "vim.remap",
@@ -335,7 +297,6 @@
 			"after": ["5", "k"]
 		}
 	},
-
 	{
 		"key": "alt+j",
 		"command": "vim.remap",
@@ -352,7 +313,6 @@
 			"after": ["5", "k"]
 		}
 	},
-
 	{
 		"key": "alt+j",
 		"command": "runCommands",
@@ -381,33 +341,38 @@
 			]
 		}
 	},
-
 	{
 		"key": "alt+h",
 		"command": "vim.remap",
-		"args": { "after": ["5", "h"] },
+		"args": {
+			"after": ["5", "h"]
+		},
 		"when": "editorTextFocus && vim.active && vim.mode == 'Normal'"
 	},
 	{
 		"key": "alt+l",
 		"command": "vim.remap",
-		"args": { "after": ["5", "l"] },
+		"args": {
+			"after": ["5", "l"]
+		},
 		"when": "editorTextFocus && vim.active && vim.mode == 'Normal'"
 	},
-
 	{
 		"key": "alt+h",
 		"command": "vim.remap",
-		"args": { "after": ["5", "h"] },
+		"args": {
+			"after": ["5", "h"]
+		},
 		"when": "editorTextFocus && vim.active && vim.mode == 'Visual'"
 	},
 	{
 		"key": "alt+l",
 		"command": "vim.remap",
-		"args": { "after": ["5", "l"] },
+		"args": {
+			"after": ["5", "l"]
+		},
 		"when": "editorTextFocus && vim.active && vim.mode == 'Visual'"
 	},
-
 	{
 		"key": "alt+h",
 		"command": "cursorWordStartLeft",
@@ -418,7 +383,6 @@
 		"command": "cursorWordEndRight",
 		"when": "editorTextFocus && vim.active && vim.mode == 'Insert'"
 	},
-
 	// // combine command
 	// {
 	// 	"key": "ctrl+3",
@@ -431,13 +395,10 @@
 	// 		],
 	// 	},
 	// },
-
 	{
 		"key": "ctrl+2",
 		"command": "workbench.view.explorer"
-		// "when": "sideBarVisible"
 	},
-
 	{
 		"key": "ctrl+b",
 		"command": "-workbench.action.toggleSidebarVisibility"
@@ -508,7 +469,6 @@
 		"command": "-extension.vim_ctrl+n",
 		"when": "editorTextFocus && vim.active && vim.use<C-n> && !inDebugRepl || vim.active && vim.use<C-n> && !inDebugRepl && vim.mode == 'CommandlineInProgress' || vim.active && vim.use<C-n> && !inDebugRepl && vim.mode == 'SearchInProgressMode'"
 	},
-
 	{
 		"key": "ctrl+k",
 		"command": "-extension.vim_ctrl+k",
@@ -527,7 +487,6 @@
 		"key": "ctrl+=",
 		"command": "-workbench.action.zoomIn"
 	},
-
 	{
 		"key": "ctrl+y",
 		"command": "-redo"
@@ -536,17 +495,14 @@
 		"key": "ctrl+y",
 		"command": "-undo"
 	},
-
 	{
 		"key": "ctrl+y",
 		"command": "scrollLineUp"
 	},
-
 	{
 		"key": "ctrl+shift+z",
 		"command": "-redo"
 	},
-
 	{
 		"key": "ctrl+k ctrl+j",
 		"command": "-editor.unfoldAll",
@@ -605,7 +561,6 @@
 		"command": "editor.action.marker.next",
 		"when": "editorFocus"
 	},
-
 	{
 		"key": "ctrl+k",
 		"command": "selectPrevSuggestion",
@@ -616,45 +571,30 @@
 		"command": "selectNextSuggestion",
 		"when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
 	},
-
 	{
 		"key": "ctrl+j",
 		"command": "-extension.vim_ctrl+j",
 		"when": "editorTextFocus && vim.active && vim.use<C-j> && !inDebugRepl"
 	},
-
 	{
 		"key": "ctrl+j",
 		"command": "-workbench.action.togglePanel"
 	},
-
 	{
 		"key": "ctrl+t",
 		"command": "jumpToNextSnippetPlaceholder",
 		"when": "editorTextFocus && inSnippetMode && vim.mode == 'Insert'"
 	},
-
 	{
 		"key": "ctrl+t",
 		"command": "acceptSelectedSuggestion",
 		"when": "editorTextFocus && suggestWidgetVisible && vim.mode == 'Insert'"
 	},
-
 	{
 		"key": "ctrl+t",
 		"command": "tab",
 		"when": "editorTextFocus && !inSnippetMode && !suggestWidgetVisible && vim.mode == 'Insert'"
 	},
-
-	// {
-	// 	"key": "ctrl+h",
-	//     "command": "editor.emmet.action.prevEditPoint"
-	// },
-	// {
-	// 	"key": "ctrl+l",
-	//     "command": "editor.emmet.action.nextEditPoint"
-	// },
-
 	// easy motion
 	{
 		"key": "ctrl+h",
@@ -664,7 +604,6 @@
 			"after": ["<leader>", "<leader>", "w"]
 		}
 	},
-
 	{
 		"key": "ctrl+j",
 		"command": "vim.remap",
@@ -673,7 +612,6 @@
 			"after": ["<leader>", "<leader>", "s"]
 		}
 	},
-
 	{
 		"key": "ctrl+l",
 		"command": "vim.remap",
@@ -682,7 +620,6 @@
 			"after": ["<leader>", "<leader>", "b"]
 		}
 	},
-
 	{
 		"key": "ctrl+=",
 		"command": "extension.vim_ctrl+a",
@@ -693,19 +630,16 @@
 		"command": "extension.vim_ctrl+x",
 		"when": "editorTextFocus && vim.mode == 'Normal'"
 	},
-
 	{
 		"key": "ctrl+j",
 		"command": "workbench.action.quickOpenSelectNext",
 		"when": "inQuickOpen"
 	},
-
 	{
 		"key": "ctrl+k",
 		"command": "workbench.action.quickOpenSelectPrevious",
 		"when": "inQuickOpen"
 	},
-
 	{
 		"key": "escape",
 		"command": "workbench.action.closeQuickOpen",
@@ -716,12 +650,10 @@
 		"command": "extension.liveServer.goOnline",
 		"when": "editorTextFocus"
 	},
-
 	{
 		"key": "ctrl+,",
 		"command": "-workbench.action.openSettings"
 	},
-
 	// colon
 	{
 		"key": "ctrl+,",
@@ -731,7 +663,9 @@
 				"cursorEnd",
 				{
 					"command": "type",
-					"args": { "text": "," }
+					"args": {
+						"text": ","
+					}
 				}
 			]
 		},
@@ -745,11 +679,15 @@
 				"cursorEnd",
 				{
 					"command": "type",
-					"args": { "text": "," }
+					"args": {
+						"text": ","
+					}
 				},
 				{
 					"command": "type",
-					"args": { "text": "\n" }
+					"args": {
+						"text": "\n"
+					}
 				}
 			]
 		},
@@ -779,7 +717,6 @@
 		"when": "vim.active && vim.mode == 'Normal' && editorTextFocus"
 	},
 	// endcolor
-
 	// semicolon
 	{
 		"key": "ctrl+;",
@@ -789,7 +726,9 @@
 				"cursorEnd",
 				{
 					"command": "type",
-					"args": { "text": ";" }
+					"args": {
+						"text": ";"
+					}
 				}
 			]
 		},
@@ -803,11 +742,15 @@
 				"cursorEnd",
 				{
 					"command": "type",
-					"args": { "text": ";" }
+					"args": {
+						"text": ";"
+					}
 				},
 				{
 					"command": "type",
-					"args": { "text": "\n" }
+					"args": {
+						"text": "\n"
+					}
 				}
 			]
 		},
@@ -837,65 +780,60 @@
 		"when": "vim.active && vim.mode == 'Normal' && editorTextFocus"
 	},
 	// endsemicolon
-
 	{
 		"key": "f2",
 		"command": "fileutils.renameFile"
 	},
-
 	{
 		"key": "ctrl+k",
 		"command": "workbench.action.terminal.sendSequence",
-		"args": { "text": "\u001b[A" },
+		"args": {
+			"text": "\u001b[A"
+		},
 		"when": "terminalFocus"
 	},
-
 	{
 		"key": "ctrl+b",
 		"command": "workbench.action.terminal.sendSequence",
-		"args": { "text": "\u007f" },
+		"args": {
+			"text": "\u007f"
+		},
 		"when": "terminalFocus"
 	},
 	{
 		"key": "ctrl+x",
 		"command": "workbench.action.terminal.sendSequence",
-		"args": { "text": "\u0015" },
+		"args": {
+			"text": "\u0015"
+		},
 		"when": "terminalFocus"
 	},
-
 	{
 		"key": "alt+c",
 		"command": "workbench.action.terminal.sendSequence",
-		"args": { "text": "\u0003" },
+		"args": {
+			"text": "\u0003"
+		},
 		"when": "terminalFocus"
 	},
-
 	{
 		"key": "ctrl+m",
 		"command": "workbench.action.terminal.sendSequence",
-		"args": { "text": "\u000D" },
+		"args": {
+			"text": "\u000D"
+		},
 		"when": "terminalFocus"
 	},
-
-	// {
-	// 	"key": "ctrl+i",
-	// 	"command": "workbench.action.terminal.sendSequence",
-	// 	"args": { "text": "\u0009" },
-	// 	"when": "terminalFocus"
-	// },
-
 	{
 		"key": "ctrl+t",
 		"command": "workbench.action.terminal.focusNext",
 		"when": "terminalFocus"
 	},
-
 	{
 		"key": "ctrl+f",
 		"command": "workbench.action.focusActiveEditorGroup",
 		"when": "terminalFocus"
 	},
-
 	{
 		"key": "ctrl+u",
 		"command": "runCommands",
@@ -903,17 +841,20 @@
 			"commands": [
 				{
 					"command": "workbench.action.terminal.sendSequence",
-					"args": { "text": "\u001b[A" }
+					"args": {
+						"text": "\u001b[A"
+					}
 				},
 				{
 					"command": "workbench.action.terminal.sendSequence",
-					"args": { "text": "\r" }
+					"args": {
+						"text": "\r"
+					}
 				}
 			]
 		},
 		"when": "terminalFocus"
 	},
-
 	{
 		"key": "ctrl+i",
 		"command": "runCommands",
@@ -924,35 +865,35 @@
 				},
 				{
 					"command": "workbench.action.terminal.sendSequence",
-					"args": { "text": "\u001b[A" }
+					"args": {
+						"text": "\u001b[A"
+					}
 				},
 				{
 					"command": "workbench.action.terminal.sendSequence",
-					"args": { "text": "\r" }
+					"args": {
+						"text": "\r"
+					}
 				}
 			]
 		},
 		"when": "terminalFocus"
 	},
-
 	{
 		"key": "ctrl+m",
 		"command": "acceptSelectedSuggestion",
 		"when": "suggestWidgetVisible && textInputFocus"
 	},
-
 	{
 		"key": "ctrl+m",
 		"command": "workbench.action.acceptSelectedQuickOpenItem",
 		"when": "inQuickOpen"
 	},
-
 	{
 		"key": "enter",
 		"command": "workbench.action.acceptSelectedQuickOpenItem",
 		"when": "inQuickOpen"
 	},
-
 	{
 		"key": "alt+[",
 		"command": "scrollLeft",
@@ -963,44 +904,34 @@
 		"command": "scrollRight",
 		"when": "vim.mode == 'Normal'"
 	},
-
 	{
 		"key": "ctrl+j",
 		"command": "closeMarkersNavigation",
 		"when": "markersNavigationVisible"
 	},
-
 	{
 		"key": "ctrl+j",
 		"command": "workbench.action.focusActiveEditorGroup",
 		"when": "editorFocus == false"
 	},
-
 	{
 		"key": "ctrl+t",
 		"command": "jumpToNextSnippetPlaceholder",
 		"when": "editorTextFocus && inSnippetMode"
 	},
-
 	{
 		"key": "ctrl+c",
 		"command": "workbench.action.terminal.sendSequence",
-		"args": { "text": "\u0003" },
+		"args": {
+			"text": "\u0003"
+		},
 		"when": "terminalFocus && terminalTextSelected == false"
 	},
-
 	{
 		"key": "ctrl+e",
 		"command": "cursorEnd",
 		"when": "editorTextFocus && vim.mode == 'Insert'"
 	},
-
-	// {
-	// 	"key": "ctrl+a",
-	// 	"command": "cursorHome",
-	// 	"when": "editorTextFocus && vim.mode == 'Insert'"
-	// },
-
 	{
 		"key": "ctrl+b",
 		"command": "deleteLeft",
@@ -1011,38 +942,34 @@
 		"command": "deleteRight",
 		"when": "editorTextFocus && vim.mode == 'Insert'"
 	},
-
 	{
 		"key": "ctrl+alt+h",
 		"command": "deleteWordLeft",
 		"when": "editorTextFocus && vim.mode == 'Insert'"
 	},
-
 	{
 		"key": "ctrl+m",
 		"command": "acceptSelectedSuggestion",
 		"when": "editorTextFocus && vim.mode == 'Insert' && suggestWidgetVisible"
 	},
-
 	{
 		"key": "ctrl+i",
 		"command": "editor.action.insertLineAfter",
 		"when": "editorTextFocus && vim.mode == 'Insert' && suggestWidgetVisible"
 	},
-
 	{
 		"key": "ctrl+i",
 		"command": "editor.action.insertLineAfter",
 		"when": "editorTextFocus && vim.mode == 'Insert' && !suggestWidgetVisible"
 	},
-
 	{
 		"key": "ctrl+m",
 		"command": "type",
-		"args": { "text": "\n" },
+		"args": {
+			"text": "\n"
+		},
 		"when": "editorTextFocus && vim.mode == 'Insert' && !suggestWidgetVisible"
 	},
-
 	{
 		"key": "ctrl+h",
 		"command": "cursorLeft",
@@ -1063,35 +990,33 @@
 		"command": "cursorDown",
 		"when": "editorTextFocus && vim.mode == 'Insert' && !suggestWidgetVisible"
 	},
-
 	{
 		"key": "ctrl+alt+c",
 		"command": "notifications.clearAll"
 	},
-
 	{
 		"key": "alt+`",
 		"command": "runCommands",
 		"args": {
 			"commands": [
-				// {
-				//     "command": "workbench.action.terminal.toggleTerminal"
-				// },
 				{
 					"command": "workbench.action.terminal.clear"
 				},
 				{
 					"command": "workbench.action.terminal.sendSequence",
-					"args": { "text": "\u001b[A" }
+					"args": {
+						"text": "\u001b[A"
+					}
 				},
 				{
 					"command": "workbench.action.terminal.sendSequence",
-					"args": { "text": "\r" }
+					"args": {
+						"text": "\r"
+					}
 				}
 			]
 		}
 	},
-
 	{
 		"key": "alt+r",
 		"command": "runCommands",
@@ -1102,12 +1027,13 @@
 				"workbench.action.terminal.clear",
 				{
 					"command": "workbench.action.terminal.sendSequence",
-					"args": { "text": "\u001b[A\r" }
+					"args": {
+						"text": "\u001b[A\r"
+					}
 				}
 			]
 		}
 	},
-
 	{
 		"key": "alt+p",
 		"command": "runCommands",
@@ -1117,19 +1043,22 @@
 				"fileutils.copyFileName",
 				{
 					"command": "workbench.action.terminal.sendSequence",
-					"args": { "text": "php " }
+					"args": {
+						"text": "php "
+					}
 				},
 				{
 					"command": "workbench.action.terminal.paste"
 				},
 				{
 					"command": "workbench.action.terminal.sendSequence",
-					"args": { "text": "\u000D" }
+					"args": {
+						"text": "\u000D"
+					}
 				}
 			]
 		}
 	},
-
 	{
 		"key": "alt+n",
 		"command": "runCommands",
@@ -1139,44 +1068,54 @@
 				"fileutils.copyFileName",
 				{
 					"command": "workbench.action.terminal.sendSequence",
-					"args": { "text": "node " }
+					"args": {
+						"text": "node "
+					}
 				},
 				{
 					"command": "workbench.action.terminal.paste"
 				},
 				{
 					"command": "workbench.action.terminal.sendSequence",
-					"args": { "text": "\u000D" }
+					"args": {
+						"text": "\u000D"
+					}
 				}
 			]
 		}
 	},
-
 	{
 		"key": "alt+u",
 		"command": "vim.remap",
 		"when": "editorTextFocus && vim.active && vim.mode == 'Normal'",
-		"args": { "after": ["f", ">", "i", " "] }
+		"args": {
+			"after": ["f", ">", "i", " "]
+		}
 	},
 	{
 		"key": "alt+i",
 		"command": "vim.remap",
 		"when": "editorTextFocus && vim.active && vim.mode == 'Normal'",
-		"args": { "after": ["F", ">", "i", " "] }
+		"args": {
+			"after": ["F", ">", "i", " "]
+		}
 	},
 	{
 		"key": "alt+y",
 		"command": "vim.remap",
 		"when": "editorTextFocus && vim.active && vim.mode == 'Normal'",
-		"args": { "after": ["f", "/", "h", "i", " "] }
+		"args": {
+			"after": ["f", "/", "h", "i", " "]
+		}
 	},
 	{
 		"key": "alt+o",
 		"command": "vim.remap",
 		"when": "editorTextFocus && vim.active && vim.mode == 'Normal'",
-		"args": { "after": ["F", "/", "h", "i", " "] }
+		"args": {
+			"after": ["F", "/", "h", "i", " "]
+		}
 	},
-
 	{
 		"key": "ctrl+shift+alt+s",
 		"command": "extension.vim_ctrl+s",
@@ -1201,7 +1140,6 @@
 		"key": "alt+s alt+b",
 		"command": "simpleBrowser.show"
 	},
-
 	{
 		"key": "ctrl+alt+3",
 		"command": "runCommands",
@@ -1210,12 +1148,10 @@
 			"commands": ["editor.toggleImportFold", "namespaceResolver.sort"]
 		}
 	},
-
 	{
 		"key": "ctrl+shift+k",
 		"command": "-editor.action.deleteLines"
 	},
-
 	{
 		"key": "ctrl+shift+j",
 		"when": "editorTextFocus && vim.active && vim.mode == 'Normal'",
@@ -1233,12 +1169,6 @@
 		"key": "ctrl+t",
 		"command": "-workbench.action.showAllSymbols"
 	},
-
-	// {
-	//     "key": "ctrl+t",
-	//     "command": "better-pest.run"
-	// },
-
 	{
 		"key": "meta+k meta+r",
 		"command": "-better-pest.run"
@@ -1247,18 +1177,14 @@
 		"key": "ctrl+alt+p",
 		"command": "better-pest.run"
 	},
-
 	{
 		"key": "ctrl+3",
 		"command": "coderabbit-vscode-sidebar.focus"
 	},
-
 	{
 		"key": "q",
 		"command": "runCommands",
-		// "when": "editorTextFocus & vim.mode == 'Normal' && !inQuickOpen && !terminalFocus",
 		"when": "vim.mode == 'Normal' && editorTextFocus",
-
 		"args": {
 			"commands": [
 				"workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
@@ -1266,7 +1192,6 @@
 			]
 		}
 	},
-
 	{
 		"key": "ctrl+k o",
 		"command": "-workbench.action.copyEditorToNewWindow",
@@ -1277,7 +1202,6 @@
 		"command": "-notebook.cell.chat.start",
 		"when": "config.notebook.experimental.cellChat && notebookChatAgentRegistered && notebookEditable && notebookEditorFocused && !inputFocus || config.notebook.experimental.generate && notebookChatAgentRegistered && notebookEditable && notebookEditorFocused && !inputFocus"
 	},
-
 	{
 		"key": "ctrl+]",
 		"command": "editor.emmet.action.nextEditPoint"
@@ -1285,6 +1209,39 @@
 	{
 		"key": "ctrl+[",
 		"command": "editor.emmet.action.prevEditPoint"
+	},
+
+	{
+		"key": "shift+j",
+		"command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
+		"when": "!inQuickOpen && !terminalFocus  && vim.active && vim.mode == 'Normal'"
+	},
+	{
+		"key": "shift+j",
+		"command": "workbench.action.quickOpenNavigateNextInEditorPicker",
+		"when": "inQuickOpen && !terminalFocus  && vim.active && vim.mode == 'Normal'"
+	},
+
+	{
+		"key": "shift+k",
+		"command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
+		"when": "!inQuickOpen && !terminalFocus  && vim.active && vim.mode == 'Normal'"
+	},
+	{
+		"key": "shift+k",
+		"command": "workbench.action.quickOpenNavigatePreviousInEditorPicker",
+		"when": "inQuickOpen && !terminalFocus  && vim.active && vim.mode == 'Normal'"
+	},
+
+	{
+		"key": "alt+=",
+		"command": "editor.emmet.action.selectNextItem",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "alt+-",
+		"command": "editor.emmet.action.selectPrevItem",
+		"when": "editorTextFocus"
 	}
 
 	// test

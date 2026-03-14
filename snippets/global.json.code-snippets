@@ -135,15 +135,6 @@
         ],
         "description": "addEventListener with arrow function"
     },
-    "Class Method snippet": {
-        "prefix": "met",
-        "body": [
-            "${1:methodName}($2) {",
-            "\t$0",
-            "}"
-        ],
-        "description": "Create a class method with parentheses and body"
-    },
     "PHP open tag inline": {
         "prefix": "pt",
         "body": [

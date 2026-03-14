@@ -295,6 +295,10 @@
 		{
 			"before": ["<leader>", "f"],
 			"commands": ["editor.action.formatSelection.multiple"]
+		},
+		{
+			"before": ["g", ";"],
+			"commands": ["editor.action.openLink"]
 		}
 	],
 	"vim.visualModeKeyBindingsNonRecursive": [

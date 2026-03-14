@@ -37,8 +37,8 @@ nnoremap <leader>k m`O<Esc>``
 " nnoremap H ^
 " nnoremap L $
 
-nnoremap J :bprevious<CR>
-nnoremap K :bnext<CR>
+" nnoremap J :bprevious<CR>
+" nnoremap K :bnext<CR>
 
 nnoremap H <C-o>
 
