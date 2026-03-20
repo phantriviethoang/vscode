@@ -569,5 +569,8 @@
 		"Bobo",
 		"tailwind"
 	],
-	"chat.mcp.gallery.enabled": true
+	"inertia.defaultExtension": ".vue",
+	"inertia.pages": "resources/js/pages/**/*.vue",
+	// "inertia.defaultExtension": ".jsx",
+	// "inertia.pages": "resources/js/Pages/**/*.jsx"
 }

@@ -72,33 +72,6 @@
         "body": "document.querySelectorAll('.$1')",
         "description": "document.querySelectorAll"
     },
-    "fun - function name()": {
-        "prefix": "fun",
-        "body": [
-            "function $1($2) {",
-            "    $3",
-            "}"
-        ],
-        "description": "Func declaration"
-    },
-    "fn - function name()": {
-        "prefix": "fn",
-        "body": [
-            "function $1($2) {",
-            "    $3",
-            "}"
-        ],
-        "description": "Function declaration"
-    },
-    "function": {
-        "prefix": "fnc",
-        "body": [
-            "function ${1:}(${2}) {",
-            "    ${3}",
-            "}"
-        ],
-        "description": "fnc function declaration"
-    },
     "afun - arrow function": {
         "prefix": "arfn",
         "body": [

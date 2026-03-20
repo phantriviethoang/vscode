@@ -9,5 +9,54 @@
             "}"
         ],
         "description": "Vue methods boilerplate"
+    },
+    "Vue 3 Setup Script": {
+        "prefix": "vue",
+        "body": [
+            "<script setup>",
+            "import { ref, computed, watch, onMounted } from 'vue';",
+            "",
+            "$0",
+            "</script>",
+            "",
+            "<template>",
+            "\tHello world!",
+            "</template>"
+        ],
+        "description": "Vue 3 <script setup> boilerplate"
+    },
+    "Vue ref": {
+        "prefix": "ref",
+        "body": [
+            "const ${1:val} = ref(${0});"
+        ],
+        "description": "Vue ref() reactive variable"
+    },
+    "Vue computed": {
+        "prefix": "comp",
+        "body": [
+            "const ${1:val} = computed(() => {",
+            "\t$0",
+            "});"
+        ],
+        "description": "Vue computed()"
+    },
+    "Vue watch": {
+        "prefix": "watch",
+        "body": [
+            "watch(${1:val}, (value) => {",
+            "\t$0",
+            "});"
+        ],
+        "description": "Vue watch()"
+    },
+    "Vue onMounted": {
+        "prefix": "mount",
+        "body": [
+            "onMounted(() => {",
+            "\t$0",
+            "});"
+        ],
+        "description": "Vue lifecycle onMounted"
     }
 }

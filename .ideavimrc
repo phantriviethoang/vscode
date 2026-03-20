@@ -34,41 +34,18 @@ inoremap jd <C-o>m`<C-o>$<C-o>a;<C-o>``
 nnoremap <leader>j m`o<Esc>``
 nnoremap <leader>k m`O<Esc>``
 
-" nnoremap H ^
-" nnoremap L $
-
-" nnoremap J :bprevious<CR>
-" nnoremap K :bnext<CR>
-
 nnoremap H <C-o>
 
 nnoremap L <C-i>
 
-" vnoremap H ^
-" vnoremap L $
-
 onoremap gh ^
 onoremap gl $
-
-" nnoremap gh <leader><leader>f
-" nnoremap gl <leader><leader>F
 
 nnoremap gh ^
 vnoremap gh ^
 
 nnoremap gl $
 vnoremap gl $
-
-" nnoremap gs 0
-" vnoremap gs 0
-
-" nnoremap K i<CR><Esc>
-
-" nnoremap <C-]> i<CR><Esc>
-" nnoremap <C-S-k> i<CR><Esc>
-
-" vnoremap <C-[> g^
-" vnoremap <C-]> g_
 
 nnoremap <C--> <C-x>
 nnoremap <C-=> <C-a>
@@ -90,7 +67,6 @@ nnoremap zk <leader><leader>k
 nnoremap zo o<CR>
 nnoremap yo O<CR><Esc>kA
 
-" nnoremap zk i<CR><Esc>
 
 nnoremap <leader><Esc> :nohlsearch<CR>
 

@@ -41,23 +41,7 @@
     "preventDefault inline": {
         "prefix": "pd",
         "body": [
-            "(e) => {",
-            "    e.preventDefault();",
-            "}"
+            "preventDefault()"
         ]
-    },
-    "Import tailwindcss vite": {
-        "prefix": "itw",
-        "body": [
-            "import tailwindcss from '@tailwindcss/vite'"
-        ],
-        "description": "Import tailwindcss plugin for Vite"
-    },
-    "Tailwindcss plugin call": {
-        "prefix": "twplg",
-        "body": [
-            "tailwindcss()"
-        ],
-        "description": "tailwindcss() plugin for Vite"
     }
 }
