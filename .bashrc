@@ -16,17 +16,59 @@ export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 
 alias c.="code ."
 
+
+react() {
+    if [ -z "$1" ]; then
+        echo "What is the name of your project?"
+        echo "E.g. example-app"
+        return 1
+    fi
+
+    npm create vite@latest "$1" -- --template react
+
+    cd "$1" || return
+
+    npm install
+
+    npm run dev
+}
+
 alias vue="npm create vue@latest"
-
 alias alpine="npm install alpinejs"
-
 alias daisy="npm i -D daisyui@latest"
 alias tw="npm install tailwindcss @tailwindcss/vite"
+
+
+alias i="install"
+alias n="npm"
+alias r="run"
+alias t="test"
+alias ni="npm install"
+alias ns="npm start"
+alias nr="npm run"
+alias nrt="npm run test"
+alias nrw="npm run watch"
+alias nrb="npm run build"
+alias d="npm run dev"
+alias vite="npm run dev"
+
+
+sh() {
+  npx shadcn@latest add "$@"
+}
+
+
+alias rd="composer run dev"
+
+alias cps='composer require'
+alias ci='composer install'
 
 
 # alias p="php -S localhost:8888"
 alias pp="php -S localhost:8888 -t public"
 alias s="php artisan serve"
+
+
 
 am() {
   if [ $# -eq 0 ]; then
@@ -116,24 +158,6 @@ alias qwork='php artisan queue:work'
 
 alias test='php artisan test'
 
-alias nrt="npm run test"
-
-alias i="install"
-alias n="npm"
-alias r="run"
-alias t="test"
-
-alias ni="npm install"
-
-alias nr="npm run"
-
-alias nrw="npm run watch"
-alias nrb="npm run build"
-alias d="npm run dev"
-alias rd="composer run dev"
-
-alias cps='composer require'
-alias ci='composer install'
 
 alias vdpl='php artisan vendor:publish'
 
@@ -205,30 +229,6 @@ alias grs="git reset --soft HEAD~1"
 alias nah="git reset --hard && git clean -df"
 
 
-sh() {
-  npx shadcn@latest add "$@"
-}
-
-
-alias vite="npm create vite@latest"
-
-p() {
-  if [ $# -eq 0 ]; then
-    php -S localhost:8888
-  else
-    file="$1"
-    shift
-    if [ ! -f "$file" ]; then
-      if [ -f "${file}.php" ]; then
-        file="${file}.php"
-      else
-        echo "File not found: $file or ${file}.php" >&2
-        return 2
-      fi
-    fi
-    php "$file" "$@"
-  fi
-}
 
 pf() {
   if [ $# -eq 0 ]; then
@@ -251,23 +251,6 @@ pf() {
   php -S localhost:8888 "$file" "$@"
 }
 
-
-vreact() {
-    if [ -z "$1" ]; then
-        echo "⚠️ Bạn phải nhập tên project, ví dụ: vreact myapp"
-        return 1
-    fi
-
-    CREATE_VITE_SKIP_PROMPTS=true npm create vite@latest "$1" -- --template react
-
-    cd "$1" || return
-
-    npm install
-
-    npm run dev
-}
-
-
 cdr() {
     if [ -z "$1" ]; then
         echo "Usage: cdr <directory>"
@@ -278,22 +261,6 @@ cdr() {
     npm run dev
 }
 
-
-
-vreact() {
-    if [ -z "$1" ]; then
-        echo "⚠️ Bạn phải nhập tên project, ví dụ: vreact myapp"
-        return 1
-    fi
-
-    npm create vite@latest "$1" -- --template react
-
-    cd "$1" || return
-
-    npm install
-
-    npm run dev
-}
 
 
 alias cb="cd .."
