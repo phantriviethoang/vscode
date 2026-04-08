@@ -1210,29 +1210,26 @@
 		"key": "ctrl+[",
 		"command": "editor.emmet.action.prevEditPoint"
 	},
-
 	{
 		"key": "shift+j",
 		"command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
-		"when": "!inQuickOpen && !terminalFocus  && vim.active && vim.mode == 'Normal'"
+		"when": "!inQuickOpen && !terminalFocus && editorTextFocus && vim.active && vim.mode == 'Normal'"
 	},
 	{
 		"key": "shift+j",
 		"command": "workbench.action.quickOpenNavigateNextInEditorPicker",
 		"when": "inQuickOpen && !terminalFocus  && vim.active && vim.mode == 'Normal'"
 	},
-
 	{
 		"key": "shift+k",
 		"command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
-		"when": "!inQuickOpen && !terminalFocus  && vim.active && vim.mode == 'Normal'"
+		"when": "!inQuickOpen && !terminalFocus && editorTextFocus && vim.active && vim.mode == 'Normal'"
 	},
 	{
 		"key": "shift+k",
 		"command": "workbench.action.quickOpenNavigatePreviousInEditorPicker",
 		"when": "inQuickOpen && !terminalFocus  && vim.active && vim.mode == 'Normal'"
 	},
-
 	{
 		"key": "alt+=",
 		"command": "editor.emmet.action.selectNextItem",
@@ -1243,6 +1240,5 @@
 		"command": "editor.emmet.action.selectPrevItem",
 		"when": "editorTextFocus"
 	}
-
 	// test
 ]
