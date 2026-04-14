@@ -135,6 +135,7 @@
 		".phpunit.result.cache": true
 	},
 	"terminal.integrated.cursorWidth": 2,
+	"terminal.integrated.commandsToSkipShell": ["workbench.view.scm"],
 	"terminal.integrated.fontSize": 15,
 	"terminal.integrated.lineHeight": 1.2,
 	"terminal.integrated.fontFamily": "JetBrains Mono, MonoLisa",
@@ -212,7 +213,7 @@
 	"vim.easymotionMarkerForegroundColorTwoCharFirst": "#EB6689",
 	"vim.easymotionMarkerForegroundColorTwoCharSecond": "#ffdd77",
 	"vim.foldfix": true,
-	"vim.highlightedyank.color": "#a9dc7660",
+	"vim.highlightedyank.color": "#44475a",
 	"vim.highlightedyank.enable": true,
 	"vim.hlsearch": true,
 	"vim.joinspaces": false,
@@ -570,7 +571,7 @@
 		"tailwind"
 	],
 	"inertia.defaultExtension": ".vue",
-	"inertia.pages": "resources/js/pages/**/*.vue",
+	"inertia.pages": "resources/js/pages/**/*.vue"
 	// "inertia.defaultExtension": ".jsx",
 	// "inertia.pages": "resources/js/Pages/**/*.jsx"
 }

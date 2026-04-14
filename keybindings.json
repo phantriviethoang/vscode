@@ -264,6 +264,10 @@
 		"key": "ctrl+8",
 		"command": "git.push"
 	},
+	{
+		"key": "ctrl+9",
+		"command": "postman-for-vscode.sidebar-panel.focus"
+	},
 	// Combine Git
 	{
 		"key": "alt+g",
@@ -1215,6 +1219,7 @@
 		"command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
 		"when": "!inQuickOpen && !terminalFocus && editorTextFocus && vim.active && vim.mode == 'Normal'"
 	},
+
 	{
 		"key": "shift+j",
 		"command": "workbench.action.quickOpenNavigateNextInEditorPicker",
@@ -1230,6 +1235,7 @@
 		"command": "workbench.action.quickOpenNavigatePreviousInEditorPicker",
 		"when": "inQuickOpen && !terminalFocus  && vim.active && vim.mode == 'Normal'"
 	},
+
 	{
 		"key": "alt+=",
 		"command": "editor.emmet.action.selectNextItem",

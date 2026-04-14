@@ -16,6 +16,8 @@ export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 
 alias c.="code ."
 
+alias nodemon="npm install --save-dev nodemon"
+
 
 react() {
     if [ -z "$1" ]; then
@@ -53,7 +55,7 @@ alias d="npm run dev"
 alias vite="npm run dev"
 
 
-sh() {
+shcn() {
   npx shadcn@latest add "$@"
 }
 
@@ -228,6 +230,13 @@ alias grs="git reset --soft HEAD~1"
 
 alias nah="git reset --hard && git clean -df"
 
+ignore() {
+  if [ $# -eq 0 ]; then
+    npx gitignore node
+  else
+    npx gitignore "$@"
+  fi
+}
 
 
 pf() {
