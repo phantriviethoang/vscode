@@ -4,18 +4,7 @@
 
 export PATH="$HOME/.fly/bin:$PATH"
 
-
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
-
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
-
-if [ -f /usr/share/git/completion/git-prompt.sh ]; then
-  source /usr/share/git/completion/git-prompt.sh
-fi
-
-PS1="[\u \W\$(__git_ps1 ' %s')]\n>_ "
+PS1='[\u \W]\n>_ '
 
 
 export PATH="$HOME/.config/composer/vendor/bin:$PATH"
