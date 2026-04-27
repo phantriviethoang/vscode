@@ -1,57 +1,65 @@
-.monaco-editor .cursors-layer > div[style*="width"] {
-	height: 20px !important;
-	transform: translateY(5px) !important;
-	line-height: 20px !important;
-	display: flex !important;
-	align-items: center !important;
+.monaco-editor .cursors-layer>div[style*="width"] {
+    height: 20px !important;
+    transform: translateY(5px) !important;
+    line-height: 20px !important;
+    display: flex !important;
+    align-items: center !important;
 }
 
 .monaco-workbench .titlebar-left .window-appicon {
-	display: none !important;
-	visibility: hidden !important;
+    display: none !important;
+    visibility: hidden !important;
 }
 
 .breadcrumbs-control {
-	display: none !important;
-	visibility: hidden !important;
+    display: none !important;
+    visibility: hidden !important;
+}
+
+.update-indicator {
+    display: none !important;
+}
+
+.codicon-toolbar-more {
+    display: none !important;
 }
 
 .custom-window-title {
-	display: flex;
-	align-items: center;
-	height: 100%;
-	padding: 0 8px;
-	flex: 1;
-	min-width: 0;
-	overflow: hidden;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 8px;
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
 }
 
 .custom-title-content {
-	display: inline-flex;
-	align-items: center;
-	gap: 0;
-	min-width: 0;
-	max-width: 100%;
-	overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    gap: 0;
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .custom-title-text {
-	color: #bababa;
-	font-weight: 600;
-	font-size: 13px;
-	line-height: 22px;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	min-width: 0;
+    color: #bababa;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 22px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
 }
 
 .letterpress {
-	display: none !important;
+    display: none !important;
 }
 
 .composite.title h2 {
-	font-weight: bold !important;
-	font-size: 11px !important;
-	color: #c786bbea !important;
+    font-weight: bold !important;
+    font-size: 11px !important;
+    color: #c786bbea !important;
 }

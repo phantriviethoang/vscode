@@ -10,13 +10,18 @@ export PATH="$HOME/.fly/bin:$PATH"
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-PS1=' [\u \W]\n'
-export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 
+if [ -f /usr/share/git/completion/git-prompt.sh ]; then
+  source /usr/share/git/completion/git-prompt.sh
+fi
+
+PS1="[\u \W\$(__git_ps1 ' %s')]\n>_ "
+
+
+export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 
 alias c.="code ."
 
-alias nodemon="npm install --save-dev nodemon"
 
 
 react() {
@@ -35,10 +40,33 @@ react() {
     npm run dev
 }
 
+next() {
+    if [ -z "$1" ]; then
+        echo "What is your project named?"
+        echo "E.g. my-app"
+        return 1
+    fi
+
+    npx create-next-app@latest "$1"
+
+    cd "$1" || return
+
+    npm run dev
+}
+
+nexty() {
+    npx create-next-app@latest "$1" --yes && cd "$1" && npm run dev
+}
+
 alias vue="npm create vue@latest"
+alias express="npm install express"
+alias nodemon="npm install --save-dev nodemon"
 alias alpine="npm install alpinejs"
-alias daisy="npm i -D daisyui@latest"
+alias jsonserver="npm install json-server"
 alias tw="npm install tailwindcss @tailwindcss/vite"
+alias daisy="npm i -D daisyui@latest"
+
+alias npxs="npx serve"
 
 
 alias i="install"
@@ -47,15 +75,18 @@ alias r="run"
 alias t="test"
 alias ni="npm install"
 alias ns="npm start"
+alias start="npm start"
 alias nr="npm run"
 alias nrt="npm run test"
 alias nrw="npm run watch"
 alias nrb="npm run build"
+alias build="npm run build"
 alias d="npm run dev"
+alias dev="npm run dev"
 alias vite="npm run dev"
 
 
-shcn() {
+sh() {
   npx shadcn@latest add "$@"
 }
 
@@ -139,11 +170,18 @@ alias mfs="php artisan migrate:fresh --seed"
 
 
 alias sqlit="sed -e 's/\(DB_.*\)/# \\1/g' -e 's/# \(DB_CONNECTION=\).*/\\1sqlite/g' -i .env"
-alias lenv="cp -n .env.example .env && (grep '^APP_KEY=.\+' .env > /dev/null || artisan key:generate)"
-alias laravel-setup="composer install && lenv && sqlit && artisan migrate --force --seed"
+alias lenv='
+if [ -f artisan ]; then
+  cp -n .env.example .env && (grep "^APP_KEY=.\+" .env > /dev/null || php artisan key:generate)
+else
+  echo "Not a Laravel project"
+fi
+'
+alias laravel-setup="composer install && lenv && sqlit && php artisan migrate --force --seed"
 
 alias breeze="composer require laravel/breeze --dev"
 alias breezei="php artisan breeze:install"
+alias api="php artisan install:api"
 
 alias tinker="php artisan tinker"
 alias clearall='php artisan cache:clear && php artisan config:clear && php artisan route:clear && php artisan view:clear'
@@ -195,6 +233,8 @@ gc() {
 }
 
 alias wip='git commit -m "wip"'
+
+alias init='git init && git add . && git commit -m "Initial commit"'
 
 gcm() {
   if [ -z "$*" ]; then
