@@ -22,18 +22,26 @@
         const allItems = breadcrumbs.querySelectorAll(
             ".monaco-breadcrumb-item"
         );
-        // if (allItems.length === 0) return;
-        // new
 
         if (allItems.length === 0) {
             if (customTitle) {
                 customTitle.innerHTML = "";
-                // customTitle.style.display = "none";
             }
             return;
         }
 
         const lastItem = allItems[allItems.length - 1];
+        const parentItem =
+            allItems.length > 1 ? allItems[allItems.length - 2] : null;
+
+        function getLabel(item) {
+            const iconLabel = item.querySelector(".monaco-icon-label");
+            if (!iconLabel) return "";
+
+            const labelName = iconLabel.querySelector(".label-name");
+            return labelName ? labelName.textContent : iconLabel.textContent;
+        }
+
         const iconLabel = lastItem.querySelector(".monaco-icon-label");
         if (!iconLabel) return;
         if (
@@ -53,8 +61,8 @@
         iconElement.style.backgroundSize = "16px 16px";
         iconElement.style.backgroundPosition = "center";
         iconElement.style.backgroundRepeat = "no-repeat";
-        iconElement.style.marginRight = "4px";
-        iconElement.style.marginBottom = "1px";
+        iconElement.style.marginRight = "2px";
+        iconElement.style.marginBottom = "1.3px";
         iconElement.style.flexShrink = "0";
         iconElement.style.verticalAlign = "middle";
         const content = beforeStyles.content;
@@ -73,18 +81,42 @@
                 iconElement.style.lineHeight = "16px";
             }
         }
-        const labelName = iconLabel.querySelector(".label-name");
-        const fileName = labelName
-            ? labelName.textContent
-            : iconLabel.textContent;
+
+        const fileName = getLabel(lastItem);
+        const parentName = parentItem ? getLabel(parentItem) : "";
+
         const textElement = document.createElement("span");
         textElement.className = "custom-title-text";
-        textElement.textContent = fileName;
-        textElement.style.fontSize = "13.3px";
-        textElement.style.fontWeight = "550";
+
+        if (parentName) {
+            const parentSpan = document.createElement("span");
+            parentSpan.textContent = parentName;
+
+            const separator = document.createElement("span");
+            separator.textContent = "/";
+            separator.style.margin = "0 2px";
+            separator.style.fontWeight = "800";
+            separator.style.fontSize = "18px";
+            separator.style.display = "inline-flex";
+            separator.style.alignItems = "center";
+            separator.style.lineHeight = "1";
+            separator.style.transform = "translateY(1px)";
+
+            const fileSpan = document.createElement("span");
+            fileSpan.textContent = fileName;
+
+            textElement.appendChild(parentSpan);
+            textElement.appendChild(separator);
+            textElement.appendChild(fileSpan);
+        } else {
+            textElement.textContent = fileName;
+        }
+
+        textElement.style.fontFamily = '"Dank Mono", monospace';
+        textElement.style.fontSize = "15px";
+        textElement.style.fontWeight = "650";
         container.appendChild(iconElement);
         container.appendChild(textElement);
-        // new
         customTitle.style.display = "flex";
         while (customTitle.firstChild)
             customTitle.removeChild(customTitle.firstChild);

@@ -1,17 +1,13 @@
 # ~/.bashrc
 #
 
-
 export PATH="$HOME/.fly/bin:$PATH"
 
 PS1='[\u \W]\n>_ '
 
-
 export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 
 alias c.="code ."
-
-
 
 react() {
     if [ -z "$1" ]; then
@@ -47,16 +43,18 @@ nexty() {
     npx create-next-app@latest "$1" --yes && cd "$1" && npm run dev
 }
 
+alias vitey="npm create vite@latest"
 alias vue="npm create vue@latest"
 alias express="npm install express"
-alias nodemon="npm install --save-dev nodemon"
+alias ejs="npm install ejs"
+alias nodew="node --watch server"
+alias nodemoni="npm install --save-dev nodemon"
 alias alpine="npm install alpinejs"
 alias jsonserver="npm install json-server"
-alias tw="npm install tailwindcss @tailwindcss/vite"
+alias tailwind="npm install tailwindcss @tailwindcss/vite"
 alias daisy="npm i -D daisyui@latest"
 
 alias npxs="npx serve"
-
 
 alias i="install"
 alias n="npm"
@@ -74,23 +72,22 @@ alias d="npm run dev"
 alias dev="npm run dev"
 alias vite="npm run dev"
 
-
 sh() {
   npx shadcn@latest add "$@"
 }
 
+sha() {
+  pnpm dlx shadcn@latest add "$@"
+}
 
 alias rd="composer run dev"
 
 alias cps='composer require'
 alias ci='composer install'
 
-
 # alias p="php -S localhost:8888"
 alias pp="php -S localhost:8888 -t public"
 alias s="php artisan serve"
-
-
 
 am() {
   if [ $# -eq 0 ]; then
@@ -101,7 +98,6 @@ am() {
 
   php artisan make:"$1" "${@:2}"
 }
-
 
 # Alias viết tắt cho các loại hay dùng
 alias mc="am controller"    # mc UserController --resource
@@ -239,7 +235,8 @@ alias gpf="git push origin main -f"
 alias gpfm="git push origin master -f"
 alias gpl="git pull"
 
-alias co="git checkout"
+alias gd="git diff --staged"
+alias co="checkout"
 alias gco="git checkout"
 alias gcb="git checkout -b"
 alias gb="git branch"
@@ -256,7 +253,6 @@ gclc() {
 alias grb="git rebase -i HEAD~5"
 alias grs="git reset --soft HEAD~1"
 
-
 alias nah="git reset --hard && git clean -df"
 
 ignore() {
@@ -266,7 +262,6 @@ ignore() {
     npx gitignore "$@"
   fi
 }
-
 
 pf() {
   if [ $# -eq 0 ]; then
@@ -299,8 +294,6 @@ cdr() {
     npm run dev
 }
 
-
-
 alias cb="cd .."
 alias macd='f(){ mkdir -p "$1" && cd "$1"; }; f'
 
@@ -308,14 +301,10 @@ md() {
   mkdir -p "$1"
 }
 
-
 alias vbash='vim ~/.bashrc'
 alias ubash='source ~/.bashrc'
 
 echo -ne "\e[2 q"
-
-
-
 
 export PATH=/usr/bin:$PATH
 export PATH=$PATH:/home/viethoang/.npm-global/bin
