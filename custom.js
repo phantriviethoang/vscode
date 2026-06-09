@@ -3,11 +3,11 @@
     "use strict";
     function updateCustomTitle() {
         const breadcrumbsControl = document.querySelector(
-            ".breadcrumbs-control"
+            ".breadcrumbs-control",
         );
         if (!breadcrumbsControl) return;
         const breadcrumbs = breadcrumbsControl.querySelector(
-            ".monaco-breadcrumbs"
+            ".monaco-breadcrumbs",
         );
         if (!breadcrumbs) return;
         let customTitle = document.querySelector(".custom-window-title");
@@ -20,7 +20,7 @@
             windowTitle.parentElement.insertBefore(customTitle, windowTitle);
         }
         const allItems = breadcrumbs.querySelectorAll(
-            ".monaco-breadcrumb-item"
+            ".monaco-breadcrumb-item",
         );
 
         if (allItems.length === 0) {
@@ -115,6 +115,7 @@
         textElement.style.fontFamily = '"Dank Mono", monospace';
         textElement.style.fontSize = "15px";
         textElement.style.fontWeight = "650";
+
         container.appendChild(iconElement);
         container.appendChild(textElement);
         customTitle.style.display = "flex";
@@ -127,7 +128,7 @@
     });
     function startObserving() {
         const breadcrumbsControl = document.querySelector(
-            ".breadcrumbs-control"
+            ".breadcrumbs-control",
         );
         if (breadcrumbsControl) {
             observer.observe(breadcrumbsControl, {

@@ -246,7 +246,7 @@
 	},
 	{
 		"key": "ctrl+3",
-		"command": "coderabbit-vscode-sidebar.focus"
+		"command": "mdb.openOverviewPage"
 	},
 	{
 		"key": "ctrl+4",
@@ -1246,6 +1246,10 @@
 		"key": "alt+-",
 		"command": "editor.emmet.action.selectPrevItem",
 		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+3",
+		"command": "workbench.view.extension.mongoDB"
 	}
 	// test
 ]
