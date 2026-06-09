@@ -1,12 +1,14 @@
 {
 	//  test
-
 	"editor.fontFamily": "Dank Mono",
 	"editor.fontSize": 17,
 	"terminal.integrated.fontFamily": "Dank Mono",
 	"scm.inputFontFamily": "Dank Mono",
 	"terminal.integrated.fontSize": 17,
 	"terminal.integrated.lineHeight": 1.3,
+	"editor.renderLineHighlight": "all",
+	"editor.occurrencesHighlight": "multiFile",
+	"editor.matchBrackets": "always",
 	"editor.rulers": [
 		{
 			"color": "#1c2430"
@@ -17,12 +19,11 @@
 		"terminal.tab.activeBorder": "#1c2430",
 		"terminal.border": "#1c2430",
 		"panel.border": "#1c2430",
-		"editorGutter.deletedBackground": "#757575",
 		"titleBar.activeForeground": "#5D6976",
 		"titleBar.inactiveForeground": "#5D6976"
 	},
 	"workbench.colorTheme": "Carbon",
-
+	//  test
 	"search.exclude": {
 		".next/**": true,
 		"**/node_modules": true,
@@ -40,10 +41,7 @@
 		"storage/framework/views": true,
 		".phpunit.result.cache": true
 	},
-	"[javascript]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-
+	//  test
 	"files.exclude": {
 		"**/.git": true,
 		"**/.github": true,
@@ -94,6 +92,5 @@
 		"**/.idea": true,
 		"**/.next": true
 	}
-
 	// test
 }
